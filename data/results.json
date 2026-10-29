@@ -1,0 +1,8514 @@
+{
+ "model": {
+  "alpha": 2.3,
+  "L": 0,
+  "k": 20.458955071638044,
+  "d0": 1.0,
+  "r_max": 250.0,
+  "natural": 174.0,
+  "n_fit": 6653,
+  "cv_rmse": 1.0792,
+  "cv_mae": 0.6667,
+  "cv_bias": 0.3098,
+  "cv_r": 0.7489,
+  "mae_fit": 0.4895,
+  "cv18_mae": 0.4936,
+  "cv18_rmse": 0.7538,
+  "cv18_bias": 0.0872,
+  "cv18_r": 0.7859,
+  "n18": 5775,
+  "fit_min": 18.0,
+  "err_by_obs": {
+   "16.0": {
+    "n": 114,
+    "err": 2.6373
+   },
+   "16.5": {
+    "n": 124,
+    "err": 1.9943
+   },
+   "17.0": {
+    "n": 232,
+    "err": 1.1076
+   },
+   "17.5": {
+    "n": 288,
+    "err": 0.8191
+   },
+   "18.0": {
+    "n": 444,
+    "err": 0.5478
+   },
+   "18.5": {
+    "n": 602,
+    "err": 0.1674
+   },
+   "19.0": {
+    "n": 594,
+    "err": 0.0714
+   },
+   "19.5": {
+    "n": 577,
+    "err": -0.0189
+   },
+   "20.0": {
+    "n": 618,
+    "err": -0.0609
+   },
+   "20.5": {
+    "n": 953,
+    "err": 0.0493
+   },
+   "21.0": {
+    "n": 1400,
+    "err": 0.0938
+   },
+   "21.5": {
+    "n": 519,
+    "err": 0.0888
+   },
+   "22.0": {
+    "n": 68,
+    "err": -0.7734
+   }
+  },
+  "grid": [
+   {
+    "alpha": 2.0,
+    "L": 0,
+    "cv18_mae": 0.5057,
+    "cv_rmse": 1.1272,
+    "cv_r": 0.7232
+   },
+   {
+    "alpha": 2.0,
+    "L": 50,
+    "cv18_mae": 0.5174,
+    "cv_rmse": 1.097,
+    "cv_r": 0.7435
+   },
+   {
+    "alpha": 2.0,
+    "L": 100,
+    "cv18_mae": 0.5096,
+    "cv_rmse": 1.1059,
+    "cv_r": 0.737
+   },
+   {
+    "alpha": 2.3,
+    "L": 0,
+    "cv18_mae": 0.4936,
+    "cv_rmse": 1.0792,
+    "cv_r": 0.7489
+   },
+   {
+    "alpha": 2.3,
+    "L": 50,
+    "cv18_mae": 0.5272,
+    "cv_rmse": 1.0771,
+    "cv_r": 0.7551
+   },
+   {
+    "alpha": 2.3,
+    "L": 100,
+    "cv18_mae": 0.5148,
+    "cv_rmse": 1.0779,
+    "cv_r": 0.7528
+   },
+   {
+    "alpha": 2.6,
+    "L": 0,
+    "cv18_mae": 0.5181,
+    "cv_rmse": 1.0654,
+    "cv_r": 0.7592
+   },
+   {
+    "alpha": 2.6,
+    "L": 50,
+    "cv18_mae": 0.5429,
+    "cv_rmse": 1.0719,
+    "cv_r": 0.7614
+   },
+   {
+    "alpha": 2.6,
+    "L": 100,
+    "cv18_mae": 0.534,
+    "cv_rmse": 1.0693,
+    "cv_r": 0.7607
+   },
+   {
+    "alpha": 2.9,
+    "L": 0,
+    "cv18_mae": 0.5443,
+    "cv_rmse": 1.0678,
+    "cv_r": 0.7639
+   },
+   {
+    "alpha": 2.9,
+    "L": 50,
+    "cv18_mae": 0.5589,
+    "cv_rmse": 1.0735,
+    "cv_r": 0.7644
+   },
+   {
+    "alpha": 2.9,
+    "L": 100,
+    "cv18_mae": 0.5533,
+    "cv_rmse": 1.071,
+    "cv_r": 0.7643
+   }
+  ],
+  "older": {
+   "n": 4842,
+   "rmse": 1.0605,
+   "bias": 0.193,
+   "r": 0.7527
+  },
+  "uk_fine": {
+   "rmse": 0.6577,
+   "mae": 0.3904,
+   "bias": 0.0839,
+   "r": 0.8744,
+   "n": 72.0
+  },
+  "uk_coarse": {
+   "rmse": 0.6666,
+   "mae": 0.4316,
+   "bias": 0.1906,
+   "r": 0.8732,
+   "n": 72.0
+  }
+ },
+ "world": {
+  "pop_mw": 0.5214,
+  "pop_polluted": 0.9293,
+  "pop_unpolluted": 0.0707,
+  "pop_pristine": 0.0262,
+  "pop_nat_lost": 0.8437,
+  "pop_no_dark": 0.2582,
+  "pop_mw_visible": 0.4786,
+  "land_mw": 0.032,
+  "land_polluted": 0.4013,
+  "land_unpolluted": 0.5987,
+  "land_pristine": 0.3645,
+  "land_nat_lost": 0.1953,
+  "land_no_dark": 0.0054,
+  "land_mw_visible": 0.968,
+  "pop_total_bn": 8.0563,
+  "land_km2": 134330788,
+  "pop_median_mag": 20.1434,
+  "people_mw_bn": 4.2004
+ },
+ "falchi": {
+  "mean_diff_pts": 11,
+  "pop_mw": 0.359,
+  "pop_polluted": 0.8320000000000001,
+  "pop_no_dark": 0.139,
+  "land_polluted": 0.225,
+  "land_mw": 0.012,
+  "compare": {
+   "n": 148,
+   "spearman": 0.9449,
+   "pearson": 0.9476,
+   "mean_diff": 0.1115,
+   "median_abs_diff": 0.0971
+  }
+ },
+ "countries_no_lights": [
+  "Kosovo"
+ ],
+ "countries_n": 160,
+ "country": {
+  "IND": {
+   "name": "India",
+   "pop_m": 1422.6,
+   "pop_mw": 0.3808,
+   "land_mw": 0.088,
+   "land_unpolluted": 0.0467,
+   "pop_unpolluted": 0.0003,
+   "falchi_pop_mw": 0.195,
+   "pop_mag": 20.4732
+  },
+  "CHN": {
+   "name": "China",
+   "pop_m": 1414.3,
+   "pop_mw": 0.6578,
+   "land_mw": 0.058,
+   "land_unpolluted": 0.4235,
+   "pop_unpolluted": 0.0009,
+   "falchi_pop_mw": 0.325,
+   "pop_mag": 19.6034
+  },
+  "USA": {
+   "name": "United States of America",
+   "pop_m": 340.0,
+   "pop_mw": 0.8586,
+   "land_mw": 0.0875,
+   "land_unpolluted": 0.282,
+   "pop_unpolluted": 0.0005,
+   "falchi_pop_mw": 0.7759999999999999,
+   "pop_mag": 18.6456
+  },
+  "IDN": {
+   "name": "Indonesia",
+   "pop_m": 276.2,
+   "pop_mw": 0.4964,
+   "land_mw": 0.0283,
+   "land_unpolluted": 0.5875,
+   "pop_unpolluted": 0.0457,
+   "falchi_pop_mw": 0.248,
+   "pop_mag": 20.2677
+  },
+  "PAK": {
+   "name": "Pakistan",
+   "pop_m": 245.1,
+   "pop_mw": 0.3348,
+   "land_mw": 0.0223,
+   "land_unpolluted": 0.4668,
+   "pop_unpolluted": 0.0274,
+   "falchi_pop_mw": 0.19699999999999998,
+   "pop_mag": 20.8155
+  },
+  "NGA": {
+   "name": "Nigeria",
+   "pop_m": 224.5,
+   "pop_mw": 0.2157,
+   "land_mw": 0.0138,
+   "land_unpolluted": 0.6965,
+   "pop_unpolluted": 0.2614,
+   "falchi_pop_mw": 0.138,
+   "pop_mag": 21.6044
+  },
+  "BRA": {
+   "name": "Brazil",
+   "pop_m": 207.3,
+   "pop_mw": 0.7035,
+   "land_mw": 0.0185,
+   "land_unpolluted": 0.562,
+   "pop_unpolluted": 0.0139,
+   "falchi_pop_mw": 0.625,
+   "pop_mag": 19.0548
+  },
+  "BGD": {
+   "name": "Bangladesh",
+   "pop_m": 173.4,
+   "pop_mw": 0.1601,
+   "land_mw": 0.0281,
+   "land_unpolluted": 0.0115,
+   "pop_unpolluted": 0.0002,
+   "falchi_pop_mw": 0.10400000000000001,
+   "pop_mag": 21.2319
+  },
+  "RUS": {
+   "name": "Russia",
+   "pop_m": 147.8,
+   "pop_mw": 0.7605,
+   "land_mw": 0.0142,
+   "land_unpolluted": 0.6845,
+   "pop_unpolluted": 0.0014,
+   "falchi_pop_mw": 0.618,
+   "pop_mag": 18.8501
+  },
+  "MEX": {
+   "name": "Mexico",
+   "pop_m": 129.4,
+   "pop_mw": 0.7396,
+   "land_mw": 0.0505,
+   "land_unpolluted": 0.1976,
+   "pop_unpolluted": 0.0019,
+   "falchi_pop_mw": 0.583,
+   "pop_mag": 18.7016
+  },
+  "ETH": {
+   "name": "Ethiopia",
+   "pop_m": 125.9,
+   "pop_mw": 0.0562,
+   "land_mw": 0.0011,
+   "land_unpolluted": 0.9355,
+   "pop_unpolluted": 0.6685,
+   "falchi_pop_mw": 0.015,
+   "pop_mag": 21.9662
+  },
+  "JPN": {
+   "name": "Japan",
+   "pop_m": 122.8,
+   "pop_mw": 0.8225,
+   "land_mw": 0.1269,
+   "land_unpolluted": 0.0162,
+   "pop_unpolluted": 0.0001,
+   "falchi_pop_mw": 0.7040000000000001,
+   "pop_mag": 18.9843
+  },
+  "EGY": {
+   "name": "Egypt",
+   "pop_m": 113.3,
+   "pop_mw": 0.994,
+   "land_mw": 0.0674,
+   "land_unpolluted": 0.5545,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.975,
+   "pop_mag": 18.823
+  },
+  "PHL": {
+   "name": "Philippines",
+   "pop_m": 109.7,
+   "pop_mw": 0.3645,
+   "land_mw": 0.0232,
+   "land_unpolluted": 0.3363,
+   "pop_unpolluted": 0.0586,
+   "falchi_pop_mw": 0.265,
+   "pop_mag": 20.954
+  },
+  "COD": {
+   "name": "Dem. Rep. Congo",
+   "pop_m": 101.5,
+   "pop_mw": 0.12,
+   "land_mw": 0.0008,
+   "land_unpolluted": 0.9729,
+   "pop_unpolluted": 0.7094,
+   "falchi_pop_mw": null,
+   "pop_mag": 21.9951
+  },
+  "VNM": {
+   "name": "Vietnam",
+   "pop_m": 99.0,
+   "pop_mw": 0.5306,
+   "land_mw": 0.1091,
+   "land_unpolluted": 0.0925,
+   "pop_unpolluted": 0.0103,
+   "falchi_pop_mw": 0.252,
+   "pop_mag": 20.1755
+  },
+  "IRN": {
+   "name": "Iran",
+   "pop_m": 89.7,
+   "pop_mw": 0.8272,
+   "land_mw": 0.0836,
+   "land_unpolluted": 0.1498,
+   "pop_unpolluted": 0.0005,
+   "falchi_pop_mw": 0.64,
+   "pop_mag": 18.8284
+  },
+  "TUR": {
+   "name": "Turkey",
+   "pop_m": 84.5,
+   "pop_mw": 0.8656,
+   "land_mw": 0.1233,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.499,
+   "pop_mag": 18.4775
+  },
+  "DEU": {
+   "name": "Germany",
+   "pop_m": 83.9,
+   "pop_mw": 0.6005,
+   "land_mw": 0.136,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.41600000000000004,
+   "pop_mag": 19.992
+  },
+  "THA": {
+   "name": "Thailand",
+   "pop_m": 72.2,
+   "pop_mw": 0.5853,
+   "land_mw": 0.1017,
+   "land_unpolluted": 0.0091,
+   "pop_unpolluted": 0.0003,
+   "falchi_pop_mw": 0.32299999999999995,
+   "pop_mag": 19.7755
+  },
+  "GBR": {
+   "name": "United Kingdom",
+   "pop_m": 67.4,
+   "pop_mw": 0.8173,
+   "land_mw": 0.1918,
+   "land_unpolluted": 0.0888,
+   "pop_unpolluted": 0.0007,
+   "falchi_pop_mw": 0.77,
+   "pop_mag": 19.3241
+  },
+  "FRA": {
+   "name": "France",
+   "pop_m": 67.1,
+   "pop_mw": 0.5762,
+   "land_mw": 0.0621,
+   "land_unpolluted": 0.1213,
+   "pop_unpolluted": 0.0002,
+   "falchi_pop_mw": 0.589,
+   "pop_mag": 19.9346
+  },
+  "TZA": {
+   "name": "Tanzania",
+   "pop_m": 65.4,
+   "pop_mw": 0.1513,
+   "land_mw": 0.0031,
+   "land_unpolluted": 0.8371,
+   "pop_unpolluted": 0.3715,
+   "falchi_pop_mw": 0.08800000000000001,
+   "pop_mag": 21.8536
+  },
+  "ZAF": {
+   "name": "South Africa",
+   "pop_m": 61.5,
+   "pop_mw": 0.5479,
+   "land_mw": 0.0228,
+   "land_unpolluted": 0.473,
+   "pop_unpolluted": 0.0131,
+   "falchi_pop_mw": 0.461,
+   "pop_mag": 20.032
+  },
+  "ITA": {
+   "name": "Italy",
+   "pop_m": 58.1,
+   "pop_mw": 0.8962,
+   "land_mw": 0.4071,
+   "land_unpolluted": 0.0001,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.769,
+   "pop_mag": 19.1161
+  },
+  "KEN": {
+   "name": "Kenya",
+   "pop_m": 54.8,
+   "pop_mw": 0.2122,
+   "land_mw": 0.0053,
+   "land_unpolluted": 0.7499,
+   "pop_unpolluted": 0.0873,
+   "falchi_pop_mw": 0.091,
+   "pop_mag": 21.3871
+  },
+  "MMR": {
+   "name": "Myanmar",
+   "pop_m": 54.0,
+   "pop_mw": 0.196,
+   "land_mw": 0.0038,
+   "land_unpolluted": 0.6302,
+   "pop_unpolluted": 0.1292,
+   "falchi_pop_mw": 0.095,
+   "pop_mag": 21.5351
+  },
+  "COL": {
+   "name": "Colombia",
+   "pop_m": 51.4,
+   "pop_mw": 0.6705,
+   "land_mw": 0.0157,
+   "land_unpolluted": 0.5654,
+   "pop_unpolluted": 0.0148,
+   "falchi_pop_mw": 0.546,
+   "pop_mag": 18.9905
+  },
+  "KOR": {
+   "name": "South Korea",
+   "pop_m": 51.4,
+   "pop_mw": 0.968,
+   "land_mw": 0.4544,
+   "land_unpolluted": 0.0003,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.91,
+   "pop_mag": 17.9274
+  },
+  "SDN": {
+   "name": "Sudan",
+   "pop_m": 50.0,
+   "pop_mw": 0.3072,
+   "land_mw": 0.0016,
+   "land_unpolluted": 0.9283,
+   "pop_unpolluted": 0.2673,
+   "falchi_pop_mw": 0.11599999999999999,
+   "pop_mag": 21.1956
+  },
+  "UGA": {
+   "name": "Uganda",
+   "pop_m": 48.9,
+   "pop_mw": 0.1116,
+   "land_mw": 0.0055,
+   "land_unpolluted": 0.7568,
+   "pop_unpolluted": 0.4492,
+   "falchi_pop_mw": 0.040999999999999995,
+   "pop_mag": 21.9016
+  },
+  "DZA": {
+   "name": "Algeria",
+   "pop_m": 46.0,
+   "pop_mw": 0.7934,
+   "land_mw": 0.0274,
+   "land_unpolluted": 0.7122,
+   "pop_unpolluted": 0.0008,
+   "falchi_pop_mw": 0.521,
+   "pop_mag": 19.524
+  },
+  "ESP": {
+   "name": "Spain",
+   "pop_m": 45.7,
+   "pop_mw": 0.8505,
+   "land_mw": 0.1248,
+   "land_unpolluted": 0.0005,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.752,
+   "pop_mag": 18.7356
+  },
+  "ARG": {
+   "name": "Argentina",
+   "pop_m": 44.7,
+   "pop_mw": 0.8536,
+   "land_mw": 0.0197,
+   "land_unpolluted": 0.4594,
+   "pop_unpolluted": 0.0053,
+   "falchi_pop_mw": 0.758,
+   "pop_mag": 18.0411
+  },
+  "IRQ": {
+   "name": "Iraq",
+   "pop_m": 44.6,
+   "pop_mw": 0.9453,
+   "land_mw": 0.2255,
+   "land_unpolluted": 0.1262,
+   "pop_unpolluted": 0.0003,
+   "falchi_pop_mw": 0.762,
+   "pop_mag": 18.1917
+  },
+  "AFG": {
+   "name": "Afghanistan",
+   "pop_m": 41.1,
+   "pop_mw": 0.1664,
+   "land_mw": 0.0015,
+   "land_unpolluted": 0.8775,
+   "pop_unpolluted": 0.3699,
+   "falchi_pop_mw": 0.11599999999999999,
+   "pop_mag": 21.792
+  },
+  "POL": {
+   "name": "Poland",
+   "pop_m": 39.2,
+   "pop_mw": 0.5969,
+   "land_mw": 0.1167,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.501,
+   "pop_mag": 19.9052
+  },
+  "CAN": {
+   "name": "Canada",
+   "pop_m": 39.0,
+   "pop_mw": 0.8389,
+   "land_mw": 0.0074,
+   "land_unpolluted": 0.8332,
+   "pop_unpolluted": 0.0014,
+   "falchi_pop_mw": 0.762,
+   "pop_mag": 18.4023
+  },
+  "YEM": {
+   "name": "Yemen",
+   "pop_m": 38.5,
+   "pop_mw": 0.1882,
+   "land_mw": 0.007,
+   "land_unpolluted": 0.6621,
+   "pop_unpolluted": 0.099,
+   "falchi_pop_mw": 0.14400000000000002,
+   "pop_mag": 21.5702
+  },
+  "MAR": {
+   "name": "Morocco",
+   "pop_m": 37.6,
+   "pop_mw": 0.468,
+   "land_mw": 0.0294,
+   "land_unpolluted": 0.5036,
+   "pop_unpolluted": 0.0118,
+   "falchi_pop_mw": 0.493,
+   "pop_mag": 20.449
+  },
+  "AGO": {
+   "name": "Angola",
+   "pop_m": 36.9,
+   "pop_mw": 0.4618,
+   "land_mw": 0.0035,
+   "land_unpolluted": 0.9307,
+   "pop_unpolluted": 0.306,
+   "falchi_pop_mw": 0.152,
+   "pop_mag": 20.4732
+  },
+  "UKR": {
+   "name": "Ukraine",
+   "pop_m": 35.3,
+   "pop_mw": 0.1873,
+   "land_mw": 0.0053,
+   "land_unpolluted": 0.3582,
+   "pop_unpolluted": 0.0959,
+   "falchi_pop_mw": 0.299,
+   "pop_mag": 21.4738
+  },
+  "MYS": {
+   "name": "Malaysia",
+   "pop_m": 34.0,
+   "pop_mw": 0.7993,
+   "land_mw": 0.0992,
+   "land_unpolluted": 0.3684,
+   "pop_unpolluted": 0.0116,
+   "falchi_pop_mw": 0.679,
+   "pop_mag": 18.9597
+  },
+  "MOZ": {
+   "name": "Mozambique",
+   "pop_m": 33.8,
+   "pop_mw": 0.1753,
+   "land_mw": 0.0024,
+   "land_unpolluted": 0.9085,
+   "pop_unpolluted": 0.5028,
+   "falchi_pop_mw": 0.11900000000000001,
+   "pop_mag": 21.9178
+  },
+  "UZB": {
+   "name": "Uzbekistan",
+   "pop_m": 33.7,
+   "pop_mw": 0.3773,
+   "land_mw": 0.0242,
+   "land_unpolluted": 0.5767,
+   "pop_unpolluted": 0.0091,
+   "falchi_pop_mw": 0.19699999999999998,
+   "pop_mag": 20.5169
+  },
+  "PER": {
+   "name": "Peru",
+   "pop_m": 33.5,
+   "pop_mw": 0.6415,
+   "land_mw": 0.0079,
+   "land_unpolluted": 0.6328,
+   "pop_unpolluted": 0.0299,
+   "falchi_pop_mw": 0.483,
+   "pop_mag": 19.1737
+  },
+  "GHA": {
+   "name": "Ghana",
+   "pop_m": 33.3,
+   "pop_mw": 0.4436,
+   "land_mw": 0.033,
+   "land_unpolluted": 0.1307,
+   "pop_unpolluted": 0.0073,
+   "falchi_pop_mw": 0.214,
+   "pop_mag": 20.5265
+  },
+  "SAU": {
+   "name": "Saudi Arabia",
+   "pop_m": 32.3,
+   "pop_mw": 0.9423,
+   "land_mw": 0.0799,
+   "land_unpolluted": 0.2682,
+   "pop_unpolluted": 0.0002,
+   "falchi_pop_mw": 0.9590000000000001,
+   "pop_mag": 17.4555
+  },
+  "NPL": {
+   "name": "Nepal",
+   "pop_m": 31.8,
+   "pop_mw": 0.1528,
+   "land_mw": 0.0084,
+   "land_unpolluted": 0.3256,
+   "pop_unpolluted": 0.0296,
+   "falchi_pop_mw": 0.0,
+   "pop_mag": 21.0721
+  },
+  "CIV": {
+   "name": "Côte d'Ivoire",
+   "pop_m": 30.4,
+   "pop_mw": 0.3561,
+   "land_mw": 0.0098,
+   "land_unpolluted": 0.1209,
+   "pop_unpolluted": 0.0154,
+   "falchi_pop_mw": null,
+   "pop_mag": 21.2016
+  },
+  "MDG": {
+   "name": "Madagascar",
+   "pop_m": 30.4,
+   "pop_mw": 0.0625,
+   "land_mw": 0.0003,
+   "land_unpolluted": 0.981,
+   "pop_unpolluted": 0.6996,
+   "falchi_pop_mw": 0.0,
+   "pop_mag": 21.9894
+  },
+  "CMR": {
+   "name": "Cameroon",
+   "pop_m": 28.9,
+   "pop_mw": 0.2872,
+   "land_mw": 0.0023,
+   "land_unpolluted": 0.9193,
+   "pop_unpolluted": 0.3917,
+   "falchi_pop_mw": 0.19899999999999998,
+   "pop_mag": 21.7753
+  },
+  "VEN": {
+   "name": "Venezuela",
+   "pop_m": 28.5,
+   "pop_mw": 0.755,
+   "land_mw": 0.0281,
+   "land_unpolluted": 0.5584,
+   "pop_unpolluted": 0.0107,
+   "falchi_pop_mw": 0.73,
+   "pop_mag": 19.1886
+  },
+  "PRK": {
+   "name": "North Korea",
+   "pop_m": 27.1,
+   "pop_mw": 0.1035,
+   "land_mw": 0.0036,
+   "land_unpolluted": 0.49,
+   "pop_unpolluted": 0.1089,
+   "falchi_pop_mw": 0.011000000000000001,
+   "pop_mag": 21.6599
+  },
+  "AUS": {
+   "name": "Australia",
+   "pop_m": 26.0,
+   "pop_mw": 0.757,
+   "land_mw": 0.003,
+   "land_unpolluted": 0.9234,
+   "pop_unpolluted": 0.0143,
+   "falchi_pop_mw": 0.667,
+   "pop_mag": 19.0953
+  },
+  "NER": {
+   "name": "Niger",
+   "pop_m": 25.7,
+   "pop_mw": 0.0805,
+   "land_mw": 0.0005,
+   "land_unpolluted": 0.9795,
+   "pop_unpolluted": 0.6834,
+   "falchi_pop_mw": 0.065,
+   "pop_mag": 21.9673
+  },
+  "MLI": {
+   "name": "Mali",
+   "pop_m": 23.3,
+   "pop_mw": 0.2942,
+   "land_mw": 0.0008,
+   "land_unpolluted": 0.9684,
+   "pop_unpolluted": 0.4397,
+   "falchi_pop_mw": 0.126,
+   "pop_mag": 21.8128
+  },
+  "TWN": {
+   "name": "Taiwan",
+   "pop_m": 23.2,
+   "pop_mw": 0.9886,
+   "land_mw": 0.4571,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": null,
+   "pop_mag": 18.1622
+  },
+  "SYR": {
+   "name": "Syria",
+   "pop_m": 23.1,
+   "pop_mw": 0.4355,
+   "land_mw": 0.0201,
+   "land_unpolluted": 0.2197,
+   "pop_unpolluted": 0.0005,
+   "falchi_pop_mw": 0.215,
+   "pop_mag": 20.455
+  },
+  "BFA": {
+   "name": "Burkina Faso",
+   "pop_m": 22.8,
+   "pop_mw": 0.1664,
+   "land_mw": 0.0031,
+   "land_unpolluted": 0.8347,
+   "pop_unpolluted": 0.5189,
+   "falchi_pop_mw": 0.109,
+   "pop_mag": 21.9232
+  },
+  "LKA": {
+   "name": "Sri Lanka",
+   "pop_m": 22.7,
+   "pop_mw": 0.1741,
+   "land_mw": 0.0172,
+   "land_unpolluted": 0.1507,
+   "pop_unpolluted": 0.0111,
+   "falchi_pop_mw": 0.025,
+   "pop_mag": 21.3117
+  },
+  "ZMB": {
+   "name": "Zambia",
+   "pop_m": 20.9,
+   "pop_mw": 0.2289,
+   "land_mw": 0.0029,
+   "land_unpolluted": 0.8944,
+   "pop_unpolluted": 0.4134,
+   "falchi_pop_mw": 0.161,
+   "pop_mag": 21.832
+  },
+  "MWI": {
+   "name": "Malawi",
+   "pop_m": 20.1,
+   "pop_mw": 0.0919,
+   "land_mw": 0.0038,
+   "land_unpolluted": 0.7457,
+   "pop_unpolluted": 0.3899,
+   "falchi_pop_mw": 0.006999999999999999,
+   "pop_mag": 21.8763
+  },
+  "KAZ": {
+   "name": "Kazakhstan",
+   "pop_m": 20.0,
+   "pop_mw": 0.6163,
+   "land_mw": 0.006,
+   "land_unpolluted": 0.7147,
+   "pop_unpolluted": 0.0131,
+   "falchi_pop_mw": 0.45,
+   "pop_mag": 19.5762
+  },
+  "CHL": {
+   "name": "Chile",
+   "pop_m": 19.4,
+   "pop_mw": 0.8138,
+   "land_mw": 0.0202,
+   "land_unpolluted": 0.5545,
+   "pop_unpolluted": 0.0025,
+   "falchi_pop_mw": 0.7440000000000001,
+   "pop_mag": 18.6733
+  },
+  "ROU": {
+   "name": "Romania",
+   "pop_m": 18.9,
+   "pop_mw": 0.4433,
+   "land_mw": 0.0384,
+   "land_unpolluted": 0.001,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.32299999999999995,
+   "pop_mag": 20.498
+  },
+  "TCD": {
+   "name": "Chad",
+   "pop_m": 18.6,
+   "pop_mw": 0.0819,
+   "land_mw": 0.0002,
+   "land_unpolluted": 0.9899,
+   "pop_unpolluted": 0.7694,
+   "falchi_pop_mw": 0.075,
+   "pop_mag": 21.9918
+  },
+  "NLD": {
+   "name": "Netherlands",
+   "pop_m": 18.1,
+   "pop_mw": 0.8908,
+   "land_mw": 0.5479,
+   "land_unpolluted": 0.0005,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.812,
+   "pop_mag": 19.219
+  },
+  "ECU": {
+   "name": "Ecuador",
+   "pop_m": 17.9,
+   "pop_mw": 0.7293,
+   "land_mw": 0.064,
+   "land_unpolluted": 0.1593,
+   "pop_unpolluted": 0.0013,
+   "falchi_pop_mw": 0.5,
+   "pop_mag": 19.0286
+  },
+  "GTM": {
+   "name": "Guatemala",
+   "pop_m": 17.9,
+   "pop_mw": 0.2928,
+   "land_mw": 0.0241,
+   "land_unpolluted": 0.1541,
+   "pop_unpolluted": 0.0039,
+   "falchi_pop_mw": 0.20199999999999999,
+   "pop_mag": 20.9829
+  },
+  "KHM": {
+   "name": "Cambodia",
+   "pop_m": 17.3,
+   "pop_mw": 0.1775,
+   "land_mw": 0.0065,
+   "land_unpolluted": 0.427,
+   "pop_unpolluted": 0.0669,
+   "falchi_pop_mw": 0.098,
+   "pop_mag": 21.5936
+  },
+  "SEN": {
+   "name": "Senegal",
+   "pop_m": 17.2,
+   "pop_mw": 0.3861,
+   "land_mw": 0.0081,
+   "land_unpolluted": 0.6769,
+   "pop_unpolluted": 0.114,
+   "falchi_pop_mw": 0.155,
+   "pop_mag": 20.9927
+  },
+  "ZWE": {
+   "name": "Zimbabwe",
+   "pop_m": 16.1,
+   "pop_mw": 0.1816,
+   "land_mw": 0.003,
+   "land_unpolluted": 0.814,
+   "pop_unpolluted": 0.4375,
+   "falchi_pop_mw": 0.025,
+   "pop_mag": 21.8666
+  },
+  "RWA": {
+   "name": "Rwanda",
+   "pop_m": 15.0,
+   "pop_mw": 0.1455,
+   "land_mw": 0.021,
+   "land_unpolluted": 0.0817,
+   "pop_unpolluted": 0.0131,
+   "falchi_pop_mw": 0.005,
+   "pop_mag": 21.5639
+  },
+  "GIN": {
+   "name": "Guinea",
+   "pop_m": 14.1,
+   "pop_mw": 0.1648,
+   "land_mw": 0.0019,
+   "land_unpolluted": 0.9121,
+   "pop_unpolluted": 0.5569,
+   "falchi_pop_mw": 0.0,
+   "pop_mag": 21.9534
+  },
+  "BDI": {
+   "name": "Burundi",
+   "pop_m": 13.6,
+   "pop_mw": 0.0664,
+   "land_mw": 0.0038,
+   "land_unpolluted": 0.614,
+   "pop_unpolluted": 0.4241,
+   "falchi_pop_mw": 0.0,
+   "pop_mag": 21.9031
+  },
+  "BEN": {
+   "name": "Benin",
+   "pop_m": 13.3,
+   "pop_mw": 0.2283,
+   "land_mw": 0.0037,
+   "land_unpolluted": 0.7806,
+   "pop_unpolluted": 0.2118,
+   "falchi_pop_mw": 0.066,
+   "pop_mag": 21.4435
+  },
+  "SOM": {
+   "name": "Somalia",
+   "pop_m": 12.9,
+   "pop_mw": 0.0567,
+   "land_mw": 0.0001,
+   "land_unpolluted": 0.9891,
+   "pop_unpolluted": 0.5411,
+   "falchi_pop_mw": 0.0,
+   "pop_mag": 21.9551
+  },
+  "BOL": {
+   "name": "Bolivia",
+   "pop_m": 12.0,
+   "pop_mw": 0.6007,
+   "land_mw": 0.0054,
+   "land_unpolluted": 0.7765,
+   "pop_unpolluted": 0.0654,
+   "falchi_pop_mw": 0.489,
+   "pop_mag": 19.1663
+  },
+  "BEL": {
+   "name": "Belgium",
+   "pop_m": 11.8,
+   "pop_mw": 0.9251,
+   "land_mw": 0.6145,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.868,
+   "pop_mag": 19.3284
+  },
+  "TUN": {
+   "name": "Tunisia",
+   "pop_m": 11.8,
+   "pop_mw": 0.6205,
+   "land_mw": 0.0583,
+   "land_unpolluted": 0.1846,
+   "pop_unpolluted": 0.0001,
+   "falchi_pop_mw": 0.485,
+   "pop_mag": 19.707
+  },
+  "JOR": {
+   "name": "Jordan",
+   "pop_m": 11.5,
+   "pop_mw": 0.9856,
+   "land_mw": 0.1569,
+   "land_unpolluted": 0.0582,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.805,
+   "pop_mag": 17.8548
+  },
+  "DOM": {
+   "name": "Dominican Rep.",
+   "pop_m": 11.2,
+   "pop_mw": 0.6973,
+   "land_mw": 0.1139,
+   "land_unpolluted": 0.0074,
+   "pop_unpolluted": 0.0001,
+   "falchi_pop_mw": null,
+   "pop_mag": 19.2866
+  },
+  "HTI": {
+   "name": "Haiti",
+   "pop_m": 11.2,
+   "pop_mw": 0.1239,
+   "land_mw": 0.0034,
+   "land_unpolluted": 0.6472,
+   "pop_unpolluted": 0.4024,
+   "falchi_pop_mw": 0.192,
+   "pop_mag": 21.8728
+  },
+  "CUB": {
+   "name": "Cuba",
+   "pop_m": 11.0,
+   "pop_mw": 0.3751,
+   "land_mw": 0.014,
+   "land_unpolluted": 0.1754,
+   "pop_unpolluted": 0.0046,
+   "falchi_pop_mw": 0.395,
+   "pop_mag": 20.7003
+  },
+  "SSD": {
+   "name": "S. Sudan",
+   "pop_m": 10.9,
+   "pop_mw": 0.0157,
+   "land_mw": 0.0001,
+   "land_unpolluted": 0.99,
+   "pop_unpolluted": 0.8245,
+   "falchi_pop_mw": null,
+   "pop_mag": 21.9971
+  },
+  "HND": {
+   "name": "Honduras",
+   "pop_m": 10.7,
+   "pop_mw": 0.2698,
+   "land_mw": 0.0147,
+   "land_unpolluted": 0.2732,
+   "pop_unpolluted": 0.024,
+   "falchi_pop_mw": 0.332,
+   "pop_mag": 21.1721
+  },
+  "CZE": {
+   "name": "Czechia",
+   "pop_m": 10.5,
+   "pop_mw": 0.5707,
+   "land_mw": 0.1237,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.428,
+   "pop_mag": 20.082
+  },
+  "SWE": {
+   "name": "Sweden",
+   "pop_m": 10.3,
+   "pop_mw": 0.7564,
+   "land_mw": 0.0424,
+   "land_unpolluted": 0.1328,
+   "pop_unpolluted": 0.0003,
+   "falchi_pop_mw": 0.62,
+   "pop_mag": 19.1961
+  },
+  "TJK": {
+   "name": "Tajikistan",
+   "pop_m": 10.3,
+   "pop_mw": 0.3271,
+   "land_mw": 0.0107,
+   "land_unpolluted": 0.482,
+   "pop_unpolluted": 0.0079,
+   "falchi_pop_mw": 0.141,
+   "pop_mag": 20.7003
+  },
+  "ARE": {
+   "name": "United Arab Emirates",
+   "pop_m": 10.3,
+   "pop_mw": 0.9904,
+   "land_mw": 0.4075,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.993,
+   "pop_mag": 17.4801
+  },
+  "PRT": {
+   "name": "Portugal",
+   "pop_m": 10.2,
+   "pop_mw": 0.8583,
+   "land_mw": 0.2306,
+   "land_unpolluted": 0.0057,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.767,
+   "pop_mag": 19.1232
+  },
+  "GRC": {
+   "name": "Greece",
+   "pop_m": 10.2,
+   "pop_mw": 0.7225,
+   "land_mw": 0.0775,
+   "land_unpolluted": 0.002,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.66,
+   "pop_mag": 19.0953
+  },
+  "AZE": {
+   "name": "Azerbaijan",
+   "pop_m": 10.1,
+   "pop_mw": 0.4793,
+   "land_mw": 0.038,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.34600000000000003,
+   "pop_mag": 20.3851
+  },
+  "HKG": {
+   "name": "Hong Kong",
+   "pop_m": 10.1,
+   "pop_mw": 1.0,
+   "land_mw": 1.0,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": null,
+   "pop_mag": 17.9227
+  },
+  "PNG": {
+   "name": "Papua New Guinea",
+   "pop_m": 10.0,
+   "pop_mw": 0.0632,
+   "land_mw": 0.0008,
+   "land_unpolluted": 0.9627,
+   "pop_unpolluted": 0.6922,
+   "falchi_pop_mw": 0.053,
+   "pop_mag": 21.9804
+  },
+  "HUN": {
+   "name": "Hungary",
+   "pop_m": 9.7,
+   "pop_mw": 0.4833,
+   "land_mw": 0.0557,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.385,
+   "pop_mag": 20.3409
+  },
+  "AUT": {
+   "name": "Austria",
+   "pop_m": 9.5,
+   "pop_mw": 0.493,
+   "land_mw": 0.0574,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.35700000000000004,
+   "pop_mag": 20.2881
+  },
+  "CHE": {
+   "name": "Switzerland",
+   "pop_m": 9.2,
+   "pop_mw": 0.5311,
+   "land_mw": 0.0971,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.34,
+   "pop_mag": 20.2134
+  },
+  "BLR": {
+   "name": "Belarus",
+   "pop_m": 9.1,
+   "pop_mw": 0.5531,
+   "land_mw": 0.0185,
+   "land_unpolluted": 0.034,
+   "pop_unpolluted": 0.0014,
+   "falchi_pop_mw": 0.485,
+   "pop_mag": 20.0609
+  },
+  "TGO": {
+   "name": "Togo",
+   "pop_m": 8.8,
+   "pop_mw": 0.2709,
+   "land_mw": 0.009,
+   "land_unpolluted": 0.4425,
+   "pop_unpolluted": 0.1374,
+   "falchi_pop_mw": 0.22699999999999998,
+   "pop_mag": 21.4361
+  },
+  "ISR": {
+   "name": "Israel",
+   "pop_m": 8.3,
+   "pop_mw": 0.9982,
+   "land_mw": 0.6069,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.976,
+   "pop_mag": 17.7624
+  },
+  "SLE": {
+   "name": "Sierra Leone",
+   "pop_m": 8.1,
+   "pop_mw": 0.0346,
+   "land_mw": 0.0009,
+   "land_unpolluted": 0.9389,
+   "pop_unpolluted": 0.6123,
+   "falchi_pop_mw": 0.0,
+   "pop_mag": 21.9723
+  },
+  "KGZ": {
+   "name": "Kyrgyzstan",
+   "pop_m": 8.0,
+   "pop_mw": 0.4219,
+   "land_mw": 0.0133,
+   "land_unpolluted": 0.2851,
+   "pop_unpolluted": 0.0011,
+   "falchi_pop_mw": 0.18600000000000003,
+   "pop_mag": 20.4371
+  },
+  "TKM": {
+   "name": "Turkmenistan",
+   "pop_m": 7.5,
+   "pop_mw": 0.5582,
+   "land_mw": 0.018,
+   "land_unpolluted": 0.5451,
+   "pop_unpolluted": 0.0023,
+   "falchi_pop_mw": 0.473,
+   "pop_mag": 20.0992
+  },
+  "LAO": {
+   "name": "Laos",
+   "pop_m": 7.3,
+   "pop_mw": 0.0881,
+   "land_mw": 0.0031,
+   "land_unpolluted": 0.5268,
+   "pop_unpolluted": 0.2109,
+   "falchi_pop_mw": 0.083,
+   "pop_mag": 21.7997
+  },
+  "LBY": {
+   "name": "Libya",
+   "pop_m": 7.2,
+   "pop_mw": 0.8246,
+   "land_mw": 0.0143,
+   "land_unpolluted": 0.795,
+   "pop_unpolluted": 0.0009,
+   "falchi_pop_mw": 0.847,
+   "pop_mag": 18.9239
+  },
+  "PRY": {
+   "name": "Paraguay",
+   "pop_m": 7.1,
+   "pop_mw": 0.7151,
+   "land_mw": 0.0184,
+   "land_unpolluted": 0.5364,
+   "pop_unpolluted": 0.0087,
+   "falchi_pop_mw": 0.55,
+   "pop_mag": 18.55
+  },
+  "BGR": {
+   "name": "Bulgaria",
+   "pop_m": 7.0,
+   "pop_mw": 0.5136,
+   "land_mw": 0.0306,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.37,
+   "pop_mag": 20.2134
+  },
+  "SRB": {
+   "name": "Serbia",
+   "pop_m": 6.9,
+   "pop_mw": 0.6788,
+   "land_mw": 0.1315,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.39399999999999996,
+   "pop_mag": 19.6312
+  },
+  "NIC": {
+   "name": "Nicaragua",
+   "pop_m": 6.7,
+   "pop_mw": 0.2493,
+   "land_mw": 0.0056,
+   "land_unpolluted": 0.5899,
+   "pop_unpolluted": 0.1635,
+   "falchi_pop_mw": 0.243,
+   "pop_mag": 21.3351
+  },
+  "SLV": {
+   "name": "El Salvador",
+   "pop_m": 6.2,
+   "pop_mw": 0.3877,
+   "land_mw": 0.0494,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.242,
+   "pop_mag": 20.5624
+  },
+  "PSE": {
+   "name": "Palestine",
+   "pop_m": 6.1,
+   "pop_mw": 1.0,
+   "land_mw": 0.9863,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": null,
+   "pop_mag": 18.5881
+  },
+  "DNK": {
+   "name": "Denmark",
+   "pop_m": 5.7,
+   "pop_mw": 0.5354,
+   "land_mw": 0.061,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.385,
+   "pop_mag": 20.1167
+  },
+  "SGP": {
+   "name": "Singapore",
+   "pop_m": 5.6,
+   "pop_mw": 1.0,
+   "land_mw": 1.0,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 1.0,
+   "pop_mag": 17.4494
+  },
+  "LBN": {
+   "name": "Lebanon",
+   "pop_m": 5.6,
+   "pop_mw": 0.7527,
+   "land_mw": 0.3573,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.63,
+   "pop_mag": 19.6482
+  },
+  "FIN": {
+   "name": "Finland",
+   "pop_m": 5.5,
+   "pop_mw": 0.7875,
+   "land_mw": 0.0607,
+   "land_unpolluted": 0.1208,
+   "pop_unpolluted": 0.0005,
+   "falchi_pop_mw": 0.68,
+   "pop_mag": 18.8177
+  },
+  "SVK": {
+   "name": "Slovakia",
+   "pop_m": 5.5,
+   "pop_mw": 0.3559,
+   "land_mw": 0.0544,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.23800000000000002,
+   "pop_mag": 20.603
+  },
+  "LBR": {
+   "name": "Liberia",
+   "pop_m": 5.5,
+   "pop_mw": 0.1953,
+   "land_mw": 0.0015,
+   "land_unpolluted": 0.9479,
+   "pop_unpolluted": 0.4666,
+   "falchi_pop_mw": 0.0,
+   "pop_mag": 21.8659
+  },
+  "MRT": {
+   "name": "Mauritania",
+   "pop_m": 5.3,
+   "pop_mw": 0.2947,
+   "land_mw": 0.0005,
+   "land_unpolluted": 0.9842,
+   "pop_unpolluted": 0.4573,
+   "falchi_pop_mw": 0.214,
+   "pop_mag": 21.8833
+  },
+  "COG": {
+   "name": "Congo",
+   "pop_m": 5.2,
+   "pop_mw": 0.5829,
+   "land_mw": 0.0046,
+   "land_unpolluted": 0.9357,
+   "pop_unpolluted": 0.151,
+   "falchi_pop_mw": 0.49,
+   "pop_mag": 19.5291
+  },
+  "NOR": {
+   "name": "Norway",
+   "pop_m": 5.1,
+   "pop_mw": 0.783,
+   "land_mw": 0.0387,
+   "land_unpolluted": 0.241,
+   "pop_unpolluted": 0.0002,
+   "falchi_pop_mw": 0.691,
+   "pop_mag": 19.1445
+  },
+  "NZL": {
+   "name": "New Zealand",
+   "pop_m": 5.1,
+   "pop_mw": 0.6171,
+   "land_mw": 0.0109,
+   "land_unpolluted": 0.6991,
+   "pop_unpolluted": 0.0249,
+   "falchi_pop_mw": 0.564,
+   "pop_mag": 19.9235
+  },
+  "IRL": {
+   "name": "Ireland",
+   "pop_m": 5.0,
+   "pop_mw": 0.5183,
+   "land_mw": 0.0399,
+   "land_unpolluted": 0.0112,
+   "pop_unpolluted": 0.0002,
+   "falchi_pop_mw": 0.452,
+   "pop_mag": 20.2182
+  },
+  "CRI": {
+   "name": "Costa Rica",
+   "pop_m": 5.0,
+   "pop_mw": 0.6144,
+   "land_mw": 0.0469,
+   "land_unpolluted": 0.012,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.529,
+   "pop_mag": 19.6772
+  },
+  "OMN": {
+   "name": "Oman",
+   "pop_m": 4.9,
+   "pop_mw": 0.8409,
+   "land_mw": 0.0615,
+   "land_unpolluted": 0.3094,
+   "pop_unpolluted": 0.0007,
+   "falchi_pop_mw": 0.805,
+   "pop_mag": 19.1302
+  },
+  "CAF": {
+   "name": "Central African Rep.",
+   "pop_m": 4.9,
+   "pop_mw": 0.0,
+   "land_mw": 0.0,
+   "land_unpolluted": 0.9967,
+   "pop_unpolluted": 0.6769,
+   "falchi_pop_mw": null,
+   "pop_mag": 21.9964
+  },
+  "KWT": {
+   "name": "Kuwait",
+   "pop_m": 4.7,
+   "pop_mw": 0.9991,
+   "land_mw": 0.565,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 1.0,
+   "pop_mag": 16.7807
+  },
+  "PAN": {
+   "name": "Panama",
+   "pop_m": 4.4,
+   "pop_mw": 0.5952,
+   "land_mw": 0.0278,
+   "land_unpolluted": 0.3388,
+   "pop_unpolluted": 0.0339,
+   "falchi_pop_mw": 0.541,
+   "pop_mag": 19.62
+  },
+  "SOL": {
+   "name": "Somaliland",
+   "pop_m": 3.8,
+   "pop_mw": 0.2007,
+   "land_mw": 0.0011,
+   "land_unpolluted": 0.9569,
+   "pop_unpolluted": 0.4019,
+   "falchi_pop_mw": null,
+   "pop_mag": 21.7753
+  },
+  "GEO": {
+   "name": "Georgia",
+   "pop_m": 3.8,
+   "pop_mw": 0.5435,
+   "land_mw": 0.0319,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.36700000000000005,
+   "pop_mag": 19.9999
+  },
+  "HRV": {
+   "name": "Croatia",
+   "pop_m": 3.7,
+   "pop_mw": 0.5744,
+   "land_mw": 0.0719,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.505,
+   "pop_mag": 20.0118
+  },
+  "URY": {
+   "name": "Uruguay",
+   "pop_m": 3.5,
+   "pop_mw": 0.832,
+   "land_mw": 0.0207,
+   "land_unpolluted": 0.343,
+   "pop_unpolluted": 0.0043,
+   "falchi_pop_mw": 0.753,
+   "pop_mag": 18.8611
+  },
+  "ERI": {
+   "name": "Eritrea",
+   "pop_m": 3.5,
+   "pop_mw": 0.0,
+   "land_mw": 0.0,
+   "land_unpolluted": 0.9819,
+   "pop_unpolluted": 0.722,
+   "falchi_pop_mw": 0.0,
+   "pop_mag": 21.9859
+  },
+  "MNG": {
+   "name": "Mongolia",
+   "pop_m": 3.4,
+   "pop_mw": 0.4981,
+   "land_mw": 0.0009,
+   "land_unpolluted": 0.9557,
+   "pop_unpolluted": 0.1032,
+   "falchi_pop_mw": 0.36700000000000005,
+   "pop_mag": 20.2778
+  },
+  "BIH": {
+   "name": "Bosnia and Herz.",
+   "pop_m": 3.3,
+   "pop_mw": 0.4037,
+   "land_mw": 0.0432,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.262,
+   "pop_mag": 20.4431
+  },
+  "PRI": {
+   "name": "Puerto Rico",
+   "pop_m": 3.2,
+   "pop_mw": 0.8857,
+   "land_mw": 0.5209,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.71,
+   "pop_mag": 19.4692
+  },
+  "MDA": {
+   "name": "Moldova",
+   "pop_m": 3.2,
+   "pop_mw": 0.235,
+   "land_mw": 0.0164,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.18600000000000003,
+   "pop_mag": 21.325
+  },
+  "NAM": {
+   "name": "Namibia",
+   "pop_m": 3.0,
+   "pop_mw": 0.3015,
+   "land_mw": 0.0008,
+   "land_unpolluted": 0.9467,
+   "pop_unpolluted": 0.2079,
+   "falchi_pop_mw": 0.174,
+   "pop_mag": 21.235
+  },
+  "ARM": {
+   "name": "Armenia",
+   "pop_m": 2.9,
+   "pop_mw": 0.5846,
+   "land_mw": 0.0384,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.313,
+   "pop_mag": 20.032
+  },
+  "QAT": {
+   "name": "Qatar",
+   "pop_m": 2.9,
+   "pop_mw": 0.9995,
+   "land_mw": 0.7825,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.998,
+   "pop_mag": 16.2738
+  },
+  "LTU": {
+   "name": "Lithuania",
+   "pop_m": 2.8,
+   "pop_mw": 0.5111,
+   "land_mw": 0.0263,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.419,
+   "pop_mag": 20.1709
+  },
+  "JAM": {
+   "name": "Jamaica",
+   "pop_m": 2.8,
+   "pop_mw": 0.5027,
+   "land_mw": 0.0899,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.47200000000000003,
+   "pop_mag": 20.2377
+  },
+  "ALB": {
+   "name": "Albania",
+   "pop_m": 2.8,
+   "pop_mw": 0.6334,
+   "land_mw": 0.0686,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.371,
+   "pop_mag": 19.7755
+  },
+  "GMB": {
+   "name": "Gambia",
+   "pop_m": 2.7,
+   "pop_mw": 0.2685,
+   "land_mw": 0.0163,
+   "land_unpolluted": 0.4243,
+   "pop_unpolluted": 0.1416,
+   "falchi_pop_mw": null,
+   "pop_mag": 21.3695
+  },
+  "GAB": {
+   "name": "Gabon",
+   "pop_m": 2.5,
+   "pop_mw": 0.4167,
+   "land_mw": 0.0034,
+   "land_unpolluted": 0.9156,
+   "pop_unpolluted": 0.2057,
+   "falchi_pop_mw": 0.387,
+   "pop_mag": 20.8671
+  },
+  "BWA": {
+   "name": "Botswana",
+   "pop_m": 2.4,
+   "pop_mw": 0.2789,
+   "land_mw": 0.0015,
+   "land_unpolluted": 0.9046,
+   "pop_unpolluted": 0.0808,
+   "falchi_pop_mw": 0.115,
+   "pop_mag": 20.8938
+  },
+  "LSO": {
+   "name": "Lesotho",
+   "pop_m": 2.3,
+   "pop_mw": 0.1444,
+   "land_mw": 0.0053,
+   "land_unpolluted": 0.489,
+   "pop_unpolluted": 0.1613,
+   "falchi_pop_mw": 0.0,
+   "pop_mag": 21.6935
+  },
+  "SVN": {
+   "name": "Slovenia",
+   "pop_m": 2.3,
+   "pop_mw": 0.4087,
+   "land_mw": 0.0698,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.27,
+   "pop_mag": 20.4611
+  },
+  "GNB": {
+   "name": "Guinea-Bissau",
+   "pop_m": 2.1,
+   "pop_mw": 0.1077,
+   "land_mw": 0.0006,
+   "land_unpolluted": 0.9662,
+   "pop_unpolluted": 0.6333,
+   "falchi_pop_mw": 0.0,
+   "pop_mag": 21.9732
+  },
+  "LVA": {
+   "name": "Latvia",
+   "pop_m": 1.9,
+   "pop_mw": 0.5456,
+   "land_mw": 0.0199,
+   "land_unpolluted": 0.0142,
+   "pop_unpolluted": 0.001,
+   "falchi_pop_mw": 0.46799999999999997,
+   "pop_mag": 20.0279
+  },
+  "MKD": {
+   "name": "North Macedonia",
+   "pop_m": 1.8,
+   "pop_mw": 0.5616,
+   "land_mw": 0.0341,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.424,
+   "pop_mag": 20.1344
+  },
+  "GNQ": {
+   "name": "Eq. Guinea",
+   "pop_m": 1.8,
+   "pop_mw": 0.4319,
+   "land_mw": 0.011,
+   "land_unpolluted": 0.753,
+   "pop_unpolluted": 0.2114,
+   "falchi_pop_mw": null,
+   "pop_mag": 20.7785
+  },
+  "BHR": {
+   "name": "Bahrain",
+   "pop_m": 1.5,
+   "pop_mw": 1.0,
+   "land_mw": 0.8765,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": null,
+   "pop_mag": 16.8691
+  },
+  "TTO": {
+   "name": "Trinidad and Tobago",
+   "pop_m": 1.5,
+   "pop_mw": 0.9589,
+   "land_mw": 0.5203,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.943,
+   "pop_mag": 18.5092
+  },
+  "TLS": {
+   "name": "Timor-Leste",
+   "pop_m": 1.4,
+   "pop_mw": 0.2109,
+   "land_mw": 0.0038,
+   "land_unpolluted": 0.6351,
+   "pop_unpolluted": 0.2584,
+   "falchi_pop_mw": 0.044000000000000004,
+   "pop_mag": 21.8036
+  },
+  "EST": {
+   "name": "Estonia",
+   "pop_m": 1.3,
+   "pop_mw": 0.6439,
+   "land_mw": 0.03,
+   "land_unpolluted": 0.0346,
+   "pop_unpolluted": 0.0015,
+   "falchi_pop_mw": 0.605,
+   "pop_mag": 19.4405
+  },
+  "SWZ": {
+   "name": "eSwatini",
+   "pop_m": 1.3,
+   "pop_mw": 0.1554,
+   "land_mw": 0.0181,
+   "land_unpolluted": 0.0,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.098,
+   "pop_mag": 21.325
+  },
+  "MUS": {
+   "name": "Mauritius",
+   "pop_m": 1.2,
+   "pop_mw": 0.5529,
+   "land_mw": 0.1816,
+   "land_unpolluted": 0.0545,
+   "pop_unpolluted": 0.0,
+   "falchi_pop_mw": 0.299,
+   "pop_mag": 20.1389
+  },
+  "DJI": {
+   "name": "Djibouti",
+   "pop_m": 1.1,
+   "pop_mw": 0.6164,
+   "land_mw": 0.009,
+   "land_unpolluted": 0.85,
+   "pop_unpolluted": 0.1452,
+   "falchi_pop_mw": 0.0,
+   "pop_mag": 19.5709
+  }
+ },
+ "countries_brightest": [
+  {
+   "iso3": "HKG",
+   "name": "Hong Kong",
+   "pop_mw": 1.0
+  },
+  {
+   "iso3": "SGP",
+   "name": "Singapore",
+   "pop_mw": 1.0
+  },
+  {
+   "iso3": "PSE",
+   "name": "Palestine",
+   "pop_mw": 1.0
+  },
+  {
+   "iso3": "BHR",
+   "name": "Bahrain",
+   "pop_mw": 1.0
+  },
+  {
+   "iso3": "QAT",
+   "name": "Qatar",
+   "pop_mw": 0.9995
+  },
+  {
+   "iso3": "KWT",
+   "name": "Kuwait",
+   "pop_mw": 0.9991
+  },
+  {
+   "iso3": "ISR",
+   "name": "Israel",
+   "pop_mw": 0.9982
+  },
+  {
+   "iso3": "EGY",
+   "name": "Egypt",
+   "pop_mw": 0.994
+  },
+  {
+   "iso3": "ARE",
+   "name": "United Arab Emirates",
+   "pop_mw": 0.9904
+  },
+  {
+   "iso3": "TWN",
+   "name": "Taiwan",
+   "pop_mw": 0.9886
+  },
+  {
+   "iso3": "JOR",
+   "name": "Jordan",
+   "pop_mw": 0.9856
+  },
+  {
+   "iso3": "KOR",
+   "name": "South Korea",
+   "pop_mw": 0.968
+  }
+ ],
+ "countries_darkest": [
+  {
+   "iso3": "ERI",
+   "name": "Eritrea",
+   "pop_mw": 0.0,
+   "pop_m": 3.5
+  },
+  {
+   "iso3": "CAF",
+   "name": "Central African Rep.",
+   "pop_mw": 0.0,
+   "pop_m": 4.9
+  },
+  {
+   "iso3": "SSD",
+   "name": "S. Sudan",
+   "pop_mw": 0.0157,
+   "pop_m": 10.9
+  },
+  {
+   "iso3": "SLE",
+   "name": "Sierra Leone",
+   "pop_mw": 0.0346,
+   "pop_m": 8.1
+  },
+  {
+   "iso3": "ETH",
+   "name": "Ethiopia",
+   "pop_mw": 0.0562,
+   "pop_m": 125.9
+  },
+  {
+   "iso3": "SOM",
+   "name": "Somalia",
+   "pop_mw": 0.0567,
+   "pop_m": 12.9
+  },
+  {
+   "iso3": "MDG",
+   "name": "Madagascar",
+   "pop_mw": 0.0625,
+   "pop_m": 30.4
+  },
+  {
+   "iso3": "PNG",
+   "name": "Papua New Guinea",
+   "pop_mw": 0.0632,
+   "pop_m": 10.0
+  },
+  {
+   "iso3": "BDI",
+   "name": "Burundi",
+   "pop_mw": 0.0664,
+   "pop_m": 13.6
+  },
+  {
+   "iso3": "NER",
+   "name": "Niger",
+   "pop_mw": 0.0805,
+   "pop_m": 25.7
+  },
+  {
+   "iso3": "TCD",
+   "name": "Chad",
+   "pop_mw": 0.0819,
+   "pop_m": 18.6
+  },
+  {
+   "iso3": "LAO",
+   "name": "Laos",
+   "pop_mw": 0.0881,
+   "pop_m": 7.3
+  }
+ ],
+ "countries_mw_over_half": 82,
+ "countries_mw_over_90": 16,
+ "megacities": [
+  {
+   "name": "Shanghai",
+   "cc": "CN",
+   "pop_m": 24.9,
+   "mw_km": 54,
+   "dark_km": 465
+  },
+  {
+   "name": "Chongqing",
+   "cc": "CN",
+   "pop_m": 22.0,
+   "mw_km": 25,
+   "dark_km": 316
+  },
+  {
+   "name": "Chengdu",
+   "cc": "CN",
+   "pop_m": 20.9,
+   "mw_km": 36,
+   "dark_km": 200
+  },
+  {
+   "name": "Beijing",
+   "cc": "CN",
+   "pop_m": 19.0,
+   "mw_km": 41,
+   "dark_km": 268
+  },
+  {
+   "name": "Guangzhou",
+   "cc": "CN",
+   "pop_m": 18.7,
+   "mw_km": 63,
+   "dark_km": 521
+  },
+  {
+   "name": "Shenzhen",
+   "cc": "CN",
+   "pop_m": 17.5,
+   "mw_km": 43,
+   "dark_km": 626
+  },
+  {
+   "name": "Kinshasa",
+   "cc": "CD",
+   "pop_m": 16.0,
+   "mw_km": 11,
+   "dark_km": 67
+  },
+  {
+   "name": "Istanbul",
+   "cc": "TR",
+   "pop_m": 15.7,
+   "mw_km": 37,
+   "dark_km": 429
+  },
+  {
+   "name": "Lagos",
+   "cc": "NG",
+   "pop_m": 15.4,
+   "mw_km": 28,
+   "dark_km": 133
+  },
+  {
+   "name": "Ho Chi Minh City",
+   "cc": "VN",
+   "pop_m": 14.0,
+   "mw_km": 35,
+   "dark_km": 213
+  },
+  {
+   "name": "Tianjin",
+   "cc": "CN",
+   "pop_m": 13.9,
+   "mw_km": 44,
+   "dark_km": 362
+  },
+  {
+   "name": "Wuhan",
+   "cc": "CN",
+   "pop_m": 13.7,
+   "mw_km": 35,
+   "dark_km": 396
+  },
+  {
+   "name": "Lahore",
+   "cc": "PK",
+   "pop_m": 13.0,
+   "mw_km": 21,
+   "dark_km": 276
+  },
+  {
+   "name": "Xi’an",
+   "cc": "CN",
+   "pop_m": 13.0,
+   "mw_km": 31,
+   "dark_km": 254
+  },
+  {
+   "name": "Mumbai",
+   "cc": "IN",
+   "pop_m": 12.7,
+   "mw_km": 19,
+   "dark_km": 694
+  },
+  {
+   "name": "São Paulo",
+   "cc": "BR",
+   "pop_m": 12.4,
+   "mw_km": 48,
+   "dark_km": 639
+  },
+  {
+   "name": "Mexico City",
+   "cc": "MX",
+   "pop_m": 12.3,
+   "mw_km": 55,
+   "dark_km": 259
+  },
+  {
+   "name": "Hangzhou",
+   "cc": "CN",
+   "pop_m": 11.9,
+   "mw_km": 46,
+   "dark_km": 593
+  },
+  {
+   "name": "Karachi",
+   "cc": "PK",
+   "pop_m": 11.6,
+   "mw_km": 22,
+   "dark_km": 122
+  },
+  {
+   "name": "Delhi",
+   "cc": "IN",
+   "pop_m": 11.0,
+   "mw_km": 58,
+   "dark_km": 326
+  },
+  {
+   "name": "Moscow",
+   "cc": "RU",
+   "pop_m": 10.4,
+   "mw_km": 80,
+   "dark_km": 342
+  },
+  {
+   "name": "Dhaka",
+   "cc": "BD",
+   "pop_m": 10.4,
+   "mw_km": 13,
+   "dark_km": 230
+  },
+  {
+   "name": "Seoul",
+   "cc": "KR",
+   "pop_m": 10.3,
+   "mw_km": 46,
+   "dark_km": 227
+  },
+  {
+   "name": "Harbin",
+   "cc": "CN",
+   "pop_m": 10.0,
+   "mw_km": 20,
+   "dark_km": 157
+  },
+  {
+   "name": "Tokyo",
+   "cc": "JP",
+   "pop_m": 9.7,
+   "mw_km": 50,
+   "dark_km": 278
+  },
+  {
+   "name": "Dongguan",
+   "cc": "CN",
+   "pop_m": 9.6,
+   "mw_km": 44,
+   "dark_km": 570
+  },
+  {
+   "name": "Cairo",
+   "cc": "EG",
+   "pop_m": 9.6,
+   "mw_km": 53,
+   "dark_km": 280
+  },
+  {
+   "name": "Hefei",
+   "cc": "CN",
+   "pop_m": 9.5,
+   "mw_km": 31,
+   "dark_km": 658
+  },
+  {
+   "name": "Johannesburg",
+   "cc": "ZA",
+   "pop_m": 9.4,
+   "mw_km": 36,
+   "dark_km": 262
+  },
+  {
+   "name": "Weifang",
+   "cc": "CN",
+   "pop_m": 9.4,
+   "mw_km": 21,
+   "dark_km": 566
+  },
+  {
+   "name": "Nanjing",
+   "cc": "CN",
+   "pop_m": 9.3,
+   "mw_km": 39,
+   "dark_km": 628
+  },
+  {
+   "name": "Shenyang",
+   "cc": "CN",
+   "pop_m": 9.1,
+   "mw_km": 29,
+   "dark_km": 216
+  },
+  {
+   "name": "London",
+   "cc": "GB",
+   "pop_m": 9.0,
+   "mw_km": 36,
+   "dark_km": 469
+  },
+  {
+   "name": "New York City",
+   "cc": "US",
+   "pop_m": 8.8,
+   "mw_km": 74,
+   "dark_km": 657
+  },
+  {
+   "name": "Jakarta",
+   "cc": "ID",
+   "pop_m": 8.5,
+   "mw_km": 30,
+   "dark_km": 255
+  },
+  {
+   "name": "Bengaluru",
+   "cc": "IN",
+   "pop_m": 8.5,
+   "mw_km": 41,
+   "dark_km": 490
+  },
+  {
+   "name": "Jinan",
+   "cc": "CN",
+   "pop_m": 8.4,
+   "mw_km": 26,
+   "dark_km": 631
+  },
+  {
+   "name": "Hanoi",
+   "cc": "VN",
+   "pop_m": 8.1,
+   "mw_km": 28,
+   "dark_km": 163
+  },
+  {
+   "name": "Taipei",
+   "cc": "TW",
+   "pop_m": 7.9,
+   "mw_km": 21,
+   "dark_km": 212
+  },
+  {
+   "name": "Lima",
+   "cc": "PE",
+   "pop_m": 7.7,
+   "mw_km": 26,
+   "dark_km": 210
+  }
+ ],
+ "cities_farthest": [
+  {
+   "name": "Songjiang",
+   "cc": "CN",
+   "pop_m": 2.0,
+   "mw_km": 84
+  },
+  {
+   "name": "Kunshan",
+   "cc": "CN",
+   "pop_m": 2.1,
+   "mw_km": 82
+  },
+  {
+   "name": "Fengxiang",
+   "cc": "CN",
+   "pop_m": 1.1,
+   "mw_km": 82
+  },
+  {
+   "name": "Moscow",
+   "cc": "RU",
+   "pop_m": 10.4,
+   "mw_km": 80
+  },
+  {
+   "name": "Jiaxing",
+   "cc": "CN",
+   "pop_m": 1.2,
+   "mw_km": 76
+  },
+  {
+   "name": "Changshu",
+   "cc": "CN",
+   "pop_m": 1.7,
+   "mw_km": 74
+  },
+  {
+   "name": "New York City",
+   "cc": "US",
+   "pop_m": 8.8,
+   "mw_km": 74
+  },
+  {
+   "name": "Sharjah",
+   "cc": "AE",
+   "pop_m": 1.8,
+   "mw_km": 72
+  },
+  {
+   "name": "Jiangyin",
+   "cc": "CN",
+   "pop_m": 1.8,
+   "mw_km": 68
+  },
+  {
+   "name": "Dubai",
+   "cc": "AE",
+   "pop_m": 3.8,
+   "mw_km": 66
+  },
+  {
+   "name": "Guangzhou",
+   "cc": "CN",
+   "pop_m": 18.7,
+   "mw_km": 63
+  },
+  {
+   "name": "Changzhou",
+   "cc": "CN",
+   "pop_m": 3.3,
+   "mw_km": 61
+  }
+ ],
+ "cities_1m_n": 505,
+ "cities_1m_median_mw_km": 17,
+ "cities_1m_mw_under_50": 478,
+ "uk": {
+  "pop_mw": 0.8469,
+  "pop_polluted": 0.9993,
+  "pop_unpolluted": 0.0007,
+  "pop_pristine": 0.0,
+  "pop_nat_lost": 0.9928,
+  "pop_no_dark": 0.3538,
+  "pop_mw_visible": 0.1531,
+  "land_mw": 0.1975,
+  "land_polluted": 0.9214,
+  "land_unpolluted": 0.0786,
+  "land_pristine": 0.0025,
+  "land_nat_lost": 0.7005,
+  "land_no_dark": 0.0252,
+  "land_mw_visible": 0.8025,
+  "pop_m": 68.2,
+  "land_km2": 248840,
+  "pop_median_mag": 19.2037,
+  "land_median_mag": 21.1391,
+  "coarse_pop_mw": 0.8173,
+  "people_mw_m": 57.7,
+  "people_mw_visible_m": 10.4,
+  "nations": {
+   "Scotland": {
+    "pop_mw": 0.754,
+    "pop_polluted": 0.9915,
+    "pop_unpolluted": 0.0085,
+    "pop_pristine": 0.0002,
+    "pop_nat_lost": 0.9455,
+    "pop_no_dark": 0.3403,
+    "pop_mw_visible": 0.246,
+    "land_mw": 0.0521,
+    "land_polluted": 0.7616,
+    "land_unpolluted": 0.2384,
+    "land_pristine": 0.0076,
+    "land_nat_lost": 0.2939,
+    "land_no_dark": 0.0077,
+    "land_mw_visible": 0.9479,
+    "land_median_mag": 21.7615
+   },
+   "England": {
+    "pop_mw": 0.8732,
+    "pop_polluted": 1.0,
+    "pop_unpolluted": 0.0,
+    "pop_pristine": 0.0,
+    "pop_nat_lost": 0.998,
+    "pop_no_dark": 0.3782,
+    "pop_mw_visible": 0.1268,
+    "land_mw": 0.3157,
+    "land_polluted": 0.9997,
+    "land_unpolluted": 0.0003,
+    "land_pristine": 0.0,
+    "land_nat_lost": 0.9343,
+    "land_no_dark": 0.0418,
+    "land_mw_visible": 0.6843,
+    "land_median_mag": 20.6488
+   },
+   "Wales": {
+    "pop_mw": 0.6609,
+    "pop_polluted": 1.0,
+    "pop_unpolluted": 0.0,
+    "pop_pristine": 0.0,
+    "pop_nat_lost": 0.9784,
+    "pop_no_dark": 0.0608,
+    "pop_mw_visible": 0.3391,
+    "land_mw": 0.1012,
+    "land_polluted": 1.0,
+    "land_unpolluted": 0.0,
+    "land_pristine": 0.0,
+    "land_nat_lost": 0.7044,
+    "land_no_dark": 0.0032,
+    "land_mw_visible": 0.8988,
+    "land_median_mag": 21.4222
+   },
+   "Northern Ireland": {
+    "pop_mw": 0.6237,
+    "pop_polluted": 1.0,
+    "pop_unpolluted": 0.0,
+    "pop_pristine": 0.0,
+    "pop_nat_lost": 0.9926,
+    "pop_no_dark": 0.137,
+    "pop_mw_visible": 0.3763,
+    "land_mw": 0.0871,
+    "land_polluted": 1.0,
+    "land_unpolluted": 0.0,
+    "land_pristine": 0.0,
+    "land_nat_lost": 0.8707,
+    "land_no_dark": 0.0052,
+    "land_mw_visible": 0.9129,
+    "land_median_mag": 21.1897
+   }
+  }
+ },
+ "uk_area": {
+  "Na h-Eileanan Siar": {
+   "nation": "Scotland",
+   "land_mag": 21.9758,
+   "pop_mag": 21.8662,
+   "land_mw_visible": 1.0,
+   "pop_mw_visible": 1.0,
+   "land_unpolluted": 0.8688,
+   "darkest_mag": 21.9992,
+   "sky_change_pct": 16.3,
+   "light_change_pct": 24.1,
+   "pop_k": 25
+  },
+  "Highland": {
+   "nation": "Scotland",
+   "land_mag": 21.9234,
+   "pop_mag": 21.2647,
+   "land_mw_visible": 0.9977,
+   "pop_mw_visible": 0.7819,
+   "land_unpolluted": 0.5359,
+   "darkest_mag": 21.9881,
+   "sky_change_pct": -14.6,
+   "light_change_pct": -13.0,
+   "pop_k": 234
+  },
+  "Orkney Islands": {
+   "nation": "Scotland",
+   "land_mag": 21.9031,
+   "pop_mag": 21.6385,
+   "land_mw_visible": 0.9997,
+   "pop_mw_visible": 0.9985,
+   "land_unpolluted": 0.4228,
+   "darkest_mag": 21.9929,
+   "sky_change_pct": -20.6,
+   "light_change_pct": -28.9,
+   "pop_k": 22
+  },
+  "Shetland Islands": {
+   "nation": "Scotland",
+   "land_mag": 21.8594,
+   "pop_mag": 21.6011,
+   "land_mw_visible": 0.9925,
+   "pop_mw_visible": 0.8919,
+   "land_unpolluted": 0.2405,
+   "darkest_mag": 21.9954,
+   "sky_change_pct": -21.6,
+   "light_change_pct": -20.5,
+   "pop_k": 22
+  },
+  "Argyll and Bute": {
+   "nation": "Scotland",
+   "land_mag": 21.821,
+   "pop_mag": 21.3084,
+   "land_mw_visible": 0.9989,
+   "pop_mw_visible": 0.9407,
+   "land_unpolluted": 0.1149,
+   "darkest_mag": 21.9644,
+   "sky_change_pct": -18.3,
+   "light_change_pct": -15.2,
+   "pop_k": 79
+  },
+  "Perth and Kinross": {
+   "nation": "Scotland",
+   "land_mag": 21.6894,
+   "pop_mag": 20.7927,
+   "land_mw_visible": 0.99,
+   "pop_mw_visible": 0.6929,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.8829,
+   "sky_change_pct": -15.3,
+   "light_change_pct": -11.5,
+   "pop_k": 156
+  },
+  "Moray": {
+   "nation": "Scotland",
+   "land_mag": 21.6588,
+   "pop_mag": 20.638,
+   "land_mw_visible": 0.9887,
+   "pop_mw_visible": 0.714,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.8697,
+   "sky_change_pct": -7.7,
+   "light_change_pct": -5.2,
+   "pop_k": 96
+  },
+  "Dumfries and Galloway": {
+   "nation": "Scotland",
+   "land_mag": 21.6407,
+   "pop_mag": 21.0922,
+   "land_mw_visible": 0.9954,
+   "pop_mw_visible": 0.8038,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.7887,
+   "sky_change_pct": -16.9,
+   "light_change_pct": -15.3,
+   "pop_k": 145
+  },
+  "Angus": {
+   "nation": "Scotland",
+   "land_mag": 21.6163,
+   "pop_mag": 20.6186,
+   "land_mw_visible": 0.9792,
+   "pop_mw_visible": 0.6459,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.8417,
+   "sky_change_pct": -13.7,
+   "light_change_pct": -8.5,
+   "pop_k": 108
+  },
+  "Dyfed": {
+   "nation": "Wales",
+   "land_mag": 21.5957,
+   "pop_mag": 20.9683,
+   "land_mw_visible": 0.9892,
+   "pop_mw_visible": 0.8195,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.8981,
+   "sky_change_pct": -0.7,
+   "light_change_pct": 3.3,
+   "pop_k": 379
+  },
+  "Northumberland": {
+   "nation": "England",
+   "land_mag": 21.5861,
+   "pop_mag": 20.1412,
+   "land_mw_visible": 0.9673,
+   "pop_mw_visible": 0.4371,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.7926,
+   "sky_change_pct": -34.2,
+   "light_change_pct": -37.1,
+   "pop_k": 312
+  },
+  "Aberdeenshire": {
+   "nation": "Scotland",
+   "land_mag": 21.5829,
+   "pop_mag": 20.8072,
+   "land_mw_visible": 0.9774,
+   "pop_mw_visible": 0.7189,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.8721,
+   "sky_change_pct": -22.0,
+   "light_change_pct": -22.7,
+   "pop_k": 273
+  },
+  "Scottish Borders": {
+   "nation": "Scotland",
+   "land_mag": 21.5776,
+   "pop_mag": 21.1223,
+   "land_mw_visible": 1.0,
+   "pop_mw_visible": 1.0,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.7349,
+   "sky_change_pct": -19.6,
+   "light_change_pct": -17.7,
+   "pop_k": 117
+  },
+  "South Ayrshire": {
+   "nation": "Scotland",
+   "land_mag": 21.5556,
+   "pop_mag": 19.8182,
+   "land_mw_visible": 0.8974,
+   "pop_mw_visible": 0.293,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.7709,
+   "sky_change_pct": -22.4,
+   "light_change_pct": -23.4,
+   "pop_k": 114
+  },
+  "Powys": {
+   "nation": "Wales",
+   "land_mag": 21.512,
+   "pop_mag": 21.2121,
+   "land_mw_visible": 1.0,
+   "pop_mw_visible": 1.0,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.6906,
+   "sky_change_pct": -8.9,
+   "light_change_pct": 6.7,
+   "pop_k": 130
+  },
+  "Devon": {
+   "nation": "England",
+   "land_mag": 21.4971,
+   "pop_mag": 20.4312,
+   "land_mw_visible": 0.9613,
+   "pop_mw_visible": 0.5452,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.8749,
+   "sky_change_pct": -8.8,
+   "light_change_pct": -9.8,
+   "pop_k": 1241
+  },
+  "Gwynedd": {
+   "nation": "Wales",
+   "land_mag": 21.4942,
+   "pop_mag": 20.9903,
+   "land_mw_visible": 0.9943,
+   "pop_mw_visible": 0.836,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.8128,
+   "sky_change_pct": -12.2,
+   "light_change_pct": -11.7,
+   "pop_k": 182
+  },
+  "Fermanagh and Omagh": {
+   "nation": "Northern Ireland",
+   "land_mag": 21.4835,
+   "pop_mag": 21.175,
+   "land_mw_visible": 0.9861,
+   "pop_mw_visible": 0.7273,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.7515,
+   "sky_change_pct": 9.3,
+   "light_change_pct": 12.2,
+   "pop_k": 118
+  },
+  "Stirling": {
+   "nation": "Scotland",
+   "land_mag": 21.4757,
+   "pop_mag": 19.7253,
+   "land_mw_visible": 0.9425,
+   "pop_mw_visible": 0.3664,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.8075,
+   "sky_change_pct": -17.8,
+   "light_change_pct": -15.0,
+   "pop_k": 95
+  },
+  "Cumbria": {
+   "nation": "England",
+   "land_mag": 21.4557,
+   "pop_mag": 20.4641,
+   "land_mw_visible": 0.9747,
+   "pop_mw_visible": 0.5878,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.7095,
+   "sky_change_pct": -9.5,
+   "light_change_pct": -4.3,
+   "pop_k": 500
+  },
+  "Cornwall": {
+   "nation": "England",
+   "land_mag": 21.3539,
+   "pop_mag": 20.6798,
+   "land_mw_visible": 0.9828,
+   "pop_mw_visible": 0.7843,
+   "land_unpolluted": 0.0118,
+   "darkest_mag": 21.9841,
+   "sky_change_pct": 17.6,
+   "light_change_pct": 22.4,
+   "pop_k": 573
+  },
+  "Causeway Coast and Glens": {
+   "nation": "Northern Ireland",
+   "land_mag": 21.3351,
+   "pop_mag": 20.6928,
+   "land_mw_visible": 0.9822,
+   "pop_mw_visible": 0.6767,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.8017,
+   "sky_change_pct": -16.2,
+   "light_change_pct": -19.5,
+   "pop_k": 139
+  },
+  "Derry City and Strabane": {
+   "nation": "Northern Ireland",
+   "land_mag": 21.31,
+   "pop_mag": 19.5446,
+   "land_mw_visible": 0.9045,
+   "pop_mw_visible": 0.2854,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.754,
+   "sky_change_pct": -9.8,
+   "light_change_pct": -12.4,
+   "pop_k": 156
+  },
+  "Mid Ulster": {
+   "nation": "Northern Ireland",
+   "land_mag": 21.1942,
+   "pop_mag": 20.8114,
+   "land_mw_visible": 0.9719,
+   "pop_mw_visible": 0.7199,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.6362,
+   "sky_change_pct": 6.8,
+   "light_change_pct": 14.2,
+   "pop_k": 154
+  },
+  "Dorset": {
+   "nation": "England",
+   "land_mag": 21.1927,
+   "pop_mag": 19.9496,
+   "land_mw_visible": 0.9147,
+   "pop_mw_visible": 0.355,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.5681,
+   "sky_change_pct": -11.6,
+   "light_change_pct": -13.7,
+   "pop_k": 778
+  },
+  "Herefordshire": {
+   "nation": "England",
+   "land_mag": 21.1897,
+   "pop_mag": 20.6434,
+   "land_mw_visible": 0.9839,
+   "pop_mw_visible": 0.6725,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.51,
+   "sky_change_pct": -6.8,
+   "light_change_pct": 1.4,
+   "pop_k": 187
+  },
+  "North Ayrshire": {
+   "nation": "Scotland",
+   "land_mag": 21.1519,
+   "pop_mag": 19.8766,
+   "land_mw_visible": 0.8675,
+   "pop_mw_visible": 0.289,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.7907,
+   "sky_change_pct": -20.7,
+   "light_change_pct": -19.5,
+   "pop_k": 130
+  },
+  "Mid and East Antrim": {
+   "nation": "Northern Ireland",
+   "land_mag": 21.1293,
+   "pop_mag": 20.0588,
+   "land_mw_visible": 0.9302,
+   "pop_mw_visible": 0.4394,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.6749,
+   "sky_change_pct": -14.4,
+   "light_change_pct": -18.6,
+   "pop_k": 137
+  },
+  "East Lothian": {
+   "nation": "Scotland",
+   "land_mag": 21.1044,
+   "pop_mag": 20.1145,
+   "land_mw_visible": 0.8993,
+   "pop_mw_visible": 0.3854,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.6218,
+   "sky_change_pct": -10.7,
+   "light_change_pct": -7.2,
+   "pop_k": 112
+  },
+  "East Ayrshire": {
+   "nation": "Scotland",
+   "land_mag": 21.1017,
+   "pop_mag": 20.0863,
+   "land_mw_visible": 0.9234,
+   "pop_mw_visible": 0.3879,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.7288,
+   "sky_change_pct": -21.5,
+   "light_change_pct": -20.4,
+   "pop_k": 119
+  },
+  "Newry, Mourne and Down": {
+   "nation": "Northern Ireland",
+   "land_mag": 21.0787,
+   "pop_mag": 20.6542,
+   "land_mw_visible": 0.9694,
+   "pop_mw_visible": 0.7237,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.4864,
+   "sky_change_pct": -4.1,
+   "light_change_pct": -4.1,
+   "pop_k": 186
+  },
+  "North Yorkshire": {
+   "nation": "England",
+   "land_mag": 21.0576,
+   "pop_mag": 19.8661,
+   "land_mw_visible": 0.866,
+   "pop_mw_visible": 0.2984,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.5402,
+   "sky_change_pct": -16.7,
+   "light_change_pct": -16.9,
+   "pop_k": 1117
+  },
+  "Clwyd": {
+   "nation": "Wales",
+   "land_mag": 21.0215,
+   "pop_mag": 20.0259,
+   "land_mw_visible": 0.82,
+   "pop_mw_visible": 0.2854,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.585,
+   "sky_change_pct": -16.2,
+   "light_change_pct": -15.8,
+   "pop_k": 504
+  },
+  "Norfolk": {
+   "nation": "England",
+   "land_mag": 20.9927,
+   "pop_mag": 20.3491,
+   "land_mw_visible": 0.9341,
+   "pop_mw_visible": 0.534,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.5882,
+   "sky_change_pct": -0.1,
+   "light_change_pct": 0.4,
+   "pop_k": 935
+  },
+  "South Lanarkshire": {
+   "nation": "Scotland",
+   "land_mag": 20.9659,
+   "pop_mag": 18.7836,
+   "land_mw_visible": 0.7942,
+   "pop_mw_visible": 0.1064,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.643,
+   "sky_change_pct": -23.2,
+   "light_change_pct": -25.6,
+   "pop_k": 370
+  },
+  "Shropshire": {
+   "nation": "England",
+   "land_mag": 20.9258,
+   "pop_mag": 20.0138,
+   "land_mw_visible": 0.8903,
+   "pop_mw_visible": 0.3526,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.5392,
+   "sky_change_pct": -9.2,
+   "light_change_pct": -5.2,
+   "pop_k": 519
+  },
+  "Wiltshire": {
+   "nation": "England",
+   "land_mag": 20.9142,
+   "pop_mag": 20.1079,
+   "land_mw_visible": 0.9073,
+   "pop_mw_visible": 0.3817,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.38,
+   "sky_change_pct": -14.6,
+   "light_change_pct": -17.6,
+   "pop_k": 778
+  },
+  "Armagh City, Banbridge and Craigavon": {
+   "nation": "Northern Ireland",
+   "land_mag": 20.8983,
+   "pop_mag": 20.0884,
+   "land_mw_visible": 0.9001,
+   "pop_mw_visible": 0.4495,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.3522,
+   "sky_change_pct": -13.3,
+   "light_change_pct": -16.1,
+   "pop_k": 221
+  },
+  "Suffolk": {
+   "nation": "England",
+   "land_mag": 20.8737,
+   "pop_mag": 20.0863,
+   "land_mw_visible": 0.8944,
+   "pop_mw_visible": 0.4416,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.4314,
+   "sky_change_pct": 2.8,
+   "light_change_pct": 3.4,
+   "pop_k": 780
+  },
+  "Isle of Wight": {
+   "nation": "England",
+   "land_mag": 20.8453,
+   "pop_mag": 20.3116,
+   "land_mw_visible": 0.8993,
+   "pop_mw_visible": 0.5444,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.3906,
+   "sky_change_pct": -10.6,
+   "light_change_pct": -10.8,
+   "pop_k": 137
+  },
+  "Somerset": {
+   "nation": "England",
+   "land_mag": 20.8453,
+   "pop_mag": 20.0927,
+   "land_mw_visible": 0.871,
+   "pop_mw_visible": 0.3902,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.6645,
+   "sky_change_pct": 3.1,
+   "light_change_pct": 9.4,
+   "pop_k": 1049
+  },
+  "Fife": {
+   "nation": "Scotland",
+   "land_mag": 20.7825,
+   "pop_mag": 19.6453,
+   "land_mw_visible": 0.7011,
+   "pop_mw_visible": 0.1993,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.6731,
+   "sky_change_pct": -16.4,
+   "light_change_pct": -17.7,
+   "pop_k": 360
+  },
+  "Gloucestershire": {
+   "nation": "England",
+   "land_mag": 20.7564,
+   "pop_mag": 19.6396,
+   "land_mw_visible": 0.8197,
+   "pop_mw_visible": 0.2762,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.1085,
+   "sky_change_pct": -8.8,
+   "light_change_pct": -7.4,
+   "pop_k": 989
+  },
+  "East Sussex": {
+   "nation": "England",
+   "land_mag": 20.7387,
+   "pop_mag": 19.8317,
+   "land_mw_visible": 0.8598,
+   "pop_mw_visible": 0.301,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.0989,
+   "sky_change_pct": -1.4,
+   "light_change_pct": 0.5,
+   "pop_k": 802
+  },
+  "Lincolnshire": {
+   "nation": "England",
+   "land_mag": 20.729,
+   "pop_mag": 19.9783,
+   "land_mw_visible": 0.8481,
+   "pop_mw_visible": 0.3425,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.315,
+   "sky_change_pct": -6.2,
+   "light_change_pct": -4.6,
+   "pop_k": 1100
+  },
+  "Ards and North Down": {
+   "nation": "Northern Ireland",
+   "land_mag": 20.729,
+   "pop_mag": 19.5629,
+   "land_mw_visible": 0.6918,
+   "pop_mw_visible": 0.2306,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.531,
+   "sky_change_pct": -3.9,
+   "light_change_pct": -2.3,
+   "pop_k": 170
+  },
+  "West Glamorgan": {
+   "nation": "Wales",
+   "land_mag": 20.6687,
+   "pop_mag": 19.5979,
+   "land_mw_visible": 0.6692,
+   "pop_mw_visible": 0.2032,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.6577,
+   "sky_change_pct": -3.0,
+   "light_change_pct": 0.9,
+   "pop_k": 389
+  },
+  "Hampshire": {
+   "nation": "England",
+   "land_mag": 20.6578,
+   "pop_mag": 19.5656,
+   "land_mw_visible": 0.7253,
+   "pop_mw_visible": 0.1774,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.3522,
+   "sky_change_pct": -5.0,
+   "light_change_pct": -3.9,
+   "pop_k": 1865
+  },
+  "East Riding of Yorkshire": {
+   "nation": "England",
+   "land_mag": 20.6542,
+   "pop_mag": 19.3455,
+   "land_mw_visible": 0.7642,
+   "pop_mw_visible": 0.2049,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.2936,
+   "sky_change_pct": -2.8,
+   "light_change_pct": 0.4,
+   "pop_k": 606
+  },
+  "Rutland": {
+   "nation": "England",
+   "land_mag": 20.6524,
+   "pop_mag": 20.449,
+   "land_mw_visible": 0.9813,
+   "pop_mw_visible": 0.7517,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.8627,
+   "sky_change_pct": -5.0,
+   "light_change_pct": -1.1,
+   "pop_k": 51
+  },
+  "Antrim and Newtownabbey": {
+   "nation": "Northern Ireland",
+   "land_mag": 20.5859,
+   "pop_mag": 19.4264,
+   "land_mw_visible": 0.7011,
+   "pop_mw_visible": 0.193,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.3167,
+   "sky_change_pct": -8.1,
+   "light_change_pct": -8.1,
+   "pop_k": 140
+  },
+  "Durham": {
+   "nation": "England",
+   "land_mag": 20.5792,
+   "pop_mag": 19.5736,
+   "land_mw_visible": 0.5597,
+   "pop_mw_visible": 0.0748,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.5936,
+   "sky_change_pct": -30.0,
+   "light_change_pct": -27.6,
+   "pop_k": 920
+  },
+  "West Sussex": {
+   "nation": "England",
+   "land_mag": 20.5346,
+   "pop_mag": 19.8182,
+   "land_mw_visible": 0.7157,
+   "pop_mw_visible": 0.2059,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.0266,
+   "sky_change_pct": -2.8,
+   "light_change_pct": 0.5,
+   "pop_k": 908
+  },
+  "Oxfordshire": {
+   "nation": "England",
+   "land_mag": 20.5329,
+   "pop_mag": 19.8453,
+   "land_mw_visible": 0.7701,
+   "pop_mw_visible": 0.263,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.024,
+   "sky_change_pct": -14.3,
+   "light_change_pct": -16.2,
+   "pop_k": 771
+  },
+  "Inverclyde": {
+   "nation": "Scotland",
+   "land_mag": 20.5281,
+   "pop_mag": 19.835,
+   "land_mw_visible": 0.6658,
+   "pop_mw_visible": 0.163,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.0381,
+   "sky_change_pct": -34.1,
+   "light_change_pct": -37.6,
+   "pop_k": 70
+  },
+  "Gwent": {
+   "nation": "Wales",
+   "land_mag": 20.5233,
+   "pop_mag": 19.9052,
+   "land_mw_visible": 0.645,
+   "pop_mw_visible": 0.1882,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.4444,
+   "sky_change_pct": -18.6,
+   "light_change_pct": -21.6,
+   "pop_k": 598
+  },
+  "Worcestershire": {
+   "nation": "England",
+   "land_mag": 20.4283,
+   "pop_mag": 19.6312,
+   "land_mw_visible": 0.6137,
+   "pop_mw_visible": 0.1615,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.2474,
+   "sky_change_pct": -11.1,
+   "light_change_pct": -10.3,
+   "pop_k": 696
+  },
+  "Cambridgeshire": {
+   "nation": "England",
+   "land_mag": 20.4166,
+   "pop_mag": 19.6743,
+   "land_mw_visible": 0.6827,
+   "pop_mw_visible": 0.1915,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.0102,
+   "sky_change_pct": 4.9,
+   "light_change_pct": 8.5,
+   "pop_k": 918
+  },
+  "Clackmannanshire": {
+   "nation": "Scotland",
+   "land_mag": 20.4137,
+   "pop_mag": 19.5736,
+   "land_mw_visible": 0.5716,
+   "pop_mw_visible": 0.09,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.0774,
+   "sky_change_pct": -12.7,
+   "light_change_pct": -10.3,
+   "pop_k": 47
+  },
+  "Lisburn and Castlereagh": {
+   "nation": "Northern Ireland",
+   "land_mag": 20.3573,
+   "pop_mag": 19.3073,
+   "land_mw_visible": 0.5876,
+   "pop_mw_visible": 0.1521,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.0881,
+   "sky_change_pct": -11.7,
+   "light_change_pct": -12.1,
+   "pop_k": 179
+  },
+  "Midlothian": {
+   "nation": "Scotland",
+   "land_mag": 20.3491,
+   "pop_mag": 19.2522,
+   "land_mw_visible": 0.5474,
+   "pop_mw_visible": 0.0385,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.3183,
+   "sky_change_pct": -12.3,
+   "light_change_pct": -4.6,
+   "pop_k": 106
+  },
+  "West Dunbartonshire": {
+   "nation": "Scotland",
+   "land_mag": 20.3089,
+   "pop_mag": 19.159,
+   "land_mw_visible": 0.5242,
+   "pop_mw_visible": 0.0254,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.1736,
+   "sky_change_pct": -26.4,
+   "light_change_pct": -31.0,
+   "pop_k": 82
+  },
+  "Mid Glamorgan": {
+   "nation": "Wales",
+   "land_mag": 20.2985,
+   "pop_mag": 20.1255,
+   "land_mw_visible": 0.5525,
+   "pop_mw_visible": 0.2663,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.2969,
+   "sky_change_pct": -19.3,
+   "light_change_pct": -20.3,
+   "pop_k": 437
+  },
+  "Essex": {
+   "nation": "England",
+   "land_mag": 20.2855,
+   "pop_mag": 19.3455,
+   "land_mw_visible": 0.5162,
+   "pop_mw_visible": 0.1308,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.0076,
+   "sky_change_pct": -0.9,
+   "light_change_pct": 3.0,
+   "pop_k": 1869
+  },
+  "Kent": {
+   "nation": "England",
+   "land_mag": 20.2778,
+   "pop_mag": 19.5498,
+   "land_mw_visible": 0.5093,
+   "pop_mw_visible": 0.1258,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.0989,
+   "sky_change_pct": -8.4,
+   "light_change_pct": -8.9,
+   "pop_k": 1903
+  },
+  "Northamptonshire": {
+   "nation": "England",
+   "land_mag": 20.2551,
+   "pop_mag": 19.4056,
+   "land_mw_visible": 0.4921,
+   "pop_mw_visible": 0.0778,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.7624,
+   "sky_change_pct": 0.4,
+   "light_change_pct": 5.2,
+   "pop_k": 832
+  },
+  "Derbyshire": {
+   "nation": "England",
+   "land_mag": 20.1943,
+   "pop_mag": 19.4311,
+   "land_mw_visible": 0.4541,
+   "pop_mw_visible": 0.0504,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.7426,
+   "sky_change_pct": -14.8,
+   "light_change_pct": -14.1,
+   "pop_k": 1039
+  },
+  "Buckinghamshire": {
+   "nation": "England",
+   "land_mag": 20.1502,
+   "pop_mag": 19.3434,
+   "land_mw_visible": 0.3894,
+   "pop_mw_visible": 0.0594,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.6488,
+   "sky_change_pct": -12.0,
+   "light_change_pct": -13.6,
+   "pop_k": 903
+  },
+  "Nottinghamshire": {
+   "nation": "England",
+   "land_mag": 20.1014,
+   "pop_mag": 19.1161,
+   "land_mw_visible": 0.3408,
+   "pop_mw_visible": 0.0317,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.6578,
+   "sky_change_pct": -16.8,
+   "light_change_pct": -18.5,
+   "pop_k": 1203
+  },
+  "Lancashire": {
+   "nation": "England",
+   "land_mag": 20.063,
+   "pop_mag": 19.4334,
+   "land_mw_visible": 0.4319,
+   "pop_mw_visible": 0.0573,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.4614,
+   "sky_change_pct": -15.1,
+   "light_change_pct": -14.3,
+   "pop_k": 1571
+  },
+  "Staffordshire": {
+   "nation": "England",
+   "land_mag": 20.0422,
+   "pop_mag": 19.219,
+   "land_mw_visible": 0.3419,
+   "pop_mw_visible": 0.0349,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.7524,
+   "sky_change_pct": -13.4,
+   "light_change_pct": -13.4,
+   "pop_k": 1132
+  },
+  "Warwickshire": {
+   "nation": "England",
+   "land_mag": 20.0198,
+   "pop_mag": 19.3897,
+   "land_mw_visible": 0.3783,
+   "pop_mw_visible": 0.0925,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.0127,
+   "sky_change_pct": -2.7,
+   "light_change_pct": 2.6,
+   "pop_k": 626
+  },
+  "Berkshire": {
+   "nation": "England",
+   "land_mag": 20.0178,
+   "pop_mag": 19.2345,
+   "land_mw_visible": 0.4221,
+   "pop_mw_visible": 0.043,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.1182,
+   "sky_change_pct": -19.1,
+   "light_change_pct": -22.6,
+   "pop_k": 911
+  },
+  "Renfrewshire": {
+   "nation": "Scotland",
+   "land_mag": 20.0078,
+   "pop_mag": 18.7112,
+   "land_mw_visible": 0.337,
+   "pop_mw_visible": 0.0231,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.1209,
+   "sky_change_pct": -29.4,
+   "light_change_pct": -32.6,
+   "pop_k": 185
+  },
+  "South Glamorgan": {
+   "nation": "Wales",
+   "land_mag": 19.9764,
+   "pop_mag": 19.1126,
+   "land_mw_visible": 0.3104,
+   "pop_mw_visible": 0.0357,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 21.0458,
+   "sky_change_pct": -24.1,
+   "light_change_pct": -26.6,
+   "pop_k": 515
+  },
+  "Leicestershire": {
+   "nation": "England",
+   "land_mag": 19.9725,
+   "pop_mag": 19.219,
+   "land_mw_visible": 0.3639,
+   "pop_mw_visible": 0.032,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.8693,
+   "sky_change_pct": -7.3,
+   "light_change_pct": -4.8,
+   "pop_k": 1115
+  },
+  "Bedfordshire": {
+   "nation": "England",
+   "land_mag": 19.9328,
+   "pop_mag": 19.1196,
+   "land_mw_visible": 0.1986,
+   "pop_mw_visible": 0.0184,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.6779,
+   "sky_change_pct": 3.7,
+   "light_change_pct": 8.4,
+   "pop_k": 717
+  },
+  "East Renfrewshire": {
+   "nation": "Scotland",
+   "land_mag": 19.9217,
+   "pop_mag": 18.8611,
+   "land_mw_visible": 0.262,
+   "pop_mw_visible": 0.007,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.6013,
+   "sky_change_pct": -26.7,
+   "light_change_pct": -30.4,
+   "pop_k": 87
+  },
+  "West Lothian": {
+   "nation": "Scotland",
+   "land_mag": 19.8215,
+   "pop_mag": 19.2345,
+   "land_mw_visible": 0.1672,
+   "pop_mw_visible": 0.0044,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.9587,
+   "sky_change_pct": -26.4,
+   "light_change_pct": -29.4,
+   "pop_k": 191
+  },
+  "Cheshire": {
+   "nation": "England",
+   "land_mag": 19.8016,
+   "pop_mag": 19.1811,
+   "land_mw_visible": 0.2046,
+   "pop_mw_visible": 0.0227,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.7724,
+   "sky_change_pct": -16.7,
+   "light_change_pct": -16.7,
+   "pop_k": 1113
+  },
+  "Hertfordshire": {
+   "nation": "England",
+   "land_mag": 19.7596,
+   "pop_mag": 19.219,
+   "land_mw_visible": 0.1679,
+   "pop_mw_visible": 0.0129,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.7309,
+   "sky_change_pct": -8.8,
+   "light_change_pct": -7.0,
+   "pop_k": 1240
+  },
+  "Surrey": {
+   "nation": "England",
+   "land_mag": 19.7161,
+   "pop_mag": 19.2522,
+   "land_mw_visible": 0.2096,
+   "pop_mw_visible": 0.047,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.729,
+   "sky_change_pct": -10.6,
+   "light_change_pct": -7.2,
+   "pop_k": 1347
+  },
+  "Falkirk": {
+   "nation": "Scotland",
+   "land_mag": 19.6743,
+   "pop_mag": 19.0953,
+   "land_mw_visible": 0.0362,
+   "pop_mw_visible": 0.0016,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.5169,
+   "sky_change_pct": -14.5,
+   "light_change_pct": -11.0,
+   "pop_k": 158
+  },
+  "East Dunbartonshire": {
+   "nation": "Scotland",
+   "land_mag": 19.6116,
+   "pop_mag": 18.9536,
+   "land_mw_visible": 0.1759,
+   "pop_mw_visible": 0.0005,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.6872,
+   "sky_change_pct": -15.1,
+   "light_change_pct": -14.9,
+   "pop_k": 77
+  },
+  "Dundee City": {
+   "nation": "Scotland",
+   "land_mag": 19.5138,
+   "pop_mag": 19.1627,
+   "land_mw_visible": 0.0526,
+   "pop_mw_visible": 0.0041,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.6065,
+   "sky_change_pct": -23.1,
+   "light_change_pct": -24.4,
+   "pop_k": 134
+  },
+  "South Yorkshire": {
+   "nation": "England",
+   "land_mag": 19.5138,
+   "pop_mag": 19.0648,
+   "land_mw_visible": 0.0961,
+   "pop_mw_visible": 0.0004,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.5893,
+   "sky_change_pct": -14.5,
+   "light_change_pct": -13.4,
+   "pop_k": 1393
+  },
+  "West Yorkshire": {
+   "nation": "England",
+   "land_mag": 19.4963,
+   "pop_mag": 18.8257,
+   "land_mw_visible": 0.0736,
+   "pop_mw_visible": 0.0026,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.6928,
+   "sky_change_pct": -23.4,
+   "light_change_pct": -24.7,
+   "pop_k": 2408
+  },
+  "North Lanarkshire": {
+   "nation": "Scotland",
+   "land_mag": 19.383,
+   "pop_mag": 18.685,
+   "land_mw_visible": 0.0603,
+   "pop_mw_visible": 0.0006,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.6169,
+   "sky_change_pct": -18.6,
+   "light_change_pct": -18.6,
+   "pop_k": 343
+  },
+  "Aberdeen City": {
+   "nation": "Scotland",
+   "land_mag": 19.3434,
+   "pop_mag": 18.7307,
+   "land_mw_visible": 0.0988,
+   "pop_mw_visible": 0.0072,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.9903,
+   "sky_change_pct": -30.4,
+   "light_change_pct": -30.6,
+   "pop_k": 218
+  },
+  "City of Edinburgh": {
+   "nation": "Scotland",
+   "land_mag": 19.0987,
+   "pop_mag": 18.6921,
+   "land_mw_visible": 0.0524,
+   "pop_mw_visible": 0.0001,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.6853,
+   "sky_change_pct": -22.8,
+   "light_change_pct": -24.0,
+   "pop_k": 522
+  },
+  "Tyne and Wear": {
+   "nation": "England",
+   "land_mag": 19.0614,
+   "pop_mag": 18.7456,
+   "land_mw_visible": 0.0266,
+   "pop_mw_visible": 0.0028,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.6761,
+   "sky_change_pct": -42.6,
+   "light_change_pct": -43.8,
+   "pop_k": 1148
+  },
+  "Merseyside": {
+   "nation": "England",
+   "land_mag": 18.9035,
+   "pop_mag": 18.5731,
+   "land_mw_visible": 0.0123,
+   "pop_mw_visible": 0.0,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.5427,
+   "sky_change_pct": -16.4,
+   "light_change_pct": -16.7,
+   "pop_k": 1440
+  },
+  "Greater Manchester": {
+   "nation": "England",
+   "land_mag": 18.8446,
+   "pop_mag": 18.5521,
+   "land_mw_visible": 0.0,
+   "pop_mw_visible": 0.0,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.2279,
+   "sky_change_pct": -19.0,
+   "light_change_pct": -19.1,
+   "pop_k": 2932
+  },
+  "Belfast": {
+   "nation": "Northern Ireland",
+   "land_mag": 18.794,
+   "pop_mag": 18.4893,
+   "land_mw_visible": 0.0,
+   "pop_mw_visible": 0.0,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 20.1035,
+   "sky_change_pct": -9.6,
+   "light_change_pct": -8.9,
+   "pop_k": 321
+  },
+  "Bristol": {
+   "nation": "England",
+   "land_mag": 18.7431,
+   "pop_mag": 18.7064,
+   "land_mw_visible": 0.0,
+   "pop_mw_visible": 0.0,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 19.3499,
+   "sky_change_pct": -2.4,
+   "light_change_pct": -2.5,
+   "pop_k": 408
+  },
+  "West Midlands": {
+   "nation": "England",
+   "land_mag": 18.5774,
+   "pop_mag": 18.3701,
+   "land_mw_visible": 0.0,
+   "pop_mw_visible": 0.0,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 19.8249,
+   "sky_change_pct": -12.7,
+   "light_change_pct": -13.7,
+   "pop_k": 2943
+  },
+  "Glasgow City": {
+   "nation": "Scotland",
+   "land_mag": 18.3018,
+   "pop_mag": 18.142,
+   "land_mw_visible": 0.0,
+   "pop_mw_visible": 0.0,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 19.0715,
+   "sky_change_pct": -15.7,
+   "light_change_pct": -12.9,
+   "pop_k": 638
+  },
+  "Greater London": {
+   "nation": "England",
+   "land_mag": 18.1798,
+   "pop_mag": 17.9559,
+   "land_mw_visible": 0.0,
+   "pop_mw_visible": 0.0,
+   "land_unpolluted": 0.0,
+   "darkest_mag": 19.6684,
+   "sky_change_pct": -15.5,
+   "light_change_pct": -16.1,
+   "pop_k": 8955
+  }
+ },
+ "uk_light_fall": [
+  {
+   "name": "Tyne and Wear",
+   "pct": -43.8
+  },
+  {
+   "name": "Inverclyde",
+   "pct": -37.6
+  },
+  {
+   "name": "Northumberland",
+   "pct": -37.1
+  },
+  {
+   "name": "Renfrewshire",
+   "pct": -32.6
+  },
+  {
+   "name": "West Dunbartonshire",
+   "pct": -31.0
+  }
+ ],
+ "uk_light_rise": [
+  {
+   "name": "Na h-Eileanan Siar",
+   "pct": 24.1
+  },
+  {
+   "name": "Cornwall",
+   "pct": 22.4
+  },
+  {
+   "name": "Mid Ulster",
+   "pct": 14.2
+  },
+  {
+   "name": "Fermanagh and Omagh",
+   "pct": 12.2
+  },
+  {
+   "name": "Somerset",
+   "pct": 9.4
+  }
+ ],
+ "uk_areas_light_up": 19,
+ "uk_areas_darkest": [
+  "Na h-Eileanan Siar",
+  "Highland",
+  "Orkney Islands",
+  "Shetland Islands",
+  "Argyll and Bute",
+  "Perth and Kinross",
+  "Moray",
+  "Dumfries and Galloway",
+  "Angus",
+  "Dyfed"
+ ],
+ "uk_areas_brightest": [
+  "Greater London",
+  "Glasgow City",
+  "West Midlands",
+  "Bristol",
+  "Belfast",
+  "Greater Manchester",
+  "Merseyside",
+  "Tyne and Wear",
+  "City of Edinburgh",
+  "Aberdeen City"
+ ],
+ "uk_areas_n": 98,
+ "england_darkest": [
+  "Northumberland",
+  "Devon",
+  "Cumbria",
+  "Cornwall",
+  "Dorset"
+ ],
+ "uk_areas_pop_mw_visible_over_half": 25,
+ "uk_councils_darkest": [
+  {
+   "name": "Na h-Eileanan Siar",
+   "land_mag": 21.9758
+  },
+  {
+   "name": "Isles of Scilly",
+   "land_mag": 21.9748
+  },
+  {
+   "name": "Highland",
+   "land_mag": 21.9236
+  },
+  {
+   "name": "Orkney Islands",
+   "land_mag": 21.9031
+  },
+  {
+   "name": "Shetland Islands",
+   "land_mag": 21.8594
+  },
+  {
+   "name": "Argyll and Bute",
+   "land_mag": 21.821
+  },
+  {
+   "name": "Torridge",
+   "land_mag": 21.6959
+  },
+  {
+   "name": "Perth and Kinross",
+   "land_mag": 21.69
+  },
+  {
+   "name": "Ceredigion",
+   "land_mag": 21.6554
+  },
+  {
+   "name": "Moray",
+   "land_mag": 21.6486
+  }
+ ],
+ "uk_councils_brightest": [
+  {
+   "name": "Tower Hamlets",
+   "land_mag": 17.2387,
+   "pop_mw_visible": 0.0
+  },
+  {
+   "name": "Westminster",
+   "land_mag": 17.2512,
+   "pop_mw_visible": 0.0
+  },
+  {
+   "name": "Southwark",
+   "land_mag": 17.3736,
+   "pop_mw_visible": 0.0
+  },
+  {
+   "name": "Islington",
+   "land_mag": 17.3764,
+   "pop_mw_visible": 0.0
+  },
+  {
+   "name": "Kensington and Chelsea",
+   "land_mag": 17.3849,
+   "pop_mw_visible": 0.0
+  },
+  {
+   "name": "Hackney",
+   "land_mag": 17.4646,
+   "pop_mw_visible": 0.0
+  },
+  {
+   "name": "Hammersmith and Fulham",
+   "land_mag": 17.477,
+   "pop_mw_visible": 0.0
+  },
+  {
+   "name": "Newham",
+   "land_mag": 17.5741,
+   "pop_mw_visible": 0.0
+  },
+  {
+   "name": "Lambeth",
+   "land_mag": 17.6298,
+   "pop_mw_visible": 0.0
+  },
+  {
+   "name": "Camden",
+   "land_mag": 17.7074,
+   "pop_mw_visible": 0.0
+  }
+ ],
+ "uk_councils_n": 359,
+ "uk_councils_all_hidden": 183,
+ "uk_towns_darkest": [
+  {
+   "name": "Hugh Town",
+   "kind": "Town",
+   "county": "Isles of Scilly",
+   "region": "South West",
+   "mag": 21.8217,
+   "sky": 31.1
+  },
+  {
+   "name": "New Galloway",
+   "kind": "Town",
+   "county": "Dumfries and Galloway",
+   "region": "Scotland",
+   "mag": 21.6163,
+   "sky": 73.8
+  },
+  {
+   "name": "Tobermory",
+   "kind": "Town",
+   "county": "Argyll and Bute",
+   "region": "Scotland",
+   "mag": 21.5681,
+   "sky": 85.0
+  },
+  {
+   "name": "Chagford",
+   "kind": "Town",
+   "county": "Devon",
+   "region": "South West",
+   "mag": 21.5671,
+   "sky": 85.2
+  },
+  {
+   "name": "Whithorn",
+   "kind": "Town",
+   "county": "Dumfries and Galloway",
+   "region": "Scotland",
+   "mag": 21.5598,
+   "sky": 87.0
+  },
+  {
+   "name": "Lynton",
+   "kind": "Town",
+   "county": "Devon",
+   "region": "South West",
+   "mag": 21.5433,
+   "sky": 91.0
+  },
+  {
+   "name": "Dulverton",
+   "kind": "Town",
+   "county": "Somerset",
+   "region": "South West",
+   "mag": 21.514,
+   "sky": 98.2
+  },
+  {
+   "name": "Inveraray (Inbhir Aora)",
+   "kind": "Town",
+   "county": "Argyll and Bute",
+   "region": "Scotland",
+   "mag": 21.5011,
+   "sky": 101.5
+  },
+  {
+   "name": "St Davids (Tyddewi)",
+   "kind": "City",
+   "county": "Sir Benfro - Pembrokeshire",
+   "region": "Wales",
+   "mag": 21.5011,
+   "sky": 101.5
+  },
+  {
+   "name": "Wigtown",
+   "kind": "Town",
+   "county": "Dumfries and Galloway",
+   "region": "Scotland",
+   "mag": 21.4913,
+   "sky": 104.0
+  },
+  {
+   "name": "Tregaron",
+   "kind": "Town",
+   "county": "Sir Ceredigion - Ceredigion",
+   "region": "Wales",
+   "mag": 21.4874,
+   "sky": 105.0
+  },
+  {
+   "name": "Newport (Trefdraeth)",
+   "kind": "Town",
+   "county": "Sir Benfro - Pembrokeshire",
+   "region": "Wales",
+   "mag": 21.4719,
+   "sky": 109.0
+  },
+  {
+   "name": "Llanwrtyd Wells",
+   "kind": "Town",
+   "county": "Powys - Powys",
+   "region": "Wales",
+   "mag": 21.47,
+   "sky": 109.5
+  },
+  {
+   "name": "Moretonhampstead",
+   "kind": "Town",
+   "county": "Devon",
+   "region": "South West",
+   "mag": 21.469,
+   "sky": 109.8
+  },
+  {
+   "name": "Gatehouse of Fleet",
+   "kind": "Town",
+   "county": "Dumfries and Galloway",
+   "region": "Scotland",
+   "mag": 21.4454,
+   "sky": 116.0
+  }
+ ],
+ "uk_towns_brightest": [
+  {
+   "name": "City of London",
+   "kind": "City",
+   "county": "Greater London",
+   "region": "London",
+   "mag": 16.8762,
+   "sky": 19328.0
+  },
+  {
+   "name": "City of Westminster",
+   "kind": "City",
+   "county": "Greater London",
+   "region": "London",
+   "mag": 16.9087,
+   "sky": 18752.0
+  },
+  {
+   "name": "London",
+   "kind": "City",
+   "county": "Greater London",
+   "region": "London",
+   "mag": 16.9087,
+   "sky": 18752.0
+  },
+  {
+   "name": "Birmingham",
+   "kind": "City",
+   "county": "Birmingham",
+   "region": "West Midlands",
+   "mag": 17.4464,
+   "sky": 11360.0
+  },
+  {
+   "name": "Manchester",
+   "kind": "City",
+   "county": "Manchester",
+   "region": "North West",
+   "mag": 17.518,
+   "sky": 10624.0
+  },
+  {
+   "name": "Liverpool",
+   "kind": "City",
+   "county": "Liverpool",
+   "region": "North West",
+   "mag": 17.6016,
+   "sky": 9824.0
+  },
+  {
+   "name": "Glasgow",
+   "kind": "City",
+   "county": "Glasgow City",
+   "region": "Scotland",
+   "mag": 17.6333,
+   "sky": 9536.0
+  },
+  {
+   "name": "Salford",
+   "kind": "City",
+   "county": "Salford",
+   "region": "North West",
+   "mag": 17.6921,
+   "sky": 9024.0
+  },
+  {
+   "name": "Leeds",
+   "kind": "City",
+   "county": "Leeds",
+   "region": "Yorkshire and the Humber",
+   "mag": 17.7035,
+   "sky": 8928.0
+  },
+  {
+   "name": "Belfast",
+   "kind": "City",
+   "county": "",
+   "region": "Northern Ireland",
+   "mag": 17.8139,
+   "sky": 8048.0
+  }
+ ],
+ "uk_villages_darkest": [
+  {
+   "name": "Timsgarry",
+   "kind": "Village",
+   "county": "Na h-Eileanan an Iar",
+   "region": "Scotland",
+   "mag": 21.9915,
+   "sky": 1.4
+  },
+  {
+   "name": "South Dell",
+   "kind": "Village",
+   "county": "Na h-Eileanan an Iar",
+   "region": "Scotland",
+   "mag": 21.9902,
+   "sky": 1.6
+  },
+  {
+   "name": "Cross",
+   "kind": "Village",
+   "county": "Na h-Eileanan an Iar",
+   "region": "Scotland",
+   "mag": 21.9897,
+   "sky": 1.7
+  },
+  {
+   "name": "Swainbost",
+   "kind": "Village",
+   "county": "Na h-Eileanan an Iar",
+   "region": "Scotland",
+   "mag": 21.9891,
+   "sky": 1.8
+  },
+  {
+   "name": "Seilebost",
+   "kind": "Village",
+   "county": "Na h-Eileanan an Iar",
+   "region": "Scotland",
+   "mag": 21.9888,
+   "sky": 1.8
+  },
+  {
+   "name": "Valtos",
+   "kind": "Village",
+   "county": "Na h-Eileanan an Iar",
+   "region": "Scotland",
+   "mag": 21.9886,
+   "sky": 1.8
+  },
+  {
+   "name": "Skigersta (Sgiogarstaigh)",
+   "kind": "Village",
+   "county": "Na h-Eileanan an Iar",
+   "region": "Scotland",
+   "mag": 21.9886,
+   "sky": 1.8
+  },
+  {
+   "name": "Kneep",
+   "kind": "Village",
+   "county": "Na h-Eileanan an Iar",
+   "region": "Scotland",
+   "mag": 21.9885,
+   "sky": 1.8
+  },
+  {
+   "name": "South Galson (Gabhsann bho Dheas)",
+   "kind": "Village",
+   "county": "Na h-Eileanan an Iar",
+   "region": "Scotland",
+   "mag": 21.9874,
+   "sky": 2.0
+  },
+  {
+   "name": "Ness (Nis)",
+   "kind": "Village",
+   "county": "Na h-Eileanan an Iar",
+   "region": "Scotland",
+   "mag": 21.9873,
+   "sky": 2.1
+  }
+ ],
+ "uk_places_n": {
+  "City": 72,
+  "Town": 1372,
+  "Village": 15155,
+  "Hamlet": 12900
+ },
+ "uk_kind_mw_visible": {
+  "City": 0.0278,
+  "Town": 0.3659,
+  "Village": 0.6684,
+  "Hamlet": 0.8181
+ },
+ "uk_cities": {
+  "London": {
+   "pop_k": 8962,
+   "sky": 19840.0,
+   "mag": 16.848,
+   "mw_km": 35,
+   "mw_lat": 51.2292,
+   "mw_lon": 0.1125,
+   "dark_km": 178,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Toy's Hill",
+    "county": "Kent",
+    "km": 1.5
+   }
+  },
+  "Birmingham": {
+   "pop_k": 1158,
+   "sky": 11712.0,
+   "mag": 17.4138,
+   "mw_km": 25,
+   "mw_lat": 52.2708,
+   "mw_lon": -2.0125,
+   "dark_km": 91,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Bradley Green",
+    "county": "Worcestershire",
+    "km": 2.0
+   }
+  },
+  "Dublin": {
+   "pop_k": 1024,
+   "sky": 11040.0,
+   "mag": 17.477,
+   "mw_km": 14,
+   "mw_lat": 53.2042,
+   "mw_lon": -6.2625,
+   "dark_km": 81,
+   "cc": "IE",
+   "mw_near": {
+    "name": "Newry",
+    "county": "",
+    "km": 108.4
+   }
+  },
+  "Glasgow": {
+   "pop_k": 626,
+   "sky": 10400.0,
+   "mag": 17.5408,
+   "mw_km": 15,
+   "mw_lat": 55.9958,
+   "mw_lon": -4.2542,
+   "dark_km": 43,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Haughhead",
+    "county": "East Dunbartonshire",
+    "km": 2.0
+   }
+  },
+  "Manchester": {
+   "pop_k": 569,
+   "sky": 10688.0,
+   "mag": 17.5116,
+   "mw_km": 22,
+   "mw_lat": 53.4958,
+   "mw_lon": -1.9042,
+   "dark_km": 112,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Padfield",
+    "county": "Derbyshire",
+    "km": 5.2
+   }
+  },
+  "Sheffield": {
+   "pop_k": 556,
+   "sky": 5904.0,
+   "mag": 18.142,
+   "mw_km": 10,
+   "mw_lat": 53.3542,
+   "mw_lon": -1.6042,
+   "dark_km": 144,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Long Line",
+    "county": "Sheffield",
+    "km": 3.7
+   }
+  },
+  "Leeds": {
+   "pop_k": 536,
+   "sky": 10368.0,
+   "mag": 17.5441,
+   "mw_km": 16,
+   "mw_lat": 53.9375,
+   "mw_lon": -1.6125,
+   "dark_km": 100,
+   "cc": "GB",
+   "mw_near": {
+    "name": "North Rigton",
+    "county": "North Yorkshire",
+    "km": 2.4
+   }
+  },
+  "Edinburgh": {
+   "pop_k": 515,
+   "sky": 5776.0,
+   "mag": 18.1651,
+   "mw_km": 9,
+   "mw_lat": 56.0292,
+   "mw_lon": -3.1375,
+   "dark_km": 36,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Kinghorn",
+    "county": "Fife",
+    "km": 5.1
+   }
+  },
+  "Liverpool": {
+   "pop_k": 497,
+   "sky": 9824.0,
+   "mag": 17.6016,
+   "mw_km": 16,
+   "mw_lat": 53.3792,
+   "mw_lon": -3.2125,
+   "dark_km": 68,
+   "cc": "GB",
+   "mw_near": {
+    "name": "West Kirby",
+    "county": "Wirral",
+    "km": 2.0
+   }
+  },
+  "Bristol": {
+   "pop_k": 479,
+   "sky": 5312.0,
+   "mag": 18.2532,
+   "mw_km": 9,
+   "mw_lat": 51.3708,
+   "mw_lon": -2.5958,
+   "dark_km": 74,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Chew Magna",
+    "county": "Bath and North East Somerset",
+    "km": 1.2
+   }
+  },
+  "Cardiff": {
+   "pop_k": 372,
+   "sky": 5952.0,
+   "mag": 18.1334,
+   "mw_km": 10,
+   "mw_lat": 51.4792,
+   "mw_lon": -3.3292,
+   "dark_km": 43,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Peterston-super-Ely",
+    "county": "Bro Morgannwg - the Vale of Glamorgan",
+    "km": 0.6
+   }
+  },
+  "Leicester": {
+   "pop_k": 369,
+   "sky": 5536.0,
+   "mag": 18.2098,
+   "mw_km": 10,
+   "mw_lat": 52.6625,
+   "mw_lon": -0.9958,
+   "dark_km": 143,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Hungarton",
+    "county": "Leicestershire",
+    "km": 1.0
+   }
+  },
+  "Bradford": {
+   "pop_k": 366,
+   "sky": 5824.0,
+   "mag": 18.1564,
+   "mw_km": 14,
+   "mw_lat": 53.7875,
+   "mw_lon": -1.9708,
+   "dark_km": 95,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Oxenhope",
+    "county": "Bradford",
+    "km": 2.7
+   }
+  },
+  "Belfast": {
+   "pop_k": 348,
+   "sky": 8048.0,
+   "mag": 17.8139,
+   "mw_km": 10,
+   "mw_lat": 54.6292,
+   "mw_lon": -6.0625,
+   "dark_km": 42,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Newtownabbey",
+    "county": "",
+    "km": 10.5
+   }
+  },
+  "Coventry": {
+   "pop_k": 345,
+   "sky": 5216.0,
+   "mag": 18.2724,
+   "mw_km": 15,
+   "mw_lat": 52.3042,
+   "mw_lon": -1.3625,
+   "dark_km": 117,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Leamington Hastings",
+    "county": "Warwickshire",
+    "km": 1.0
+   }
+  },
+  "Nottingham": {
+   "pop_k": 324,
+   "sky": 6064.0,
+   "mag": 18.1138,
+   "mw_km": 13,
+   "mw_lat": 52.8792,
+   "mw_lon": -1.0042,
+   "dark_km": 139,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Kinoulton",
+    "county": "Nottinghamshire",
+    "km": 1.2
+   }
+  },
+  "Reading": {
+   "pop_k": 318,
+   "sky": 4080.0,
+   "mag": 18.5294,
+   "mw_km": 7,
+   "mw_lat": 51.5042,
+   "mw_lon": -1.0292,
+   "dark_km": 146,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Gallowstree Common",
+    "county": "Oxfordshire",
+    "km": 2.1
+   }
+  },
+  "Kingston upon Hull": {
+   "pop_k": 314,
+   "sky": 4896.0,
+   "mag": 18.3389,
+   "mw_km": 10,
+   "mw_lat": 53.8292,
+   "mw_lon": -0.3042,
+   "dark_km": 120,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Skirlaugh",
+    "county": "East Riding of Yorkshire",
+    "km": 2.7
+   }
+  },
+  "Preston": {
+   "pop_k": 313,
+   "sky": 3336.0,
+   "mag": 18.7381,
+   "mw_km": 9,
+   "mw_lat": 53.8208,
+   "mw_lon": -2.7958,
+   "dark_km": 71,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Catforth",
+    "county": "Lancashire",
+    "km": 0.6
+   }
+  },
+  "Swansea": {
+   "pop_k": 300,
+   "sky": 2992.0,
+   "mag": 18.8501,
+   "mw_km": 6,
+   "mw_lat": 51.5708,
+   "mw_lon": -3.9792,
+   "dark_km": 23,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Caswell",
+    "county": "Abertawe - Swansea",
+    "km": 3.9
+   }
+  },
+  "Newcastle upon Tyne": {
+   "pop_k": 300,
+   "sky": 7856.0,
+   "mag": 17.8396,
+   "mw_km": 12,
+   "mw_lat": 55.0208,
+   "mw_lon": -1.7875,
+   "dark_km": 35,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Medburn",
+    "county": "Northumberland",
+    "km": 0.9
+   }
+  },
+  "Southend-on-Sea": {
+   "pop_k": 295,
+   "sky": 2984.0,
+   "mag": 18.8528,
+   "mw_km": 8,
+   "mw_lat": 51.5875,
+   "mw_lon": 0.7958,
+   "dark_km": 160,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Paglesham Eastend",
+    "county": "Essex",
+    "km": 1.1
+   }
+  },
+  "Brighton": {
+   "pop_k": 284,
+   "sky": 3800.0,
+   "mag": 18.6033,
+   "mw_km": 8,
+   "mw_lat": 50.8958,
+   "mw_lon": -0.1292,
+   "dark_km": 176,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Clayton",
+    "county": "West Sussex",
+    "km": 1.9
+   }
+  },
+  "Derby": {
+   "pop_k": 270,
+   "sky": 5152.0,
+   "mag": 18.2854,
+   "mw_km": 9,
+   "mw_lat": 52.9458,
+   "mw_lon": -1.6125,
+   "dark_km": 133,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Lees",
+    "county": "Derbyshire",
+    "km": 1.6
+   }
+  },
+  "Southampton": {
+   "pop_k": 270,
+   "sky": 6368.0,
+   "mag": 18.0621,
+   "mw_km": 8,
+   "mw_lat": 50.8542,
+   "mw_lon": -1.4792,
+   "dark_km": 90,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Dibden",
+    "county": "Hampshire",
+    "km": 4.2
+   }
+  },
+  "Wolverhampton": {
+   "pop_k": 264,
+   "sky": 7392.0,
+   "mag": 17.9042,
+   "mw_km": 12,
+   "mw_lat": 52.5875,
+   "mw_lon": -2.3042,
+   "dark_km": 79,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Burnhill Green",
+    "county": "Staffordshire",
+    "km": 1.8
+   }
+  },
+  "Plymouth": {
+   "pop_k": 260,
+   "sky": 3104.0,
+   "mag": 18.8124,
+   "mw_km": 4,
+   "mw_lat": 50.3375,
+   "mw_lon": -4.1458,
+   "dark_km": 20,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Heybrook Bay",
+    "county": "Devon",
+    "km": 2.8
+   }
+  },
+  "Stoke-on-Trent": {
+   "pop_k": 258,
+   "sky": 4592.0,
+   "mag": 18.406,
+   "mw_km": 10,
+   "mw_lat": 52.9375,
+   "mw_lon": -2.2792,
+   "dark_km": 90,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Chapel Chorlton",
+    "county": "Staffordshire",
+    "km": 0.4
+   }
+  },
+  "Milton Keynes": {
+   "pop_k": 256,
+   "sky": 4608.0,
+   "mag": 18.4023,
+   "mw_km": 10,
+   "mw_lat": 51.9958,
+   "mw_lon": -0.8875,
+   "dark_km": 153,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Nash",
+    "county": "Buckinghamshire",
+    "km": 1.8
+   }
+  },
+  "Northampton": {
+   "pop_k": 246,
+   "sky": 2952.0,
+   "mag": 18.8639,
+   "mw_km": 8,
+   "mw_lat": 52.3042,
+   "mw_lon": -0.9542,
+   "dark_km": 146,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Church Brampton",
+    "county": "West Northamptonshire",
+    "km": 2.0
+   }
+  },
+  "Bexley": {
+   "pop_k": 228,
+   "sky": 3848.0,
+   "mag": 18.5903,
+   "mw_km": 23,
+   "mw_lat": 51.2375,
+   "mw_lon": 0.1458,
+   "dark_km": 178,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Goathurst Common",
+    "county": "Kent",
+    "km": 1.3
+   }
+  },
+  "Luton": {
+   "pop_k": 225,
+   "sky": 4016.0,
+   "mag": 18.5458,
+   "mw_km": 21,
+   "mw_lat": 51.9458,
+   "mw_lon": -0.1375,
+   "dark_km": 152,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Weston",
+    "county": "Hertfordshire",
+    "km": 2.4
+   }
+  },
+  "Cork": {
+   "pop_k": 224,
+   "sky": 4736.0,
+   "mag": 18.3737,
+   "mw_km": 6,
+   "mw_lat": 51.9542,
+   "mw_lon": -8.4792,
+   "dark_km": 27,
+   "cc": "IE",
+   "mw_near": {
+    "name": "Solva (Solfach)",
+    "county": "Sir Benfro - Pembrokeshire",
+    "km": 225.1
+   }
+  },
+  "Portsmouth": {
+   "pop_k": 208,
+   "sky": 4032.0,
+   "mag": 18.5417,
+   "mw_km": 8,
+   "mw_lat": 50.7375,
+   "mw_lon": -1.1458,
+   "dark_km": 109,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Ryde",
+    "county": "Isle of Wight",
+    "km": 1.5
+   }
+  },
+  "Swindon": {
+   "pop_k": 202,
+   "sky": 2728.0,
+   "mag": 18.9446,
+   "mw_km": 5,
+   "mw_lat": 51.5125,
+   "mw_lon": -1.8042,
+   "dark_km": 115,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Wroughton",
+    "county": "Swindon",
+    "km": 2.9
+   }
+  },
+  "Aberdeen": {
+   "pop_k": 199,
+   "sky": 6880.0,
+   "mag": 17.9803,
+   "mw_km": 10,
+   "mw_lat": 57.0792,
+   "mw_lon": -2.2042,
+   "dark_km": 26,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Kirkton of Maryculter",
+    "county": "Aberdeenshire",
+    "km": 2.0
+   }
+  },
+  "Sutton": {
+   "pop_k": 188,
+   "sky": 4192.0,
+   "mag": 18.5012,
+   "mw_km": 20,
+   "mw_lat": 51.2042,
+   "mw_lon": -0.3625,
+   "dark_km": 186,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Wotton",
+    "county": "Surrey",
+    "km": 2.0
+   }
+  },
+  "St Helens": {
+   "pop_k": 183,
+   "sky": 4072.0,
+   "mag": 18.5314,
+   "mw_km": 28,
+   "mw_lat": 53.5542,
+   "mw_lon": -3.1125,
+   "dark_km": 83,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Formby",
+    "county": "Sefton",
+    "km": 3.5
+   }
+  },
+  "Ipswich": {
+   "pop_k": 179,
+   "sky": 3160.0,
+   "mag": 18.794,
+   "mw_km": 5,
+   "mw_lat": 52.0875,
+   "mw_lon": 1.2042,
+   "dark_km": 102,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Tuddenham St Martin",
+    "county": "Suffolk",
+    "km": 0.6
+   }
+  },
+  "Wigan": {
+   "pop_k": 175,
+   "sky": 3472.0,
+   "mag": 18.6968,
+   "mw_km": 28,
+   "mw_lat": 53.7042,
+   "mw_lon": -2.9542,
+   "dark_km": 94,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Banks",
+    "county": "Lancashire",
+    "km": 3.6
+   }
+  },
+  "Mansfield": {
+   "pop_k": 172,
+   "sky": 2440.0,
+   "mag": 19.0581,
+   "mw_km": 11,
+   "mw_lat": 53.2125,
+   "mw_lon": -1.0958,
+   "dark_km": 143,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Meden Vale",
+    "county": "Nottinghamshire",
+    "km": 2.5
+   }
+  },
+  "Sunderland": {
+   "pop_k": 170,
+   "sky": 4656.0,
+   "mag": 18.3915,
+   "mw_km": 22,
+   "mw_lat": 54.8125,
+   "mw_lon": -1.6792,
+   "dark_km": 51,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Langley Park",
+    "county": "County Durham",
+    "km": 1.6
+   }
+  },
+  "Ilford": {
+   "pop_k": 168,
+   "sky": 7456.0,
+   "mag": 17.8951,
+   "mw_km": 27,
+   "mw_lat": 51.7458,
+   "mw_lon": 0.3292,
+   "dark_km": 167,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Willingale",
+    "county": "Essex",
+    "km": 1.3
+   }
+  },
+  "Slough": {
+   "pop_k": 165,
+   "sky": 4560.0,
+   "mag": 18.4133,
+   "mw_km": 19,
+   "mw_lat": 51.5792,
+   "mw_lon": -0.8458,
+   "dark_km": 170,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Pheasant's Hill",
+    "county": "Buckinghamshire",
+    "km": 1.6
+   }
+  },
+  "Bournemouth": {
+   "pop_k": 164,
+   "sky": 2216.0,
+   "mag": 19.1554,
+   "mw_km": 6,
+   "mw_lat": 50.6875,
+   "mw_lon": -1.9542,
+   "dark_km": 53,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Poole",
+    "county": "Bournemouth, Christchurch and Poole",
+    "km": 3.9
+   }
+  },
+  "Peterborough": {
+   "pop_k": 163,
+   "sky": 3744.0,
+   "mag": 18.6187,
+   "mw_km": 7,
+   "mw_lat": 52.6042,
+   "mw_lon": -0.3458,
+   "dark_km": 90,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Marholm",
+    "county": "City of Peterborough",
+    "km": 2.5
+   }
+  },
+  "Oxford": {
+   "pop_k": 162,
+   "sky": 2504.0,
+   "mag": 19.0318,
+   "mw_km": 6,
+   "mw_lat": 51.7542,
+   "mw_lon": -1.3375,
+   "dark_km": 150,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Farmoor",
+    "county": "Oxfordshire",
+    "km": 1.1
+   }
+  },
+  "Newport": {
+   "pop_k": 162,
+   "sky": 2832.0,
+   "mag": 18.9064,
+   "mw_km": 7,
+   "mw_lat": 51.6375,
+   "mw_lon": -2.9292,
+   "dark_km": 58,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Llandegveth",
+    "county": "Sir Fynwy - Monmouthshire",
+    "km": 2.7
+   }
+  },
+  "Enfield Town": {
+   "pop_k": 157,
+   "sky": 4592.0,
+   "mag": 18.406,
+   "mw_km": 25,
+   "mw_lat": 51.8625,
+   "mw_lon": 0.0292,
+   "dark_km": 162,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Standon",
+    "county": "Hertfordshire",
+    "km": 2.0
+   }
+  },
+  "York": {
+   "pop_k": 156,
+   "sky": 3080.0,
+   "mag": 18.8203,
+   "mw_km": 6,
+   "mw_lat": 53.9125,
+   "mw_lon": -1.0292,
+   "dark_km": 105,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Deighton",
+    "county": "York",
+    "km": 3.2
+   }
+  },
+  "Telford": {
+   "pop_k": 156,
+   "sky": 3008.0,
+   "mag": 18.8446,
+   "mw_km": 6,
+   "mw_lat": 52.6625,
+   "mw_lon": -2.5292,
+   "dark_km": 63,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Little Wenlock",
+    "county": "Telford and Wrekin",
+    "km": 0.6
+   }
+  },
+  "Burnley": {
+   "pop_k": 149,
+   "sky": 2400.0,
+   "mag": 19.0749,
+   "mw_km": 6,
+   "mw_lat": 53.8042,
+   "mw_lon": -2.1458,
+   "dark_km": 82,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Worsthorne",
+    "county": "Lancashire",
+    "km": 3.5
+   }
+  },
+  "Harrow": {
+   "pop_k": 149,
+   "sky": 6208.0,
+   "mag": 18.089,
+   "mw_km": 30,
+   "mw_lat": 51.7375,
+   "mw_lon": -0.6792,
+   "dark_km": 177,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Lee Common",
+    "county": "Buckinghamshire",
+    "km": 1.1
+   }
+  },
+  "Huddersfield": {
+   "pop_k": 149,
+   "sky": 3616.0,
+   "mag": 18.6548,
+   "mw_km": 13,
+   "mw_lat": 53.5375,
+   "mw_lon": -1.8292,
+   "dark_km": 109,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Holme",
+    "county": "Kirklees",
+    "km": 1.6
+   }
+  },
+  "Dundee": {
+   "pop_k": 148,
+   "sky": 2920.0,
+   "mag": 18.8751,
+   "mw_km": 4,
+   "mw_lat": 56.4292,
+   "mw_lon": -2.9708,
+   "dark_km": 20,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Newport-on-Tay",
+    "county": "Fife",
+    "km": 2.2
+   }
+  },
+  "Blackburn": {
+   "pop_k": 147,
+   "sky": 3232.0,
+   "mag": 18.7708,
+   "mw_km": 8,
+   "mw_lat": 53.8208,
+   "mw_lon": -2.4958,
+   "dark_km": 79,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Dinckley",
+    "county": "Lancashire",
+    "km": 1.5
+   }
+  },
+  "Cambridge": {
+   "pop_k": 146,
+   "sky": 2888.0,
+   "mag": 18.8864,
+   "mw_km": 6,
+   "mw_lat": 52.1708,
+   "mw_lon": 0.0375,
+   "dark_km": 101,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Barton",
+    "county": "Cambridgeshire",
+    "km": 1.8
+   }
+  },
+  "Blackpool": {
+   "pop_k": 145,
+   "sky": 3560.0,
+   "mag": 18.6709,
+   "mw_km": 11,
+   "mw_lat": 53.9125,
+   "mw_lon": -3.0542,
+   "dark_km": 59,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Fleetwood",
+    "county": "Lancashire",
+    "km": 1.3
+   }
+  },
+  "Basildon": {
+   "pop_k": 145,
+   "sky": 3296.0,
+   "mag": 18.7505,
+   "mw_km": 19,
+   "mw_lat": 51.6792,
+   "mw_lon": 0.6708,
+   "dark_km": 159,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Cold Norton",
+    "county": "Essex",
+    "km": 0.8
+   }
+  },
+  "Norwich": {
+   "pop_k": 143,
+   "sky": 3904.0,
+   "mag": 18.5753,
+   "mw_km": 6,
+   "mw_lat": 52.5792,
+   "mw_lon": 1.3292,
+   "dark_km": 45,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Upper Stoke",
+    "county": "Norfolk",
+    "km": 0.9
+   }
+  },
+  "Middlesbrough": {
+   "pop_k": 143,
+   "sky": 6640.0,
+   "mag": 18.0179,
+   "mw_km": 12,
+   "mw_lat": 54.4708,
+   "mw_lon": -1.2458,
+   "dark_km": 66,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Seamer",
+    "county": "North Yorkshire",
+    "km": 1.8
+   }
+  },
+  "Bolton": {
+   "pop_k": 141,
+   "sky": 4240.0,
+   "mag": 18.4893,
+   "mw_km": 27,
+   "mw_lat": 53.8208,
+   "mw_lon": -2.4958,
+   "dark_km": 97,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Dinckley",
+    "county": "Lancashire",
+    "km": 1.5
+   }
+  },
+  "High Wycombe": {
+   "pop_k": 133,
+   "sky": 2280.0,
+   "mag": 19.1267,
+   "mw_km": 7,
+   "mw_lat": 51.6625,
+   "mw_lon": -0.8375,
+   "dark_km": 169,
+   "cc": "GB",
+   "mw_near": {
+    "name": "The City",
+    "county": "Buckinghamshire",
+    "km": 1.3
+   }
+  },
+  "Gloucester": {
+   "pop_k": 132,
+   "sky": 2392.0,
+   "mag": 19.0782,
+   "mw_km": 4,
+   "mw_lat": 51.8958,
+   "mw_lon": -2.2708,
+   "dark_km": 83,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Maisemore",
+    "county": "Gloucestershire",
+    "km": 0.8
+   }
+  },
+  "Exeter": {
+   "pop_k": 131,
+   "sky": 2096.0,
+   "mag": 19.2113,
+   "mw_km": 3,
+   "mw_lat": 50.7208,
+   "mw_lon": -3.5708,
+   "dark_km": 15,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Nadderwater",
+    "county": "Devon",
+    "km": 0.8
+   }
+  },
+  "Colchester": {
+   "pop_k": 130,
+   "sky": 2176.0,
+   "mag": 19.1737,
+   "mw_km": 5,
+   "mw_lat": 51.9292,
+   "mw_lon": 0.8625,
+   "dark_km": 120,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Great Horkesley",
+    "county": "Essex",
+    "km": 1.1
+   }
+  },
+  "Saint Peters": {
+   "pop_k": 125,
+   "sky": 1220.0,
+   "mag": 19.7407,
+   "mw_km": 2,
+   "mw_lat": 51.3792,
+   "mw_lon": 1.4458,
+   "dark_km": 181,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Broadstairs",
+    "county": "Kent",
+    "km": 2.3
+   }
+  },
+  "Crawley": {
+   "pop_k": 124,
+   "sky": 3528.0,
+   "mag": 18.6803,
+   "mw_km": 7,
+   "mw_lat": 51.0542,
+   "mw_lon": -0.1708,
+   "dark_km": 179,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Staplefield",
+    "county": "West Sussex",
+    "km": 1.9
+   }
+  },
+  "Burton upon Trent": {
+   "pop_k": 122,
+   "sky": 3640.0,
+   "mag": 18.6479,
+   "mw_km": 11,
+   "mw_lat": 52.8375,
+   "mw_lon": -1.8042,
+   "dark_km": 118,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Newborough",
+    "county": "Staffordshire",
+    "km": 1.2
+   }
+  },
+  "Worthing": {
+   "pop_k": 114,
+   "sky": 2360.0,
+   "mag": 19.0919,
+   "mw_km": 6,
+   "mw_lat": 50.8708,
+   "mw_lon": -0.3792,
+   "dark_km": 160,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Findon",
+    "county": "West Sussex",
+    "km": 2.0
+   }
+  },
+  "Doncaster": {
+   "pop_k": 114,
+   "sky": 5392.0,
+   "mag": 18.2375,
+   "mw_km": 14,
+   "mw_lat": 53.4958,
+   "mw_lon": -0.9208,
+   "dark_km": 140,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Wroot",
+    "county": "North Lincolnshire",
+    "km": 2.6
+   }
+  },
+  "Chesterfield": {
+   "pop_k": 113,
+   "sky": 2224.0,
+   "mag": 19.1518,
+   "mw_km": 7,
+   "mw_lat": 53.2542,
+   "mw_lon": -1.5208,
+   "dark_km": 147,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Old Brampton",
+    "county": "Derbyshire",
+    "km": 1.9
+   }
+  },
+  "Chelmsford": {
+   "pop_k": 112,
+   "sky": 2424.0,
+   "mag": 19.0648,
+   "mw_km": 6,
+   "mw_lat": 51.7708,
+   "mw_lon": 0.4125,
+   "dark_km": 141,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Chignall St James",
+    "county": "Essex",
+    "km": 1.1
+   }
+  },
+  "Wakefield": {
+   "pop_k": 110,
+   "sky": 4080.0,
+   "mag": 18.5294,
+   "mw_km": 24,
+   "mw_lat": 53.5125,
+   "mw_lon": -1.7292,
+   "dark_km": 113,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Carlecotes",
+    "county": "Barnsley",
+    "km": 1.5
+   }
+  },
+  "Basingstoke": {
+   "pop_k": 108,
+   "sky": 2360.0,
+   "mag": 19.0919,
+   "mw_km": 4,
+   "mw_lat": 51.2292,
+   "mw_lon": -1.0625,
+   "dark_km": 127,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Cliddesden",
+    "county": "Hampshire",
+    "km": 2.6
+   }
+  },
+  "Maidstone": {
+   "pop_k": 108,
+   "sky": 2336.0,
+   "mag": 19.1022,
+   "mw_km": 7,
+   "mw_lat": 51.2125,
+   "mw_lon": 0.4708,
+   "dark_km": 191,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Hunton",
+    "county": "Kent",
+    "km": 0.9
+   }
+  },
+  "Bedford": {
+   "pop_k": 107,
+   "sky": 3056.0,
+   "mag": 18.8284,
+   "mw_km": 7,
+   "mw_lat": 52.1875,
+   "mw_lon": -0.4125,
+   "dark_km": 132,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Wilden",
+    "county": "Bedford",
+    "km": 1.2
+   }
+  },
+  "Woking": {
+   "pop_k": 104,
+   "sky": 2216.0,
+   "mag": 19.1554,
+   "mw_km": 12,
+   "mw_lat": 51.2208,
+   "mw_lon": -0.4792,
+   "dark_km": 162,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Shere",
+    "county": "Surrey",
+    "km": 1.0
+   }
+  },
+  "Lincoln": {
+   "pop_k": 104,
+   "sky": 2552.0,
+   "mag": 19.0126,
+   "mw_km": 5,
+   "mw_lat": 53.2625,
+   "mw_lon": -0.5708,
+   "dark_km": 101,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Burton-by-Lincoln",
+    "county": "Lincolnshire",
+    "km": 0.6
+   }
+  },
+  "Limerick": {
+   "pop_k": 102,
+   "sky": 4144.0,
+   "mag": 18.5132,
+   "mw_km": 5,
+   "mw_lat": 52.7125,
+   "mw_lon": -8.6208,
+   "dark_km": 20,
+   "cc": "IE",
+   "mw_near": {
+    "name": "Newry",
+    "county": "",
+    "km": 224.1
+   }
+  },
+  "Eastbourne": {
+   "pop_k": 102,
+   "sky": 1360.0,
+   "mag": 19.6368,
+   "mw_km": 2,
+   "mw_lat": 50.7542,
+   "mw_lon": 0.2708,
+   "dark_km": 205,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Eastbourne",
+    "county": "East Sussex",
+    "km": 1.5
+   }
+  },
+  "Worcester": {
+   "pop_k": 102,
+   "sky": 1968.0,
+   "mag": 19.2743,
+   "mw_km": 4,
+   "mw_lat": 52.1708,
+   "mw_lon": -2.2708,
+   "dark_km": 71,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Upper Wick",
+    "county": "Worcestershire",
+    "km": 1.1
+   }
+  },
+  "Bath": {
+   "pop_k": 102,
+   "sky": 1516.0,
+   "mag": 19.5317,
+   "mw_km": 3,
+   "mw_lat": 51.3542,
+   "mw_lon": -2.3375,
+   "dark_km": 81,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Monkton Combe",
+    "county": "Bath and North East Somerset",
+    "km": 1.0
+   }
+  },
+  "Gillingham": {
+   "pop_k": 101,
+   "sky": 3224.0,
+   "mag": 18.7733,
+   "mw_km": 14,
+   "mw_lat": 51.2875,
+   "mw_lon": 0.6708,
+   "dark_km": 178,
+   "cc": "GB",
+   "mw_near": {
+    "name": "Wormshill",
+    "county": "Kent",
+    "km": 1.7
+   }
+  }
+ },
+ "city": {
+  "Shanghai": {
+   "cc": "CN",
+   "pop_m": 24.9,
+   "mw_km": 54,
+   "dark_km": 465
+  },
+  "Chongqing": {
+   "cc": "CN",
+   "pop_m": 22.0,
+   "mw_km": 25,
+   "dark_km": 316
+  },
+  "Chengdu": {
+   "cc": "CN",
+   "pop_m": 20.9,
+   "mw_km": 36,
+   "dark_km": 200
+  },
+  "Beijing": {
+   "cc": "CN",
+   "pop_m": 19.0,
+   "mw_km": 41,
+   "dark_km": 268
+  },
+  "Guangzhou": {
+   "cc": "CN",
+   "pop_m": 18.7,
+   "mw_km": 63,
+   "dark_km": 521
+  },
+  "Shenzhen": {
+   "cc": "CN",
+   "pop_m": 17.5,
+   "mw_km": 43,
+   "dark_km": 626
+  },
+  "Kinshasa": {
+   "cc": "CD",
+   "pop_m": 16.0,
+   "mw_km": 11,
+   "dark_km": 67
+  },
+  "Istanbul": {
+   "cc": "TR",
+   "pop_m": 15.7,
+   "mw_km": 37,
+   "dark_km": 429
+  },
+  "Lagos": {
+   "cc": "NG",
+   "pop_m": 15.4,
+   "mw_km": 28,
+   "dark_km": 133
+  },
+  "Ho Chi Minh City": {
+   "cc": "VN",
+   "pop_m": 14.0,
+   "mw_km": 35,
+   "dark_km": 213
+  },
+  "Tianjin": {
+   "cc": "CN",
+   "pop_m": 13.9,
+   "mw_km": 44,
+   "dark_km": 362
+  },
+  "Wuhan": {
+   "cc": "CN",
+   "pop_m": 13.7,
+   "mw_km": 35,
+   "dark_km": 396
+  },
+  "Lahore": {
+   "cc": "PK",
+   "pop_m": 13.0,
+   "mw_km": 21,
+   "dark_km": 276
+  },
+  "Xi’an": {
+   "cc": "CN",
+   "pop_m": 13.0,
+   "mw_km": 31,
+   "dark_km": 254
+  },
+  "Mumbai": {
+   "cc": "IN",
+   "pop_m": 12.7,
+   "mw_km": 19,
+   "dark_km": 694
+  },
+  "São Paulo": {
+   "cc": "BR",
+   "pop_m": 12.4,
+   "mw_km": 48,
+   "dark_km": 639
+  },
+  "Mexico City": {
+   "cc": "MX",
+   "pop_m": 12.3,
+   "mw_km": 55,
+   "dark_km": 259
+  },
+  "Hangzhou": {
+   "cc": "CN",
+   "pop_m": 11.9,
+   "mw_km": 46,
+   "dark_km": 593
+  },
+  "Karachi": {
+   "cc": "PK",
+   "pop_m": 11.6,
+   "mw_km": 22,
+   "dark_km": 122
+  },
+  "Delhi": {
+   "cc": "IN",
+   "pop_m": 11.0,
+   "mw_km": 58,
+   "dark_km": 326
+  },
+  "Moscow": {
+   "cc": "RU",
+   "pop_m": 10.4,
+   "mw_km": 80,
+   "dark_km": 342
+  },
+  "Dhaka": {
+   "cc": "BD",
+   "pop_m": 10.4,
+   "mw_km": 13,
+   "dark_km": 230
+  },
+  "Seoul": {
+   "cc": "KR",
+   "pop_m": 10.3,
+   "mw_km": 46,
+   "dark_km": 227
+  },
+  "Harbin": {
+   "cc": "CN",
+   "pop_m": 10.0,
+   "mw_km": 20,
+   "dark_km": 157
+  },
+  "Tokyo": {
+   "cc": "JP",
+   "pop_m": 9.7,
+   "mw_km": 50,
+   "dark_km": 278
+  },
+  "Dongguan": {
+   "cc": "CN",
+   "pop_m": 9.6,
+   "mw_km": 44,
+   "dark_km": 570
+  },
+  "Cairo": {
+   "cc": "EG",
+   "pop_m": 9.6,
+   "mw_km": 53,
+   "dark_km": 280
+  },
+  "Hefei": {
+   "cc": "CN",
+   "pop_m": 9.5,
+   "mw_km": 31,
+   "dark_km": 658
+  },
+  "Johannesburg": {
+   "cc": "ZA",
+   "pop_m": 9.4,
+   "mw_km": 36,
+   "dark_km": 262
+  },
+  "Weifang": {
+   "cc": "CN",
+   "pop_m": 9.4,
+   "mw_km": 21,
+   "dark_km": 566
+  },
+  "Nanjing": {
+   "cc": "CN",
+   "pop_m": 9.3,
+   "mw_km": 39,
+   "dark_km": 628
+  },
+  "Shenyang": {
+   "cc": "CN",
+   "pop_m": 9.1,
+   "mw_km": 29,
+   "dark_km": 216
+  },
+  "London": {
+   "cc": "GB",
+   "pop_m": 9.0,
+   "mw_km": 36,
+   "dark_km": 469
+  },
+  "New York City": {
+   "cc": "US",
+   "pop_m": 8.8,
+   "mw_km": 74,
+   "dark_km": 657
+  },
+  "Jakarta": {
+   "cc": "ID",
+   "pop_m": 8.5,
+   "mw_km": 30,
+   "dark_km": 255
+  },
+  "Bengaluru": {
+   "cc": "IN",
+   "pop_m": 8.5,
+   "mw_km": 41,
+   "dark_km": 490
+  },
+  "Jinan": {
+   "cc": "CN",
+   "pop_m": 8.4,
+   "mw_km": 26,
+   "dark_km": 631
+  },
+  "Hanoi": {
+   "cc": "VN",
+   "pop_m": 8.1,
+   "mw_km": 28,
+   "dark_km": 163
+  },
+  "Taipei": {
+   "cc": "TW",
+   "pop_m": 7.9,
+   "mw_km": 21,
+   "dark_km": 212
+  },
+  "Lima": {
+   "cc": "PE",
+   "pop_m": 7.7,
+   "mw_km": 26,
+   "dark_km": 210
+  },
+  "Bogotá": {
+   "cc": "CO",
+   "pop_m": 7.7,
+   "mw_km": 17,
+   "dark_km": 172
+  },
+  "Dalian": {
+   "cc": "CN",
+   "pop_m": 7.5,
+   "mw_km": 24,
+   "dark_km": 262
+  },
+  "Hong Kong": {
+   "cc": "HK",
+   "pop_m": 7.4,
+   "mw_km": 22,
+   "dark_km": 625
+  },
+  "Baghdad": {
+   "cc": "IQ",
+   "pop_m": 7.2,
+   "mw_km": 50,
+   "dark_km": 262
+  },
+  "Wuzhong": {
+   "cc": "CN",
+   "pop_m": 7.2,
+   "mw_km": 10,
+   "dark_km": 147
+  },
+  "Qingdao": {
+   "cc": "CN",
+   "pop_m": 7.2,
+   "mw_km": 25,
+   "dark_km": 478
+  },
+  "Tehran": {
+   "cc": "IR",
+   "pop_m": 7.2,
+   "mw_km": 34,
+   "dark_km": 241
+  },
+  "Yantai": {
+   "cc": "CN",
+   "pop_m": 7.1,
+   "mw_km": 14,
+   "dark_km": 348
+  },
+  "Hyderabad": {
+   "cc": "IN",
+   "pop_m": 7.0,
+   "mw_km": 37,
+   "dark_km": 879
+  },
+  "Rio de Janeiro": {
+   "cc": "BR",
+   "pop_m": 6.7,
+   "mw_km": 48,
+   "dark_km": 569
+  },
+  "Suzhou": {
+   "cc": "CN",
+   "pop_m": 6.7,
+   "mw_km": 47,
+   "dark_km": 521
+  },
+  "Zhengzhou": {
+   "cc": "CN",
+   "pop_m": 6.7,
+   "mw_km": 31,
+   "dark_km": 446
+  },
+  "Ahmedabad": {
+   "cc": "IN",
+   "pop_m": 6.4,
+   "mw_km": 32,
+   "dark_km": 318
+  },
+  "Abidjan": {
+   "cc": "CI",
+   "pop_m": 6.3,
+   "mw_km": 18,
+   "dark_km": 316
+  },
+  "Nanning": {
+   "cc": "CN",
+   "pop_m": 6.0,
+   "mw_km": 19,
+   "dark_km": 257
+  },
+  "Kunming": {
+   "cc": "CN",
+   "pop_m": 6.0,
+   "mw_km": 20,
+   "dark_km": 244
+  },
+  "Shijiazhuang": {
+   "cc": "CN",
+   "pop_m": 5.8,
+   "mw_km": 22,
+   "dark_km": 447
+  },
+  "Changchun": {
+   "cc": "CN",
+   "pop_m": 5.7,
+   "mw_km": 25,
+   "dark_km": 243
+  },
+  "Sydney": {
+   "cc": "AU",
+   "pop_m": 5.6,
+   "mw_km": 25,
+   "dark_km": 177
+  },
+  "Singapore": {
+   "cc": "SG",
+   "pop_m": 5.6,
+   "mw_km": 30,
+   "dark_km": 166
+  },
+  "Melbourne": {
+   "cc": "AU",
+   "pop_m": 5.4,
+   "mw_km": 30,
+   "dark_km": 150
+  },
+  "Dar es Salaam": {
+   "cc": "TZ",
+   "pop_m": 5.4,
+   "mw_km": 14,
+   "dark_km": 91
+  },
+  "Saint Petersburg": {
+   "cc": "RU",
+   "pop_m": 5.4,
+   "mw_km": 41,
+   "dark_km": 268
+  },
+  "Taiyuan": {
+   "cc": "CN",
+   "pop_m": 5.3,
+   "mw_km": 22,
+   "dark_km": 448
+  },
+  "Alexandria": {
+   "cc": "EG",
+   "pop_m": 5.3,
+   "mw_km": 46,
+   "dark_km": 264
+  },
+  "Bangkok": {
+   "cc": "TH",
+   "pop_m": 5.1,
+   "mw_km": 60,
+   "dark_km": 248
+  },
+  "Kano": {
+   "cc": "NG",
+   "pop_m": 4.9,
+   "mw_km": 11,
+   "dark_km": 54
+  },
+  "Santiago": {
+   "cc": "CL",
+   "pop_m": 4.8,
+   "mw_km": 28,
+   "dark_km": 244
+  },
+  "Cape Town": {
+   "cc": "ZA",
+   "pop_m": 4.8,
+   "mw_km": 12,
+   "dark_km": 147
+  },
+  "Peshawar": {
+   "cc": "PK",
+   "pop_m": 4.8,
+   "mw_km": 8,
+   "dark_km": 86
+  },
+  "Zibo": {
+   "cc": "CN",
+   "pop_m": 4.7,
+   "mw_km": 20,
+   "dark_km": 625
+  },
+  "Jeddah": {
+   "cc": "SA",
+   "pop_m": 4.7,
+   "mw_km": 43,
+   "dark_km": 200
+  },
+  "Chennai": {
+   "cc": "IN",
+   "pop_m": 4.7,
+   "mw_km": 34,
+   "dark_km": 398
+  },
+  "Kolkata": {
+   "cc": "IN",
+   "pop_m": 4.6,
+   "mw_km": 30,
+   "dark_km": 426
+  },
+  "Xiamen": {
+   "cc": "CN",
+   "pop_m": 4.6,
+   "mw_km": 33,
+   "dark_km": 542
+  },
+  "Surat": {
+   "cc": "IN",
+   "pop_m": 4.6,
+   "mw_km": 20,
+   "dark_km": 501
+  },
+  "Yangzhou": {
+   "cc": "CN",
+   "pop_m": 4.6,
+   "mw_km": 28,
+   "dark_km": 556
+  },
+  "Huai'an": {
+   "cc": "CN",
+   "pop_m": 4.6,
+   "mw_km": 15,
+   "dark_km": 561
+  },
+  "Guiyang": {
+   "cc": "CN",
+   "pop_m": 4.5,
+   "mw_km": 18,
+   "dark_km": 202
+  },
+  "Yangon": {
+   "cc": "MM",
+   "pop_m": 4.5,
+   "mw_km": 11,
+   "dark_km": 81
+  },
+  "Kabul": {
+   "cc": "AF",
+   "pop_m": 4.4,
+   "mw_km": 10,
+   "dark_km": 50
+  },
+  "Nairobi": {
+   "cc": "KE",
+   "pop_m": 4.4,
+   "mw_km": 17,
+   "dark_km": 101
+  },
+  "Wuxi": {
+   "cc": "CN",
+   "pop_m": 4.4,
+   "mw_km": 42,
+   "dark_km": 528
+  },
+  "Lanzhou": {
+   "cc": "CN",
+   "pop_m": 4.4,
+   "mw_km": 13,
+   "dark_km": 182
+  },
+  "Bamako": {
+   "cc": "ML",
+   "pop_m": 4.2,
+   "mw_km": 14,
+   "dark_km": 62
+  },
+  "Riyadh": {
+   "cc": "SA",
+   "pop_m": 4.2,
+   "mw_km": 52,
+   "dark_km": 263
+  },
+  "Fuzhou": {
+   "cc": "CN",
+   "pop_m": 4.1,
+   "mw_km": 19,
+   "dark_km": 419
+  },
+  "Ürümqi": {
+   "cc": "CN",
+   "pop_m": 4.1,
+   "mw_km": 18,
+   "dark_km": 172
+  },
+  "Chattogram": {
+   "cc": "BD",
+   "pop_m": 3.9,
+   "mw_km": 11,
+   "dark_km": 71
+  },
+  "Addis Ababa": {
+   "cc": "ET",
+   "pop_m": 3.9,
+   "mw_km": 14,
+   "dark_km": 71
+  },
+  "Zaozhuang": {
+   "cc": "CN",
+   "pop_m": 3.9,
+   "mw_km": 8,
+   "dark_km": 693
+  },
+  "Zhongshan": {
+   "cc": "CN",
+   "pop_m": 3.8,
+   "mw_km": 50,
+   "dark_km": 568
+  },
+  "Shantou": {
+   "cc": "CN",
+   "pop_m": 3.8,
+   "mw_km": 28,
+   "dark_km": 592
+  },
+  "Los Angeles": {
+   "cc": "US",
+   "pop_m": 3.8,
+   "mw_km": 50,
+   "dark_km": 331
+  },
+  "Faisalabad": {
+   "cc": "PK",
+   "pop_m": 3.8,
+   "mw_km": 16,
+   "dark_km": 248
+  },
+  "Dubai": {
+   "cc": "AE",
+   "pop_m": 3.8,
+   "mw_km": 66,
+   "dark_km": 317
+  },
+  "Yokohama": {
+   "cc": "JP",
+   "pop_m": 3.8,
+   "mw_km": 27,
+   "dark_km": 250
+  },
+  "Ningbo": {
+   "cc": "CN",
+   "pop_m": 3.7,
+   "mw_km": 33,
+   "dark_km": 484
+  },
+  "Casablanca": {
+   "cc": "MA",
+   "pop_m": 3.7,
+   "mw_km": 27,
+   "dark_km": 282
+  },
+  "Ibadan": {
+   "cc": "NG",
+   "pop_m": 3.6,
+   "mw_km": 8,
+   "dark_km": 76
+  },
+  "Puyang": {
+   "cc": "CN",
+   "pop_m": 3.6,
+   "mw_km": 10,
+   "dark_km": 538
+  },
+  "Ankara": {
+   "cc": "TR",
+   "pop_m": 3.5,
+   "mw_km": 27,
+   "dark_km": 615
+  },
+  "Shiyan": {
+   "cc": "CN",
+   "pop_m": 3.5,
+   "mw_km": 8,
+   "dark_km": 94
+  },
+  "Hohhot": {
+   "cc": "CN",
+   "pop_m": 3.4,
+   "mw_km": 15,
+   "dark_km": 125
+  },
+  "Berlin": {
+   "cc": "DE",
+   "pop_m": 3.4,
+   "mw_km": 21,
+   "dark_km": 576
+  },
+  "Tangshan": {
+   "cc": "CN",
+   "pop_m": 3.4,
+   "mw_km": 26,
+   "dark_km": 310
+  },
+  "Rawalpindi": {
+   "cc": "PK",
+   "pop_m": 3.4,
+   "mw_km": 19,
+   "dark_km": 176
+  },
+  "Lüliang": {
+   "cc": "CN",
+   "pop_m": 3.3,
+   "mw_km": 7,
+   "dark_km": 482
+  },
+  "Durban": {
+   "cc": "ZA",
+   "pop_m": 3.3,
+   "mw_km": 30,
+   "dark_km": 172
+  },
+  "Anshan": {
+   "cc": "CN",
+   "pop_m": 3.3,
+   "mw_km": 15,
+   "dark_km": 210
+  },
+  "Changzhou": {
+   "cc": "CN",
+   "pop_m": 3.3,
+   "mw_km": 61,
+   "dark_km": 543
+  },
+  "Busan": {
+   "cc": "KR",
+   "pop_m": 3.3,
+   "mw_km": 41,
+   "dark_km": 246
+  },
+  "Madrid": {
+   "cc": "ES",
+   "pop_m": 3.3,
+   "mw_km": 42,
+   "dark_km": 753
+  },
+  "Pyongyang": {
+   "cc": "KP",
+   "pop_m": 3.2,
+   "mw_km": 7,
+   "dark_km": 59
+  },
+  "Pune": {
+   "cc": "IN",
+   "pop_m": 3.1,
+   "mw_km": 23,
+   "dark_km": 765
+  },
+  "Datong": {
+   "cc": "CN",
+   "pop_m": 3.1,
+   "mw_km": 12,
+   "dark_km": 208
+  },
+  "Bursa": {
+   "cc": "TR",
+   "pop_m": 3.1,
+   "mw_km": 16,
+   "dark_km": 507
+  },
+  "Changsha": {
+   "cc": "CN",
+   "pop_m": 3.1,
+   "mw_km": 25,
+   "dark_km": 458
+  },
+  "Quezon City": {
+   "cc": "PH",
+   "pop_m": 3.1,
+   "mw_km": 21,
+   "dark_km": 140
+  },
+  "Jaipur": {
+   "cc": "IN",
+   "pop_m": 3.0,
+   "mw_km": 24,
+   "dark_km": 425
+  },
+  "Huainan": {
+   "cc": "CN",
+   "pop_m": 3.0,
+   "mw_km": 12,
+   "dark_km": 635
+  },
+  "Surabaya": {
+   "cc": "ID",
+   "pop_m": 3.0,
+   "mw_km": 24,
+   "dark_km": 300
+  },
+  "Incheon": {
+   "cc": "KR",
+   "pop_m": 3.0,
+   "mw_km": 34,
+   "dark_km": 239
+  },
+  "Haikou": {
+   "cc": "CN",
+   "pop_m": 3.0,
+   "mw_km": 21,
+   "dark_km": 402
+  },
+  "Caracas": {
+   "cc": "VE",
+   "pop_m": 3.0,
+   "mw_km": 18,
+   "dark_km": 143
+  },
+  "Kyiv": {
+   "cc": "UA",
+   "pop_m": 3.0,
+   "mw_km": 13,
+   "dark_km": 70
+  },
+  "İzmir": {
+   "cc": "TR",
+   "pop_m": 2.9,
+   "mw_km": 25,
+   "dark_km": 251
+  },
+  "Huizhou": {
+   "cc": "CN",
+   "pop_m": 2.9,
+   "mw_km": 22,
+   "dark_km": 626
+  },
+  "Buenos Aires": {
+   "cc": "AR",
+   "pop_m": 2.9,
+   "mw_km": 43,
+   "dark_km": 254
+  },
+  "Yinchuan": {
+   "cc": "CN",
+   "pop_m": 2.9,
+   "mw_km": 20,
+   "dark_km": 130
+  },
+  "Taichung": {
+   "cc": "TW",
+   "pop_m": 2.9,
+   "mw_km": 26,
+   "dark_km": 301
+  },
+  "Kanpur": {
+   "cc": "IN",
+   "pop_m": 2.8,
+   "mw_km": 15,
+   "dark_km": 301
+  },
+  "Toronto": {
+   "cc": "CA",
+   "pop_m": 2.8,
+   "mw_km": 29,
+   "dark_km": 252
+  },
+  "Quito": {
+   "cc": "EC",
+   "pop_m": 2.8,
+   "mw_km": 14,
+   "dark_km": 181
+  },
+  "Brisbane": {
+   "cc": "AU",
+   "pop_m": 2.8,
+   "mw_km": 17,
+   "dark_km": 137
+  },
+  "Luanda": {
+   "cc": "AO",
+   "pop_m": 2.8,
+   "mw_km": 14,
+   "dark_km": 100
+  },
+  "Baotou": {
+   "cc": "CN",
+   "pop_m": 2.8,
+   "mw_km": 13,
+   "dark_km": 119
+  },
+  "Osaka": {
+   "cc": "JP",
+   "pop_m": 2.8,
+   "mw_km": 34,
+   "dark_km": 271
+  },
+  "Linyi": {
+   "cc": "CN",
+   "pop_m": 2.7,
+   "mw_km": 28,
+   "dark_km": 624
+  },
+  "Baoding": {
+   "cc": "CN",
+   "pop_m": 2.7,
+   "mw_km": 20,
+   "dark_km": 369
+  },
+  "Kaohsiung": {
+   "cc": "TW",
+   "pop_m": 2.7,
+   "mw_km": 37,
+   "dark_km": 234
+  },
+  "Guayaquil": {
+   "cc": "EC",
+   "pop_m": 2.7,
+   "mw_km": 18,
+   "dark_km": 240
+  },
+  "Belo Horizonte": {
+   "cc": "BR",
+   "pop_m": 2.7,
+   "mw_km": 22,
+   "dark_km": 235
+  },
+  "Bazhong": {
+   "cc": "CN",
+   "pop_m": 2.7,
+   "mw_km": 3,
+   "dark_km": 196
+  },
+  "Salvador": {
+   "cc": "BR",
+   "pop_m": 2.7,
+   "mw_km": 21,
+   "dark_km": 334
+  },
+  "Abuja": {
+   "cc": "NG",
+   "pop_m": 2.7,
+   "mw_km": 12,
+   "dark_km": 73
+  },
+  "Gazipur": {
+   "cc": "BD",
+   "pop_m": 2.7,
+   "mw_km": 6,
+   "dark_km": 240
+  },
+  "Chicago": {
+   "cc": "US",
+   "pop_m": 2.7,
+   "mw_km": 31,
+   "dark_km": 404
+  },
+  "Wenzhou": {
+   "cc": "CN",
+   "pop_m": 2.6,
+   "mw_km": 24,
+   "dark_km": 373
+  },
+  "Dakar": {
+   "cc": "SN",
+   "pop_m": 2.6,
+   "mw_km": 15,
+   "dark_km": 195
+  },
+  "Haiphong": {
+   "cc": "VN",
+   "pop_m": 2.6,
+   "mw_km": 20,
+   "dark_km": 231
+  },
+  "Yunfu": {
+   "cc": "CN",
+   "pop_m": 2.6,
+   "mw_km": 6,
+   "dark_km": 433
+  },
+  "Mogadishu": {
+   "cc": "SO",
+   "pop_m": 2.6,
+   "mw_km": 8,
+   "dark_km": 29
+  },
+  "Kumasi": {
+   "cc": "GH",
+   "pop_m": 2.5,
+   "mw_km": 21,
+   "dark_km": 168
+  },
+  "Bandung": {
+   "cc": "ID",
+   "pop_m": 2.5,
+   "mw_km": 18,
+   "dark_km": 355
+  },
+  "Gujranwala": {
+   "cc": "PK",
+   "pop_m": 2.5,
+   "mw_km": 12,
+   "dark_km": 250
+  },
+  "Medan": {
+   "cc": "ID",
+   "pop_m": 2.5,
+   "mw_km": 20,
+   "dark_km": 100
+  },
+  "Lucknow": {
+   "cc": "IN",
+   "pop_m": 2.5,
+   "mw_km": 24,
+   "dark_km": 239
+  },
+  "Xining": {
+   "cc": "CN",
+   "pop_m": 2.5,
+   "mw_km": 14,
+   "dark_km": 100
+  },
+  "Ouagadougou": {
+   "cc": "BF",
+   "pop_m": 2.4,
+   "mw_km": 13,
+   "dark_km": 60
+  },
+  "Nagpur": {
+   "cc": "IN",
+   "pop_m": 2.4,
+   "mw_km": 18,
+   "dark_km": 896
+  },
+  "Fortaleza": {
+   "cc": "BR",
+   "pop_m": 2.4,
+   "mw_km": 24,
+   "dark_km": 321
+  },
+  "Cali": {
+   "cc": "CO",
+   "pop_m": 2.4,
+   "mw_km": 15,
+   "dark_km": 95
+  },
+  "Perth": {
+   "cc": "AU",
+   "pop_m": 2.4,
+   "mw_km": 17,
+   "dark_km": 115
+  },
+  "Daegu": {
+   "cc": "KR",
+   "pop_m": 2.4,
+   "mw_km": 28,
+   "dark_km": 330
+  },
+  "Algiers": {
+   "cc": "DZ",
+   "pop_m": 2.4,
+   "mw_km": 37,
+   "dark_km": 393
+  },
+  "Nanchang": {
+   "cc": "CN",
+   "pop_m": 2.4,
+   "mw_km": 19,
+   "dark_km": 627
+  },
+  "Baku": {
+   "cc": "AZ",
+   "pop_m": 2.4,
+   "mw_km": 28,
+   "dark_km": 241
+  },
+  "Nagoya": {
+   "cc": "JP",
+   "pop_m": 2.3,
+   "mw_km": 31,
+   "dark_km": 341
+  },
+  "Rome": {
+   "cc": "IT",
+   "pop_m": 2.3,
+   "mw_km": 34,
+   "dark_km": 667
+  },
+  "Houston": {
+   "cc": "US",
+   "pop_m": 2.3,
+   "mw_km": 60,
+   "dark_km": 590
+  },
+  "Mashhad": {
+   "cc": "IR",
+   "pop_m": 2.3,
+   "mw_km": 19,
+   "dark_km": 185
+  },
+  "Shaoxing": {
+   "cc": "CN",
+   "pop_m": 2.3,
+   "mw_km": 26,
+   "dark_km": 543
+  },
+  "Nantong": {
+   "cc": "CN",
+   "pop_m": 2.3,
+   "mw_km": 30,
+   "dark_km": 453
+  },
+  "Gaziantep": {
+   "cc": "TR",
+   "pop_m": 2.2,
+   "mw_km": 21,
+   "dark_km": 213
+  },
+  "Lubumbashi": {
+   "cc": "CD",
+   "pop_m": 2.2,
+   "mw_km": 11,
+   "dark_km": 51
+  },
+  "Manaus": {
+   "cc": "BR",
+   "pop_m": 2.2,
+   "mw_km": 14,
+   "dark_km": 82
+  },
+  "Lusaka": {
+   "cc": "ZM",
+   "pop_m": 2.2,
+   "mw_km": 17,
+   "dark_km": 81
+  },
+  "Brasília": {
+   "cc": "BR",
+   "pop_m": 2.2,
+   "mw_km": 22,
+   "dark_km": 164
+  },
+  "Zhuhai": {
+   "cc": "CN",
+   "pop_m": 2.2,
+   "mw_km": 33,
+   "dark_km": 600
+  },
+  "Santo Domingo": {
+   "cc": "DO",
+   "pop_m": 2.2,
+   "mw_km": 23,
+   "dark_km": 185
+  },
+  "Lomé": {
+   "cc": "TG",
+   "pop_m": 2.2,
+   "mw_km": 13,
+   "dark_km": 130
+  },
+  "Multan": {
+   "cc": "PK",
+   "pop_m": 2.2,
+   "mw_km": 11,
+   "dark_km": 128
+  },
+  "Havana": {
+   "cc": "CU",
+   "pop_m": 2.2,
+   "mw_km": 8,
+   "dark_km": 93
+  },
+  "Ordos": {
+   "cc": "CN",
+   "pop_m": 2.2,
+   "mw_km": 6,
+   "dark_km": 223
+  },
+  "Paris": {
+   "cc": "FR",
+   "pop_m": 2.1,
+   "mw_km": 38,
+   "dark_km": 529
+  },
+  "Coimbatore": {
+   "cc": "IN",
+   "pop_m": 2.1,
+   "mw_km": 14,
+   "dark_km": 363
+  },
+  "Qingyang": {
+   "cc": "CN",
+   "pop_m": 2.1,
+   "mw_km": 8,
+   "dark_km": 325
+  },
+  "Port Harcourt": {
+   "cc": "NG",
+   "pop_m": 2.1,
+   "mw_km": 7,
+   "dark_km": 138
+  },
+  "Pretoria": {
+   "cc": "ZA",
+   "pop_m": 2.1,
+   "mw_km": 26,
+   "dark_km": 223
+  },
+  "Córdoba": {
+   "cc": "AR",
+   "pop_m": 2.1,
+   "mw_km": 23,
+   "dark_km": 155
+  },
+  "Mbuji-Mayi": {
+   "cc": "CD",
+   "pop_m": 2.1,
+   "mw_km": 2,
+   "dark_km": 8
+  },
+  "Aleppo": {
+   "cc": "SY",
+   "pop_m": 2.1,
+   "mw_km": 7,
+   "dark_km": 158
+  },
+  "Kunshan": {
+   "cc": "CN",
+   "pop_m": 2.1,
+   "mw_km": 82,
+   "dark_km": 489
+  },
+  "Zunyi": {
+   "cc": "CN",
+   "pop_m": 2.0,
+   "mw_km": 7,
+   "dark_km": 279
+  },
+  "La Paz": {
+   "cc": "BO",
+   "pop_m": 2.0,
+   "mw_km": 15,
+   "dark_km": 94
+  },
+  "Lianyungang": {
+   "cc": "CN",
+   "pop_m": 2.0,
+   "mw_km": 14,
+   "dark_km": 539
+  },
+  "Medellín": {
+   "cc": "CO",
+   "pop_m": 2.0,
+   "mw_km": 18,
+   "dark_km": 97
+  },
+  "Puning": {
+   "cc": "CN",
+   "pop_m": 2.0,
+   "mw_km": 14,
+   "dark_km": 639
+  },
+  "Indore": {
+   "cc": "IN",
+   "pop_m": 2.0,
+   "mw_km": 20,
+   "dark_km": 607
+  },
+  "Tashkent": {
+   "cc": "UZ",
+   "pop_m": 2.0,
+   "mw_km": 20,
+   "dark_km": 144
+  },
+  "Ganzhou": {
+   "cc": "CN",
+   "pop_m": 2.0,
+   "mw_km": 12,
+   "dark_km": 615
+  },
+  "Almaty": {
+   "cc": "KZ",
+   "pop_m": 2.0,
+   "mw_km": 17,
+   "dark_km": 117
+  },
+  "Khartoum": {
+   "cc": "SD",
+   "pop_m": 2.0,
+   "mw_km": 16,
+   "dark_km": 83
+  },
+  "Hamburg": {
+   "cc": "DE",
+   "pop_m": 2.0,
+   "mw_km": 20,
+   "dark_km": 637
+  },
+  "Sapporo": {
+   "cc": "JP",
+   "pop_m": 2.0,
+   "mw_km": 14,
+   "dark_km": 129
+  },
+  "Songjiang": {
+   "cc": "CN",
+   "pop_m": 2.0,
+   "mw_km": 84,
+   "dark_km": 496
+  },
+  "Accra": {
+   "cc": "GH",
+   "pop_m": 2.0,
+   "mw_km": 36,
+   "dark_km": 262
+  },
+  "Curitiba": {
+   "cc": "BR",
+   "pop_m": 1.9,
+   "mw_km": 21,
+   "dark_km": 555
+  },
+  "Sanaa": {
+   "cc": "YE",
+   "pop_m": 1.9,
+   "mw_km": 11,
+   "dark_km": 51
+  },
+  "Conakry": {
+   "cc": "GN",
+   "pop_m": 1.9,
+   "mw_km": 6,
+   "dark_km": 46
+  },
+  "Tijuana": {
+   "cc": "MX",
+   "pop_m": 1.9,
+   "mw_km": 23,
+   "dark_km": 200
+  },
+  "Beirut": {
+   "cc": "LB",
+   "pop_m": 1.9,
+   "mw_km": 8,
+   "dark_km": 194
+  },
+  "Jieyang": {
+   "cc": "CN",
+   "pop_m": 1.9,
+   "mw_km": 16,
+   "dark_km": 630
+  },
+  "Jilin": {
+   "cc": "CN",
+   "pop_m": 1.9,
+   "mw_km": 13,
+   "dark_km": 144
+  },
+  "Jiading": {
+   "cc": "CN",
+   "pop_m": 1.9,
+   "mw_km": 58,
+   "dark_km": 468
+  },
+  "Bucharest": {
+   "cc": "RO",
+   "pop_m": 1.9,
+   "mw_km": 21,
+   "dark_km": 268
+  },
+  "Kakamega": {
+   "cc": "KE",
+   "pop_m": 1.9,
+   "mw_km": 3,
+   "dark_km": 83
+  },
+  "Shangqiu": {
+   "cc": "CN",
+   "pop_m": 1.9,
+   "mw_km": 16,
+   "dark_km": 574
+  },
+  "Nanchong": {
+   "cc": "CN",
+   "pop_m": 1.9,
+   "mw_km": 12,
+   "dark_km": 276
+  },
+  "Tainan": {
+   "cc": "TW",
+   "pop_m": 1.9,
+   "mw_km": 20,
+   "dark_km": 272
+  },
+  "Kaduna": {
+   "cc": "NG",
+   "pop_m": 1.9,
+   "mw_km": 9,
+   "dark_km": 45
+  },
+  "Davao": {
+   "cc": "PH",
+   "pop_m": 1.8,
+   "mw_km": 8,
+   "dark_km": 63
+  },
+  "Diyarbakır": {
+   "cc": "TR",
+   "pop_m": 1.8,
+   "mw_km": 15,
+   "dark_km": 278
+  },
+  "Santa Cruz de la Sierra": {
+   "cc": "BO",
+   "pop_m": 1.8,
+   "mw_km": 14,
+   "dark_km": 93
+  },
+  "Vadodara": {
+   "cc": "IN",
+   "pop_m": 1.8,
+   "mw_km": 16,
+   "dark_km": 421
+  },
+  "Adana": {
+   "cc": "TR",
+   "pop_m": 1.8,
+   "mw_km": 20,
+   "dark_km": 343
+  },
+  "Nanyang": {
+   "cc": "CN",
+   "pop_m": 1.8,
+   "mw_km": 11,
+   "dark_km": 247
+  },
+  "Abu Dhabi": {
+   "cc": "AE",
+   "pop_m": 1.8,
+   "mw_km": 22,
+   "dark_km": 252
+  },
+  "Palembang": {
+   "cc": "ID",
+   "pop_m": 1.8,
+   "mw_km": 7,
+   "dark_km": 67
+  },
+  "Sharjah": {
+   "cc": "AE",
+   "pop_m": 1.8,
+   "mw_km": 72,
+   "dark_km": 298
+  },
+  "Bhopal": {
+   "cc": "IN",
+   "pop_m": 1.8,
+   "mw_km": 17,
+   "dark_km": 733
+  },
+  "Jiangmen": {
+   "cc": "CN",
+   "pop_m": 1.8,
+   "mw_km": 34,
+   "dark_km": 540
+  },
+  "Benin City": {
+   "cc": "NG",
+   "pop_m": 1.8,
+   "mw_km": 7,
+   "dark_km": 81
+  },
+  "Jiangyin": {
+   "cc": "CN",
+   "pop_m": 1.8,
+   "mw_km": 68,
+   "dark_km": 510
+  },
+  "Fuyang": {
+   "cc": "CN",
+   "pop_m": 1.8,
+   "mw_km": 18,
+   "dark_km": 531
+  },
+  "Montréal": {
+   "cc": "CA",
+   "pop_m": 1.8,
+   "mw_km": 44,
+   "dark_km": 237
+  },
+  "Bayan Nur": {
+   "cc": "CN",
+   "pop_m": 1.8,
+   "mw_km": 6,
+   "dark_km": 64
+  },
+  "Chengtangcun": {
+   "cc": "CN",
+   "pop_m": 1.8,
+   "mw_km": 11,
+   "dark_km": 729
+  },
+  "Maracaibo": {
+   "cc": "VE",
+   "pop_m": 1.8,
+   "mw_km": 19,
+   "dark_km": 135
+  },
+  "Chaozhou": {
+   "cc": "CN",
+   "pop_m": 1.8,
+   "mw_km": 14,
+   "dark_km": 612
+  },
+  "Minsk": {
+   "cc": "BY",
+   "pop_m": 1.7,
+   "mw_km": 18,
+   "dark_km": 172
+  },
+  "Budapest": {
+   "cc": "HU",
+   "pop_m": 1.7,
+   "mw_km": 21,
+   "dark_km": 473
+  },
+  "Qingyuan": {
+   "cc": "CN",
+   "pop_m": 1.7,
+   "mw_km": 13,
+   "dark_km": 470
+  },
+  "Tai’an": {
+   "cc": "CN",
+   "pop_m": 1.7,
+   "mw_km": 14,
+   "dark_km": 686
+  },
+  "Rasapūdipalem": {
+   "cc": "IN",
+   "pop_m": 1.7,
+   "mw_km": 13,
+   "dark_km": 960
+  },
+  "Warsaw": {
+   "cc": "PL",
+   "pop_m": 1.7,
+   "mw_km": 27,
+   "dark_km": 258
+  },
+  "Semarang": {
+   "cc": "ID",
+   "pop_m": 1.7,
+   "mw_km": 15,
+   "dark_km": 413
+  },
+  "Puebla": {
+   "cc": "MX",
+   "pop_m": 1.7,
+   "mw_km": 24,
+   "dark_km": 312
+  },
+  "Vienna": {
+   "cc": "AT",
+   "pop_m": 1.7,
+   "mw_km": 20,
+   "dark_km": 635
+  },
+  "Barcelona": {
+   "cc": "ES",
+   "pop_m": 1.7,
+   "mw_km": 39,
+   "dark_km": 894
+  },
+  "Patna": {
+   "cc": "IN",
+   "pop_m": 1.7,
+   "mw_km": 22,
+   "dark_km": 281
+  },
+  "Mosul": {
+   "cc": "IQ",
+   "pop_m": 1.7,
+   "mw_km": 20,
+   "dark_km": 302
+  },
+  "Kallakurichi": {
+   "cc": "IN",
+   "pop_m": 1.7,
+   "mw_km": 2,
+   "dark_km": 302
+  },
+  "Kampala": {
+   "cc": "UG",
+   "pop_m": 1.7,
+   "mw_km": 15,
+   "dark_km": 72
+  },
+  "Changshu": {
+   "cc": "CN",
+   "pop_m": 1.7,
+   "mw_km": 74,
+   "dark_km": 487
+  },
+  "Rabat": {
+   "cc": "MA",
+   "pop_m": 1.7,
+   "mw_km": 20,
+   "dark_km": 297
+  },
+  "Recife": {
+   "cc": "BR",
+   "pop_m": 1.7,
+   "mw_km": 30,
+   "dark_km": 494
+  },
+  "Phoenix": {
+   "cc": "US",
+   "pop_m": 1.7,
+   "mw_km": 30,
+   "dark_km": 245
+  },
+  "Lu’an": {
+   "cc": "CN",
+   "pop_m": 1.6,
+   "mw_km": 13,
+   "dark_km": 586
+  },
+  "Valencia": {
+   "cc": "VE",
+   "pop_m": 1.6,
+   "mw_km": 18,
+   "dark_km": 173
+  },
+  "Ludhiana": {
+   "cc": "IN",
+   "pop_m": 1.6,
+   "mw_km": 20,
+   "dark_km": 230
+  },
+  "Yancheng": {
+   "cc": "CN",
+   "pop_m": 1.6,
+   "mw_km": 19,
+   "dark_km": 461
+  },
+  "Novosibirsk": {
+   "cc": "RU",
+   "pop_m": 1.6,
+   "mw_km": 24,
+   "dark_km": 133
+  },
+  "Erbil": {
+   "cc": "IQ",
+   "pop_m": 1.6,
+   "mw_km": 27,
+   "dark_km": 364
+  },
+  "Fukuoka": {
+   "cc": "JP",
+   "pop_m": 1.6,
+   "mw_km": 14,
+   "dark_km": 165
+  },
+  "Taizhou": {
+   "cc": "CN",
+   "pop_m": 1.6,
+   "mw_km": 19,
+   "dark_km": 511
+  },
+  "Daqing": {
+   "cc": "CN",
+   "pop_m": 1.6,
+   "mw_km": 21,
+   "dark_km": 216
+  },
+  "Kisangani": {
+   "cc": "CD",
+   "pop_m": 1.6,
+   "mw_km": 1,
+   "dark_km": 9
+  },
+  "Wuhu": {
+   "cc": "CN",
+   "pop_m": 1.6,
+   "mw_km": 17,
+   "dark_km": 692
+  },
+  "Santiago de Querétaro": {
+   "cc": "MX",
+   "pop_m": 1.6,
+   "mw_km": 27,
+   "dark_km": 290
+  },
+  "Dazhou": {
+   "cc": "CN",
+   "pop_m": 1.6,
+   "mw_km": 7,
+   "dark_km": 137
+  },
+  "León de los Aldama": {
+   "cc": "MX",
+   "pop_m": 1.6,
+   "mw_km": 18,
+   "dark_km": 314
+  },
+  "Makkah": {
+   "cc": "SA",
+   "pop_m": 1.6,
+   "mw_km": 36,
+   "dark_km": 264
+  },
+  "Philadelphia": {
+   "cc": "US",
+   "pop_m": 1.6,
+   "mw_km": 45,
+   "dark_km": 696
+  },
+  "Phnom Penh": {
+   "cc": "KH",
+   "pop_m": 1.6,
+   "mw_km": 11,
+   "dark_km": 86
+  },
+  "Guilin": {
+   "cc": "CN",
+   "pop_m": 1.6,
+   "mw_km": 10,
+   "dark_km": 151
+  },
+  "Damascus": {
+   "cc": "SY",
+   "pop_m": 1.6,
+   "mw_km": 12,
+   "dark_km": 132
+  },
+  "Quetta": {
+   "cc": "PK",
+   "pop_m": 1.6,
+   "mw_km": 10,
+   "dark_km": 47
+  },
+  "Zhaoqing": {
+   "cc": "CN",
+   "pop_m": 1.6,
+   "mw_km": 11,
+   "dark_km": 458
+  },
+  "Onitsha": {
+   "cc": "NG",
+   "pop_m": 1.6,
+   "mw_km": 5,
+   "dark_km": 79
+  },
+  "Mianyang": {
+   "cc": "CN",
+   "pop_m": 1.6,
+   "mw_km": 13,
+   "dark_km": 141
+  },
+  "Auckland": {
+   "cc": "NZ",
+   "pop_m": 1.5,
+   "mw_km": 9,
+   "dark_km": 70
+  },
+  "Isfahan": {
+   "cc": "IR",
+   "pop_m": 1.5,
+   "mw_km": 30,
+   "dark_km": 204
+  },
+  "Wanzhou": {
+   "cc": "CN",
+   "pop_m": 1.5,
+   "mw_km": 8,
+   "dark_km": 101
+  },
+  "Astana": {
+   "cc": "KZ",
+   "pop_m": 1.5,
+   "mw_km": 15,
+   "dark_km": 110
+  },
+  "Harare": {
+   "cc": "ZW",
+   "pop_m": 1.5,
+   "mw_km": 16,
+   "dark_km": 69
+  },
+  "Monrovia": {
+   "cc": "LR",
+   "pop_m": 1.5,
+   "mw_km": 2,
+   "dark_km": 29
+  },
+  "Putian": {
+   "cc": "CN",
+   "pop_m": 1.5,
+   "mw_km": 12,
+   "dark_km": 450
+  },
+  "Goiânia": {
+   "cc": "BR",
+   "pop_m": 1.5,
+   "mw_km": 21,
+   "dark_km": 196
+  },
+  "San Antonio": {
+   "cc": "US",
+   "pop_m": 1.5,
+   "mw_km": 34,
+   "dark_km": 290
+  },
+  "Kobe": {
+   "cc": "JP",
+   "pop_m": 1.5,
+   "mw_km": 24,
+   "dark_km": 251
+  },
+  "Jinzhou": {
+   "cc": "CN",
+   "pop_m": 1.5,
+   "mw_km": 11,
+   "dark_km": 239
+  },
+  "Stockholm": {
+   "cc": "SE",
+   "pop_m": 1.5,
+   "mw_km": 22,
+   "dark_km": 129
+  },
+  "Ciudad Juárez": {
+   "cc": "MX",
+   "pop_m": 1.5,
+   "mw_km": 22,
+   "dark_km": 163
+  },
+  "Cần Thơ": {
+   "cc": "VN",
+   "pop_m": 1.5,
+   "mw_km": 10,
+   "dark_km": 196
+  },
+  "Munich": {
+   "cc": "DE",
+   "pop_m": 1.5,
+   "mw_km": 15,
+   "dark_km": 984
+  },
+  "Khulna": {
+   "cc": "BD",
+   "pop_m": 1.5,
+   "mw_km": 4,
+   "dark_km": 309
+  },
+  "Belém": {
+   "cc": "BR",
+   "pop_m": 1.5,
+   "mw_km": 10,
+   "dark_km": 83
+  },
+  "Yekaterinburg": {
+   "cc": "RU",
+   "pop_m": 1.5,
+   "mw_km": 23,
+   "dark_km": 220
+  },
+  "Porto Alegre": {
+   "cc": "BR",
+   "pop_m": 1.5,
+   "mw_km": 16,
+   "dark_km": 222
+  },
+  "Nashik": {
+   "cc": "IN",
+   "pop_m": 1.5,
+   "mw_km": 14,
+   "dark_km": 666
+  },
+  "Asunción": {
+   "cc": "PY",
+   "pop_m": 1.5,
+   "mw_km": 17,
+   "dark_km": 144
+  },
+  "Zapopan": {
+   "cc": "MX",
+   "pop_m": 1.5,
+   "mw_km": 20,
+   "dark_km": 231
+  },
+  "Makassar": {
+   "cc": "ID",
+   "pop_m": 1.5,
+   "mw_km": 9,
+   "dark_km": 94
+  },
+  "Adelaide": {
+   "cc": "AU",
+   "pop_m": 1.5,
+   "mw_km": 15,
+   "dark_km": 85
+  },
+  "Quanzhou": {
+   "cc": "CN",
+   "pop_m": 1.5,
+   "mw_km": 32,
+   "dark_km": 501
+  },
+  "Madurai": {
+   "cc": "IN",
+   "pop_m": 1.5,
+   "mw_km": 12,
+   "dark_km": 240
+  },
+  "Jinhua": {
+   "cc": "CN",
+   "pop_m": 1.5,
+   "mw_km": 16,
+   "dark_km": 529
+  },
+  "Kyoto": {
+   "cc": "JP",
+   "pop_m": 1.5,
+   "mw_km": 11,
+   "dark_km": 266
+  },
+  "Cixi": {
+   "cc": "CN",
+   "pop_m": 1.5,
+   "mw_km": 36,
+   "dark_km": 527
+  },
+  "Changde": {
+   "cc": "CN",
+   "pop_m": 1.5,
+   "mw_km": 11,
+   "dark_km": 315
+  },
+  "Kuala Lumpur": {
+   "cc": "MY",
+   "pop_m": 1.5,
+   "mw_km": 27,
+   "dark_km": 265
+  },
+  "Kayseri": {
+   "cc": "TR",
+   "pop_m": 1.5,
+   "mw_km": 19,
+   "dark_km": 461
+  },
+  "Kaifeng": {
+   "cc": "CN",
+   "pop_m": 1.5,
+   "mw_km": 15,
+   "dark_km": 495
+  },
+  "Karaj": {
+   "cc": "IR",
+   "pop_m": 1.4,
+   "mw_km": 21,
+   "dark_km": 283
+  },
+  "Kathmandu": {
+   "cc": "NP",
+   "pop_m": 1.4,
+   "mw_km": 11,
+   "dark_km": 69
+  },
+  "Daejeon": {
+   "cc": "KR",
+   "pop_m": 1.4,
+   "mw_km": 23,
+   "dark_km": 327
+  },
+  "Baoji": {
+   "cc": "CN",
+   "pop_m": 1.4,
+   "mw_km": 8,
+   "dark_km": 231
+  },
+  "Suqian": {
+   "cc": "CN",
+   "pop_m": 1.4,
+   "mw_km": 16,
+   "dark_km": 624
+  },
+  "Liuzhou": {
+   "cc": "CN",
+   "pop_m": 1.4,
+   "mw_km": 14,
+   "dark_km": 139
+  },
+  "Tirunelveli": {
+   "cc": "IN",
+   "pop_m": 1.4,
+   "mw_km": 9,
+   "dark_km": 229
+  },
+  "Konya": {
+   "cc": "TR",
+   "pop_m": 1.4,
+   "mw_km": 15,
+   "dark_km": 518
+  },
+  "Zhangjiagang": {
+   "cc": "CN",
+   "pop_m": 1.4,
+   "mw_km": 56,
+   "dark_km": 490
+  },
+  "Agra": {
+   "cc": "IN",
+   "pop_m": 1.4,
+   "mw_km": 20,
+   "dark_km": 380
+  },
+  "Tabriz": {
+   "cc": "IR",
+   "pop_m": 1.4,
+   "mw_km": 13,
+   "dark_km": 593
+  },
+  "Kharkiv": {
+   "cc": "UA",
+   "pop_m": 1.4,
+   "mw_km": 1,
+   "dark_km": 41
+  },
+  "Xinyang": {
+   "cc": "CN",
+   "pop_m": 1.4,
+   "mw_km": 8,
+   "dark_km": 356
+  },
+  "Faridabad": {
+   "cc": "IN",
+   "pop_m": 1.4,
+   "mw_km": 52,
+   "dark_km": 340
+  },
+  "Bozhou": {
+   "cc": "CN",
+   "pop_m": 1.4,
+   "mw_km": 10,
+   "dark_km": 559
+  },
+  "Qujing": {
+   "cc": "CN",
+   "pop_m": 1.4,
+   "mw_km": 10,
+   "dark_km": 227
+  },
+  "San Diego": {
+   "cc": "US",
+   "pop_m": 1.4,
+   "mw_km": 32,
+   "dark_km": 228
+  },
+  "Gwangju": {
+   "cc": "KR",
+   "pop_m": 1.4,
+   "mw_km": 17,
+   "dark_km": 206
+  },
+  "Zhanjiang": {
+   "cc": "CN",
+   "pop_m": 1.4,
+   "mw_km": 15,
+   "dark_km": 493
+  },
+  "Fushun": {
+   "cc": "CN",
+   "pop_m": 1.4,
+   "mw_km": 9,
+   "dark_km": 191
+  },
+  "Rājkot": {
+   "cc": "IN",
+   "pop_m": 1.4,
+   "mw_km": 15,
+   "dark_km": 297
+  },
+  "Luoyang": {
+   "cc": "CN",
+   "pop_m": 1.4,
+   "mw_km": 19,
+   "dark_km": 367
+  },
+  "Guankou": {
+   "cc": "CN",
+   "pop_m": 1.4,
+   "mw_km": 6,
+   "dark_km": 501
+  },
+  "Huế": {
+   "cc": "VN",
+   "pop_m": 1.4,
+   "mw_km": 7,
+   "dark_km": 56
+  },
+  "Milan": {
+   "cc": "IT",
+   "pop_m": 1.4,
+   "mw_km": 58,
+   "dark_km": 1097
+  },
+  "Najafgarh": {
+   "cc": "IN",
+   "pop_m": 1.4,
+   "mw_km": 38,
+   "dark_km": 345
+  },
+  "Lianjiang": {
+   "cc": "CN",
+   "pop_m": 1.4,
+   "mw_km": 7,
+   "dark_km": 446
+  },
+  "N'Djamena": {
+   "cc": "TD",
+   "pop_m": 1.4,
+   "mw_km": 9,
+   "dark_km": 35
+  },
+  "Handan": {
+   "cc": "CN",
+   "pop_m": 1.4,
+   "mw_km": 18,
+   "dark_km": 604
+  },
+  "Bannu": {
+   "cc": "PK",
+   "pop_m": 1.4,
+   "mw_km": 1,
+   "dark_km": 29
+  },
+  "Yichang": {
+   "cc": "CN",
+   "pop_m": 1.4,
+   "mw_km": 9,
+   "dark_km": 138
+  },
+  "Antananarivo": {
+   "cc": "MG",
+   "pop_m": 1.3,
+   "mw_km": 7,
+   "dark_km": 29
+  },
+  "Heze": {
+   "cc": "CN",
+   "pop_m": 1.3,
+   "mw_km": 17,
+   "dark_km": 609
+  },
+  "Jamshedpur": {
+   "cc": "IN",
+   "pop_m": 1.3,
+   "mw_km": 13,
+   "dark_km": 539
+  },
+  "Douala": {
+   "cc": "CM",
+   "pop_m": 1.3,
+   "mw_km": 7,
+   "dark_km": 45
+  },
+  "Antalya": {
+   "cc": "TR",
+   "pop_m": 1.3,
+   "mw_km": 19,
+   "dark_km": 332
+  },
+  "Basrah": {
+   "cc": "IQ",
+   "pop_m": 1.3,
+   "mw_km": 50,
+   "dark_km": 299
+  },
+  "Dallas": {
+   "cc": "US",
+   "pop_m": 1.3,
+   "mw_km": 55,
+   "dark_km": 551
+  },
+  "Niamey": {
+   "cc": "NE",
+   "pop_m": 1.3,
+   "mw_km": 8,
+   "dark_km": 42
+  },
+  "Liupanshui": {
+   "cc": "CN",
+   "pop_m": 1.3,
+   "mw_km": 7,
+   "dark_km": 280
+  },
+  "Maoming": {
+   "cc": "CN",
+   "pop_m": 1.3,
+   "mw_km": 13,
+   "dark_km": 473
+  },
+  "Calgary": {
+   "cc": "CA",
+   "pop_m": 1.3,
+   "mw_km": 20,
+   "dark_km": 144
+  },
+  "Tripoli": {
+   "cc": "LY",
+   "pop_m": 1.3,
+   "mw_km": 44,
+   "dark_km": 215
+  },
+  "Madinah": {
+   "cc": "SA",
+   "pop_m": 1.3,
+   "mw_km": 27,
+   "dark_km": 245
+  },
+  "Yaoundé": {
+   "cc": "CM",
+   "pop_m": 1.3,
+   "mw_km": 12,
+   "dark_km": 47
+  },
+  "Qinzhou": {
+   "cc": "CN",
+   "pop_m": 1.3,
+   "mw_km": 6,
+   "dark_km": 310
+  },
+  "Luohe": {
+   "cc": "CN",
+   "pop_m": 1.3,
+   "mw_km": 13,
+   "dark_km": 398
+  },
+  "Xiangyang": {
+   "cc": "CN",
+   "pop_m": 1.3,
+   "mw_km": 12,
+   "dark_km": 175
+  },
+  "Yangjiang": {
+   "cc": "CN",
+   "pop_m": 1.3,
+   "mw_km": 12,
+   "dark_km": 514
+  },
+  "Yixing": {
+   "cc": "CN",
+   "pop_m": 1.3,
+   "mw_km": 24,
+   "dark_km": 577
+  },
+  "Da Nang": {
+   "cc": "VN",
+   "pop_m": 1.3,
+   "mw_km": 9,
+   "dark_km": 87
+  },
+  "Amman": {
+   "cc": "JO",
+   "pop_m": 1.3,
+   "mw_km": 35,
+   "dark_km": 239
+  },
+  "Budta": {
+   "cc": "PH",
+   "pop_m": 1.3,
+   "mw_km": 2,
+   "dark_km": 19
+  },
+  "Belgrade": {
+   "cc": "RS",
+   "pop_m": 1.3,
+   "mw_km": 21,
+   "dark_km": 581
+  },
+  "Biên Hòa": {
+   "cc": "VN",
+   "pop_m": 1.3,
+   "mw_km": 22,
+   "dark_km": 206
+  },
+  "Kananga": {
+   "cc": "CD",
+   "pop_m": 1.3,
+   "mw_km": 2,
+   "dark_km": 5
+  },
+  "Montevideo": {
+   "cc": "UY",
+   "pop_m": 1.3,
+   "mw_km": 23,
+   "dark_km": 148
+  },
+  "Xuchang": {
+   "cc": "CN",
+   "pop_m": 1.3,
+   "mw_km": 12,
+   "dark_km": 411
+  },
+  "Kalyān": {
+   "cc": "IN",
+   "pop_m": 1.3,
+   "mw_km": 20,
+   "dark_km": 699
+  },
+  "Zigong": {
+   "cc": "CN",
+   "pop_m": 1.3,
+   "mw_km": 11,
+   "dark_km": 263
+  },
+  "Nizhniy Novgorod": {
+   "cc": "RU",
+   "pop_m": 1.3,
+   "mw_km": 18,
+   "dark_km": 151
+  },
+  "Jepara": {
+   "cc": "ID",
+   "pop_m": 1.3,
+   "mw_km": 4,
+   "dark_km": 361
+  },
+  "Maputo": {
+   "cc": "MZ",
+   "pop_m": 1.3,
+   "mw_km": 11,
+   "dark_km": 124
+  },
+  "Xuzhou": {
+   "cc": "CN",
+   "pop_m": 1.3,
+   "mw_km": 16,
+   "dark_km": 702
+  },
+  "Dammam": {
+   "cc": "SA",
+   "pop_m": 1.3,
+   "mw_km": 46,
+   "dark_km": 352
+  },
+  "Neijiang": {
+   "cc": "CN",
+   "pop_m": 1.3,
+   "mw_km": 8,
+   "dark_km": 295
+  },
+  "Shiraz": {
+   "cc": "IR",
+   "pop_m": 1.2,
+   "mw_km": 22,
+   "dark_km": 421
+  },
+  "Heshan": {
+   "cc": "CN",
+   "pop_m": 1.2,
+   "mw_km": 9,
+   "dark_km": 390
+  },
+  "Kazan": {
+   "cc": "RU",
+   "pop_m": 1.2,
+   "mw_km": 25,
+   "dark_km": 250
+  },
+  "Jining": {
+   "cc": "CN",
+   "pop_m": 1.2,
+   "mw_km": 20,
+   "dark_km": 702
+  },
+  "Barquisimeto": {
+   "cc": "VE",
+   "pop_m": 1.2,
+   "mw_km": 14,
+   "dark_km": 176
+  },
+  "Port-au-Prince": {
+   "cc": "HT",
+   "pop_m": 1.2,
+   "mw_km": 3,
+   "dark_km": 28
+  },
+  "Suwon": {
+   "cc": "KR",
+   "pop_m": 1.2,
+   "mw_km": 56,
+   "dark_km": 259
+  },
+  "Liaocheng": {
+   "cc": "CN",
+   "pop_m": 1.2,
+   "mw_km": 15,
+   "dark_km": 642
+  },
+  "Jinzhong": {
+   "cc": "CN",
+   "pop_m": 1.2,
+   "mw_km": 12,
+   "dark_km": 468
+  },
+  "Meerut": {
+   "cc": "IN",
+   "pop_m": 1.2,
+   "mw_km": 23,
+   "dark_km": 270
+  },
+  "Virār": {
+   "cc": "IN",
+   "pop_m": 1.2,
+   "mw_km": 8,
+   "dark_km": 658
+  },
+  "Nowrangapur": {
+   "cc": "IN",
+   "pop_m": 1.2,
+   "mw_km": 2,
+   "dark_km": 1029
+  },
+  "Karbala": {
+   "cc": "IQ",
+   "pop_m": 1.2,
+   "mw_km": 20,
+   "dark_km": 212
+  },
+  "Changzhi": {
+   "cc": "CN",
+   "pop_m": 1.2,
+   "mw_km": 17,
+   "dark_km": 541
+  },
+  "Tianshui": {
+   "cc": "CN",
+   "pop_m": 1.2,
+   "mw_km": 7,
+   "dark_km": 111
+  },
+  "Mombasa": {
+   "cc": "KE",
+   "pop_m": 1.2,
+   "mw_km": 12,
+   "dark_km": 55
+  },
+  "Mandalay": {
+   "cc": "MM",
+   "pop_m": 1.2,
+   "mw_km": 6,
+   "dark_km": 57
+  },
+  "Srinagar": {
+   "cc": "IN",
+   "pop_m": 1.2,
+   "mw_km": 12,
+   "dark_km": 83
+  },
+  "Barranquilla": {
+   "cc": "CO",
+   "pop_m": 1.2,
+   "mw_km": 15,
+   "dark_km": 285
+  },
+  "Chelyabinsk": {
+   "cc": "RU",
+   "pop_m": 1.2,
+   "mw_km": 24,
+   "dark_km": 217
+  },
+  "Mérida": {
+   "cc": "MX",
+   "pop_m": 1.2,
+   "mw_km": 18,
+   "dark_km": 115
+  },
+  "Hiroshima": {
+   "cc": "JP",
+   "pop_m": 1.2,
+   "mw_km": 12,
+   "dark_km": 190
+  },
+  "Santiago de los Caballeros": {
+   "cc": "DO",
+   "pop_m": 1.2,
+   "mw_km": 14,
+   "dark_km": 153
+  },
+  "Shymkent": {
+   "cc": "KZ",
+   "pop_m": 1.2,
+   "mw_km": 11,
+   "dark_km": 136
+  },
+  "Weinan": {
+   "cc": "CN",
+   "pop_m": 1.2,
+   "mw_km": 9,
+   "dark_km": 281
+  },
+  "Dhanbad": {
+   "cc": "IN",
+   "pop_m": 1.2,
+   "mw_km": 14,
+   "dark_km": 426
+  },
+  "Arequipa": {
+   "cc": "PE",
+   "pop_m": 1.2,
+   "mw_km": 14,
+   "dark_km": 82
+  },
+  "Fes": {
+   "cc": "MA",
+   "pop_m": 1.2,
+   "mw_km": 12,
+   "dark_km": 168
+  },
+  "Nouakchott": {
+   "cc": "MR",
+   "pop_m": 1.2,
+   "mw_km": 9,
+   "dark_km": 54
+  },
+  "Jiaxing": {
+   "cc": "CN",
+   "pop_m": 1.2,
+   "mw_km": 76,
+   "dark_km": 550
+  },
+  "Aurangabad": {
+   "cc": "IN",
+   "pop_m": 1.2,
+   "mw_km": 12,
+   "dark_km": 770
+  },
+  "Zhongwei": {
+   "cc": "CN",
+   "pop_m": 1.2,
+   "mw_km": 7,
+   "dark_km": 91
+  },
+  "Omsk": {
+   "cc": "RU",
+   "pop_m": 1.2,
+   "mw_km": 19,
+   "dark_km": 119
+  },
+  "Pekanbaru": {
+   "cc": "ID",
+   "pop_m": 1.2,
+   "mw_km": 11,
+   "dark_km": 109
+  },
+  "Panjin": {
+   "cc": "CN",
+   "pop_m": 1.2,
+   "mw_km": 12,
+   "dark_km": 276
+  },
+  "Bandar Lampung": {
+   "cc": "ID",
+   "pop_m": 1.2,
+   "mw_km": 10,
+   "dark_km": 92
+  },
+  "Prague": {
+   "cc": "CZ",
+   "pop_m": 1.2,
+   "mw_km": 21,
+   "dark_km": 736
+  },
+  "Varanasi": {
+   "cc": "IN",
+   "pop_m": 1.2,
+   "mw_km": 23,
+   "dark_km": 352
+  },
+  "Jiujiang": {
+   "cc": "CN",
+   "pop_m": 1.2,
+   "mw_km": 12,
+   "dark_km": 587
+  },
+  "Samara": {
+   "cc": "RU",
+   "pop_m": 1.2,
+   "mw_km": 13,
+   "dark_km": 205
+  },
+  "Aba": {
+   "cc": "NG",
+   "pop_m": 1.2,
+   "mw_km": 1,
+   "dark_km": 84
+  },
+  "Amritsar": {
+   "cc": "IN",
+   "pop_m": 1.2,
+   "mw_km": 21,
+   "dark_km": 233
+  },
+  "Birmingham": {
+   "cc": "GB",
+   "pop_m": 1.2,
+   "mw_km": 26,
+   "dark_km": 417
+  },
+  "Copenhagen": {
+   "cc": "DK",
+   "pop_m": 1.2,
+   "mw_km": 23,
+   "dark_km": 369
+  },
+  "Sofia": {
+   "cc": "BG",
+   "pop_m": 1.2,
+   "mw_km": 16,
+   "dark_km": 546
+  },
+  "Anyang": {
+   "cc": "CN",
+   "pop_m": 1.1,
+   "mw_km": 13,
+   "dark_km": 600
+  },
+  "Yerevan": {
+   "cc": "AM",
+   "pop_m": 1.1,
+   "mw_km": 14,
+   "dark_km": 495
+  },
+  "Vijayawada": {
+   "cc": "IN",
+   "pop_m": 1.1,
+   "mw_km": 13,
+   "dark_km": 777
+  },
+  "Fengxiang": {
+   "cc": "CN",
+   "pop_m": 1.1,
+   "mw_km": 82,
+   "dark_km": 494
+  },
+  "Bijie": {
+   "cc": "CN",
+   "pop_m": 1.1,
+   "mw_km": 6,
+   "dark_km": 348
+  },
+  "Monterrey": {
+   "cc": "MX",
+   "pop_m": 1.1,
+   "mw_km": 22,
+   "dark_km": 244
+  },
+  "Kigali": {
+   "cc": "RW",
+   "pop_m": 1.1,
+   "mw_km": 9,
+   "dark_km": 72
+  },
+  "Rostov-on-Don": {
+   "cc": "RU",
+   "pop_m": 1.1,
+   "mw_km": 18,
+   "dark_km": 195
+  },
+  "Zhuzhou": {
+   "cc": "CN",
+   "pop_m": 1.1,
+   "mw_km": 12,
+   "dark_km": 501
+  },
+  "Touba": {
+   "cc": "SN",
+   "pop_m": 1.1,
+   "mw_km": 10,
+   "dark_km": 53
+  },
+  "Ufa": {
+   "cc": "RU",
+   "pop_m": 1.1,
+   "mw_km": 21,
+   "dark_km": 350
+  },
+  "Ranchi": {
+   "cc": "IN",
+   "pop_m": 1.1,
+   "mw_km": 13,
+   "dark_km": 501
+  },
+  "Zoucheng": {
+   "cc": "CN",
+   "pop_m": 1.1,
+   "mw_km": 10,
+   "dark_km": 732
+  },
+  "Shangrao": {
+   "cc": "CN",
+   "pop_m": 1.1,
+   "mw_km": 11,
+   "dark_km": 624
+  },
+  "Lilongwe": {
+   "cc": "MW",
+   "pop_m": 1.1,
+   "mw_km": 7,
+   "dark_km": 39
+  },
+  "Huaibei": {
+   "cc": "CN",
+   "pop_m": 1.1,
+   "mw_km": 10,
+   "dark_km": 651
+  },
+  "Maiduguri": {
+   "cc": "NG",
+   "pop_m": 1.1,
+   "mw_km": 6,
+   "dark_km": 24
+  },
+  "Meishan": {
+   "cc": "CN",
+   "pop_m": 1.1,
+   "mw_km": 7,
+   "dark_km": 188
+  },
+  "Mwanza": {
+   "cc": "TZ",
+   "pop_m": 1.1,
+   "mw_km": 5,
+   "dark_km": 32
+  },
+  "Ulsan": {
+   "cc": "KR",
+   "pop_m": 1.1,
+   "mw_km": 25,
+   "dark_km": 297
+  },
+  "Sendai": {
+   "cc": "JP",
+   "pop_m": 1.1,
+   "mw_km": 12,
+   "dark_km": 209
+  },
+  "Krasnoyarsk": {
+   "cc": "RU",
+   "pop_m": 1.1,
+   "mw_km": 20,
+   "dark_km": 145
+  },
+  "Guigang": {
+   "cc": "CN",
+   "pop_m": 1.1,
+   "mw_km": 8,
+   "dark_km": 268
+  },
+  "Oslo": {
+   "cc": "NO",
+   "pop_m": 1.1,
+   "mw_km": 18,
+   "dark_km": 258
+  },
+  "Jabalpur": {
+   "cc": "IN",
+   "pop_m": 1.1,
+   "mw_km": 14,
+   "dark_km": 655
+  },
+  "Ilorin": {
+   "cc": "NG",
+   "pop_m": 1.1,
+   "mw_km": 3,
+   "dark_km": 26
+  },
+  "Aden": {
+   "cc": "YE",
+   "pop_m": 1.1,
+   "mw_km": 13,
+   "dark_km": 52
+  },
+  "Bogor": {
+   "cc": "ID",
+   "pop_m": 1.1,
+   "mw_km": 16,
+   "dark_km": 258
+  },
+  "Hengyang": {
+   "cc": "CN",
+   "pop_m": 1.1,
+   "mw_km": 11,
+   "dark_km": 411
+  },
+  "Prayagraj": {
+   "cc": "IN",
+   "pop_m": 1.1,
+   "mw_km": 18,
+   "dark_km": 351
+  },
+  "Trujillo": {
+   "cc": "PE",
+   "pop_m": 1.1,
+   "mw_km": 13,
+   "dark_km": 133
+  },
+  "Yulin": {
+   "cc": "CN",
+   "pop_m": 1.1,
+   "mw_km": 11,
+   "dark_km": 341
+  },
+  "Jodhpur": {
+   "cc": "IN",
+   "pop_m": 1.1,
+   "mw_km": 15,
+   "dark_km": 209
+  },
+  "Gwalior": {
+   "cc": "IN",
+   "pop_m": 1.1,
+   "mw_km": 12,
+   "dark_km": 447
+  },
+  "Jingzhou": {
+   "cc": "CN",
+   "pop_m": 1.1,
+   "mw_km": 9,
+   "dark_km": 230
+  },
+  "Gqeberha": {
+   "cc": "ZA",
+   "pop_m": 1.1,
+   "mw_km": 9,
+   "dark_km": 75
+  },
+  "Tbilisi": {
+   "cc": "GE",
+   "pop_m": 1.0,
+   "mw_km": 14,
+   "dark_km": 342
+  },
+  "Voronezh": {
+   "cc": "RU",
+   "pop_m": 1.0,
+   "mw_km": 19,
+   "dark_km": 238
+  },
+  "Xinxiang": {
+   "cc": "CN",
+   "pop_m": 1.0,
+   "mw_km": 14,
+   "dark_km": 490
+  },
+  "Yichun": {
+   "cc": "CN",
+   "pop_m": 1.0,
+   "mw_km": 9,
+   "dark_km": 578
+  },
+  "Sokoto": {
+   "cc": "NG",
+   "pop_m": 1.0,
+   "mw_km": 3,
+   "dark_km": 18
+  },
+  "Jos": {
+   "cc": "NG",
+   "pop_m": 1.0,
+   "mw_km": 5,
+   "dark_km": 32
+  },
+  "Tangier": {
+   "cc": "MA",
+   "pop_m": 1.0,
+   "mw_km": 14,
+   "dark_km": 340
+  },
+  "Mexicali": {
+   "cc": "MX",
+   "pop_m": 1.0,
+   "mw_km": 18,
+   "dark_km": 160
+  },
+  "Pointe-Noire": {
+   "cc": "CG",
+   "pop_m": 1.0,
+   "mw_km": 15,
+   "dark_km": 77
+  },
+  "Maceió": {
+   "cc": "BR",
+   "pop_m": 1.0,
+   "mw_km": 21,
+   "dark_km": 375
+  },
+  "Campinas": {
+   "cc": "BR",
+   "pop_m": 1.0,
+   "mw_km": 42,
+   "dark_km": 563
+  },
+  "Sanya": {
+   "cc": "CN",
+   "pop_m": 1.0,
+   "mw_km": 8,
+   "dark_km": 288
+  },
+  "Rangpur": {
+   "cc": "BD",
+   "pop_m": 1.0,
+   "mw_km": 3,
+   "dark_km": 187
+  },
+  "Kirkuk": {
+   "cc": "IQ",
+   "pop_m": 1.0,
+   "mw_km": 24,
+   "dark_km": 344
+  },
+  "Ashgabat": {
+   "cc": "TM",
+   "pop_m": 1.0,
+   "mw_km": 21,
+   "dark_km": 134
+  },
+  "Shaoguan": {
+   "cc": "CN",
+   "pop_m": 1.0,
+   "mw_km": 11,
+   "dark_km": 486
+  },
+  "Raipur": {
+   "cc": "IN",
+   "pop_m": 1.0,
+   "mw_km": 16,
+   "dark_km": 814
+  },
+  "Changwon": {
+   "cc": "KR",
+   "pop_m": 1.0,
+   "mw_km": 29,
+   "dark_km": 260
+  },
+  "Longyan": {
+   "cc": "CN",
+   "pop_m": 1.0,
+   "mw_km": 8,
+   "dark_km": 653
+  },
+  "Köln": {
+   "cc": "DE",
+   "pop_m": 1.0,
+   "mw_km": 24,
+   "dark_km": 901
+  },
+  "Dublin": {
+   "cc": "IE",
+   "pop_m": 1.0,
+   "mw_km": 16,
+   "dark_km": 243
+  },
+  "Tiruchirappalli": {
+   "cc": "IN",
+   "pop_m": 1.0,
+   "mw_km": 13,
+   "dark_km": 247
+  },
+  "Yongzhou": {
+   "cc": "CN",
+   "pop_m": 1.0,
+   "mw_km": 8,
+   "dark_km": 299
+  },
+  "Brussels": {
+   "cc": "BE",
+   "pop_m": 1.0,
+   "mw_km": 30,
+   "dark_km": 725
+  },
+  "Zamboanga": {
+   "cc": "PH",
+   "pop_m": 1.0,
+   "mw_km": 7,
+   "dark_km": 27
+  },
+  "Ottawa": {
+   "cc": "CA",
+   "pop_m": 1.0,
+   "mw_km": 20,
+   "dark_km": 145
+  },
+  "Huzhou": {
+   "cc": "CN",
+   "pop_m": 1.0,
+   "mw_km": 31,
+   "dark_km": 589
+  },
+  "Xinyi": {
+   "cc": "CN",
+   "pop_m": 1.0,
+   "mw_km": 4,
+   "dark_km": 406
+  },
+  "Volgograd": {
+   "cc": "RU",
+   "pop_m": 1.0,
+   "mw_km": 15,
+   "dark_km": 101
+  },
+  "Edmonton": {
+   "cc": "CA",
+   "pop_m": 1.0,
+   "mw_km": 25,
+   "dark_km": 215
+  },
+  "Odesa": {
+   "cc": "UA",
+   "pop_m": 1.0,
+   "mw_km": 2,
+   "dark_km": 45
+  },
+  "Wuwei": {
+   "cc": "CN",
+   "pop_m": 1.0,
+   "mw_km": 7,
+   "dark_km": 62
+  },
+  "Jacksonville": {
+   "cc": "US",
+   "pop_m": 1.0,
+   "mw_km": 25,
+   "dark_km": 521
+  },
+  "Fort Worth": {
+   "cc": "US",
+   "pop_m": 1.0,
+   "mw_km": 47,
+   "dark_km": 508
+  },
+  "Yishui": {
+   "cc": "CN",
+   "pop_m": 1.0,
+   "mw_km": 6,
+   "dark_km": 615
+  },
+  "Hanzhong": {
+   "cc": "CN",
+   "pop_m": 1.0,
+   "mw_km": 11,
+   "dark_km": 224
+  },
+  "Hezhou": {
+   "cc": "CN",
+   "pop_m": 1.0,
+   "mw_km": 7,
+   "dark_km": 302
+  },
+  "Kota": {
+   "cc": "IN",
+   "pop_m": 1.0,
+   "mw_km": 11,
+   "dark_km": 509
+  },
+  "Zhu Cheng City": {
+   "cc": "CN",
+   "pop_m": 1.0,
+   "mw_km": 8,
+   "dark_km": 556
+  }
+ },
+ "dsp_uk": [
+  {
+   "name": "Isle of Coll",
+   "status": "Dark Sky Community",
+   "year": "2013",
+   "mag": 21.9523,
+   "sky": 7.8
+  },
+  {
+   "name": "Tomintoul and Glenlivet, Cairngorms National Park",
+   "status": "Dark Sky Park",
+   "year": "2018",
+   "mag": 21.868,
+   "sky": 22.5
+  },
+  {
+   "name": "Bardsey Island (Ynys Enlli)",
+   "status": "Dark Sky Sanctuary",
+   "year": "2023",
+   "mag": 21.8082,
+   "sky": 33.6
+  },
+  {
+   "name": "Galloway Forest Park",
+   "status": "Dark Sky Park",
+   "year": "2009",
+   "mag": 21.7392,
+   "sky": 47.2
+  },
+  {
+   "name": "Bodmin Moor Dark Sky Landscape",
+   "status": "Dark Sky Park",
+   "year": "2017",
+   "mag": 21.7149,
+   "sky": 52.2
+  },
+  {
+   "name": "Northumberland International Dark Sky Park",
+   "status": "Dark Sky Park",
+   "year": "2013",
+   "mag": 21.7059,
+   "sky": 54.1
+  },
+  {
+   "name": "Coed y Bont",
+   "status": "dark-sky place (Wikidata)",
+   "year": "",
+   "mag": 21.6634,
+   "sky": 63.2
+  },
+  {
+   "name": "Elan Valley Estate",
+   "status": "Dark Sky Park",
+   "year": "2015",
+   "mag": 21.6463,
+   "sky": 67.0
+  },
+  {
+   "name": "Exmoor National Park",
+   "status": "Dark Sky Reserve",
+   "year": "2011",
+   "mag": 21.6163,
+   "sky": 73.8
+  },
+  {
+   "name": "Snowdonia National Park (Eryri)",
+   "status": "Dark Sky Reserve",
+   "year": "2015",
+   "mag": 21.6131,
+   "sky": 74.5
+  },
+  {
+   "name": "Yorkshire Dales National Park",
+   "status": "Dark Sky Reserve",
+   "year": "2020",
+   "mag": 21.4576,
+   "sky": 112.8
+  },
+  {
+   "name": "West Penwith",
+   "status": "Dark Sky Park",
+   "year": "2021",
+   "mag": 21.3402,
+   "sky": 145.5
+  },
+  {
+   "name": "Cranborne Chase National Landscape",
+   "status": "Dark Sky Reserve (Provisional)",
+   "year": "2019",
+   "mag": 21.33,
+   "sky": 148.5
+  },
+  {
+   "name": "Brecon Beacons (Bannau Brycheiniog) National Park",
+   "status": "Dark Sky Reserve",
+   "year": "2013",
+   "mag": 21.33,
+   "sky": 148.5
+  },
+  {
+   "name": "Moffat",
+   "status": "Dark Sky Community",
+   "year": "2016",
+   "mag": 21.2366,
+   "sky": 177.5
+  },
+  {
+   "name": "Presteigne and Norton Dark Sky Community",
+   "status": "Dark Sky Community",
+   "year": "2023",
+   "mag": 21.2335,
+   "sky": 178.5
+  },
+  {
+   "name": "Moore’s Reserve",
+   "status": "Dark Sky Reserve",
+   "year": "2016",
+   "mag": 20.6416,
+   "sky": 434.0
+  }
+ ],
+ "dsp_uk_n": 17,
+ "dsp_world": {
+  "n": 220,
+  "placed": 171,
+  "mw_visible": 0.9357,
+  "not_polluted": 0.2339
+ },
+ "dsp_uk_mw_visible": 17,
+ "change": {
+  "years": [
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023
+  ],
+  "gbr": [
+   89870484,
+   83598833,
+   81292026,
+   81506967,
+   77990269,
+   77277842,
+   79340190,
+   75076057,
+   77744101
+  ],
+  "irl": [
+   8757738,
+   8585011,
+   8756477,
+   8995479,
+   8614362,
+   8865287,
+   8739690,
+   9170442,
+   9663089
+  ],
+  "gbr_pct": -13.5,
+  "irl_pct": 10.3,
+  "pop_mw_2015": 0.8656,
+  "pop_mw_2023": 0.8469,
+  "land_mw_2015": 0.2143,
+  "land_mw_2023": 0.1975,
+  "land_polluted_2015": 0.9262,
+  "land_polluted_2023": 0.9214,
+  "land_brighter": 0.1546,
+  "land_dimmer": 0.6591
+ },
+ "meta": {
+  "retrieved": "2026-10-29",
+  "world_files": 246,
+  "uk_files": 27,
+  "gan_sqm_all": 30237,
+  "dsp_rows": 220
+ }
+}

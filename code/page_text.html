@@ -1,0 +1,84 @@
+<!--@INTRO-->
+<p class="lede">On a clear, moonless night far from any town, the Milky Way crosses the sky as a pale river of light. Most people alive today will never see it from their own doorstep. The light we spill upwards from streets, buildings and car parks scatters off air and dust and comes back down as a glow that drowns the faint stars. Astronomers call it sky glow, and it can be mapped.</p>
+<p>I built my own map of it. Satellites photograph the Earth at night; the VIIRS instrument measures how much light leaves every patch of ground. I took those measurements for the whole world in 2023, spread each patch's light across the sky around it with a simple rule for how glow fades with distance, and tuned that rule against {{model.n_fit|int}} readings that Globe at Night volunteers took with hand-held sky meters. Then I asked who lives under each kind of sky. By this model, {{world.pop_mw|pct}} of the world's people, about {{world.people_mw_bn|f1}} billion, live where the glow hides the Milky Way. In the United Kingdom it is {{uk.pop_mw|pct}}.</p>
+<!--@end-->
+<!--@BODY-->
+<p>Use the map to read the sky anywhere: search a place, use your location or click. The panel tells you how bright the sky is in magnitudes per square arcsecond (the unit sky meters use: higher is darker, and a perfect natural sky is about 22), how much artificial light adds to it, and, if the Milky Way is hidden, how far you would have to go to find a sky where it shows. Zoom into Britain and Ireland for the 1 km version. "Lights from space" shows what the satellite sees; the change layer compares the UK's sky in 2015 and 2023.</p>
+
+<h2><span class="n">02 · The world</span>Who can still see the Milky Way?</h2>
+<p>The thresholds come from the most careful study of the problem, the World Atlas of Artificial Night Sky Brightness by Fabio Falchi and colleagues (2016). They take the natural night sky as 174 µcd/m² (22.0 magnitudes per square arcsecond) and say the Milky Way is hidden once artificial glow passes 688 µcd/m², about four times the natural sky. I use the same lines, so my numbers can sit beside theirs.</p>
+<div class="stats">
+  <div><b class="r">{{world.pop_mw|pct}}</b><span>of people under skies that hide the Milky Way (my model, 2023)</span></div>
+  <div><b>{{falchi.pop_mw|pct}}</b><span>the same share in Falchi et al. (2016), from 2014 lights</span></div>
+  <div><b class="a">{{world.pop_no_dark|pct}}</b><span>of people where the sky never gets dark enough for eyes to fully adapt</span></div>
+  <div><b class="n">{{world.land_mw_visible|pct}}</b><span>of the world's land (75° N to 60° S) still shows the Milky Way</span></div>
+</div>
+<p>My figure is higher than the atlas's, and I think the honest reading is that the truth lies somewhere between the two. Mine uses lights from 2023 rather than 2014, a population grid that puts people only where there are buildings, and sky meter readings that volunteers mostly take in the evening, when more lights are on than at the satellite's 1:30 am pass. The atlas uses a full model of how light scatters in the atmosphere, which mine does not. But the two agree closely on which countries are worst and best: across {{falchi.compare.n|int}} countries the rank correlation is {{falchi.compare.spearman|f2}}. On average mine is {{falchi.mean_diff_pts|int}} percentage points higher. Ukraine is one of the few big countries where my 2023 figure is well below the atlas's ({{country.UKR.pop_mw|pct}} against {{country.UKR.falchi_pop_mw|pct}}), as you would expect after the wartime blackouts.</p>
+<div class="figure">
+  <div class="fig-h">Countries of 30 million people or more: share of people under skies that hide the Milky Way</div>
+  <div class="fig-sub">Bars: my model, 2023 lights and population. Black ticks: Falchi et al. (2016). Hover for details.</div>
+  <div class="chart" id="ctryChart"></div>
+</div>
+<p>In {{countries_mw_over_half|int}} of the {{countries_n|int}} countries with a million people or more, most people cannot see the Milky Way from home, and in {{countries_mw_over_90|int}} more than nine in ten cannot: the city states of Hong Kong and Singapore, the Gulf states, Israel and Palestine, and Egypt, whose people crowd into the bright ribbon of the Nile valley. At the other end, in Eritrea, the Central African Republic, South Sudan, Sierra Leone and Ethiopia almost everyone can, mostly because there is little electric light at all. Darkness is not always a luxury.</p>
+<p class="pull">The two biggest countries tell the story: {{country.CHN.pop_mw|pct}} of people in China cannot see the Milky Way from home, {{country.IND.pop_mw|pct}} in India.</p>
+
+<h2><span class="n">03 · The UK</span>Darkness lives in the north and west</h2>
+<p>At 1 km the United Kingdom is a picture of where people live. {{uk.pop_mw|pct}} of its people, about {{uk.people_mw_m|f1}} million, live under skies that hide the Milky Way; {{uk.people_mw_visible_m|f1}} million can still see it from home. But the people are packed together: the Milky Way still shows over {{uk.land_mw_visible|pct}} of the land.</p>
+<div class="figure">
+  <div class="fig-h">Land and people by sky class, UK nations</div>
+  <div class="fig-sub">Share of land area, and of people, in each class of artificial glow. 2023 lights.</div>
+  <div class="chart" id="nationChart"></div>
+</div>
+<p>England is the brightest nation: {{uk.nations.England.pop_mw|pct}} of its people and {{uk.nations.England.land_mw|pct}} of its land are under a Milky Way hiding sky. In Scotland the figures are {{uk.nations.Scotland.pop_mw|pct}} and {{uk.nations.Scotland.land_mw|pct}}, in Wales {{uk.nations.Wales.pop_mw|pct}} and {{uk.nations.Wales.land_mw|pct}}, and in Northern Ireland {{uk.nations.Northern Ireland.pop_mw|pct}} and {{uk.nations.Northern Ireland.land_mw|pct}}. The darkest areas are all Scottish islands and Highlands: the Western Isles (Na h-Eileanan Siar), Highland, Orkney, Shetland, and Argyll and Bute. England's darkest counties are Northumberland, Devon, Cumbria, Cornwall and Dorset. Click a column to sort, or a row to see the county on the map.</p>
+<div class="figure">
+  <div class="fig-h">Every county, Scottish council area and Northern Ireland district</div>
+  <div class="fig-sub">Sky: median over the land, mag/arcsec² (higher is darker). Residents and Land: share where the Milky Way should show. Change: modelled glow, 2015 lights to 2023 lights.</div>
+  <div class="tablewrap"><table class="t" id="areaTable"></table></div>
+</div>
+<p>Size of place matters most. Among the UK's {{uk_places_n.City|int}} cities in OS Open Names, the Milky Way should show from the centre of only {{uk_kind_mw_visible.City|pct}}. It shows from {{uk_kind_mw_visible.Town|pct}} of towns, {{uk_kind_mw_visible.Village|pct}} of villages and {{uk_kind_mw_visible.Hamlet|pct}} of hamlets. The town with the darkest sky is Hugh Town on St Mary's in the Isles of Scilly ({{uk_towns_darkest.0.mag|f2}}), followed by New Galloway in Dumfries and Galloway, Tobermory on Mull, Chagford on Dartmoor and Whithorn. In {{uk_councils_all_hidden|int}} of {{uk_councils_n|int}} council areas, practically nobody (fewer than one resident in a hundred) can see the Milky Way from home.</p>
+
+<h2><span class="n">04 · Escape</span>How far to a dark sky?</h2>
+<p>For each city of a million or more I looked for the nearest land where the model says the Milky Way should show. The answer is usually closer than people think, because the worst glow is concentrated: the median among {{cities_1m_n|int}} such cities is {{cities_1m_median_mw_km|int}} km. The great sprawls are the exceptions: from New York the nearest Milky Way sky is {{city.New York City.mw_km|int}} km away, from Moscow {{city.Moscow.mw_km|int}} km, Delhi {{city.Delhi.mw_km|int}} km, Shanghai {{city.Shanghai.mw_km|int}} km and Tokyo {{city.Tokyo.mw_km|int}} km. A sky that is not light polluted at all is much further: {{city.New York City.dark_km|int}} km from New York, {{city.Shanghai.dark_km|int}} km from Shanghai.</p>
+<div class="figure">
+  <div class="fig-h">The world's biggest cities: distance to the nearest Milky Way sky</div>
+  <div class="fig-sub">From the city's GeoNames point to the nearest land cell (4.6 km) below the Milky Way threshold. Click a bar to see the city on the map.</div>
+  <div class="chart" id="cityChart"></div>
+</div>
+<p>From central London the nearest Milky Way sky is {{uk_cities.London.mw_km|int}} km away, near Toys Hill on the Greensand Ridge in Kent; for Birmingham it is {{uk_cities.Birmingham.mw_km|int}} km, Manchester {{uk_cities.Manchester.mw_km|int}} km, on the edge of the Peak District above Glossop, Leeds {{uk_cities.Leeds.mw_km|int}} km and Glasgow {{uk_cities.Glasgow.mw_km|int}} km. To reach a sky where the glow is less than half the natural sky, Londoners must go {{uk_cities.London.dark_km|int}} km.</p>
+<div class="figure">
+  <div class="fig-h">UK cities: distance to the nearest Milky Way sky</div>
+  <div class="fig-sub">From the city centre to the nearest 1 km square on land below the Milky Way threshold.</div>
+  <div class="chart" id="ukCityChart"></div>
+</div>
+
+<h2><span class="n">05 · Protected</span>Dark Sky Places</h2>
+<p>DarkSky International certifies parks, reserves, sanctuaries and communities that protect their night. Wikipedia's list names {{dsp_world.n|int}}; I could place {{dsp_world.placed|int}} from their articles' coordinates. The model says the Milky Way should show at {{dsp_world.mw_visible|pct}} of them. In the UK all {{dsp_uk_n|int}} placed sites are below the Milky Way line; the darkest are the Isle of Coll ({{dsp_uk.0.mag|f2}}) and Tomintoul and Glenlivet in the Cairngorms, and the brightest is Moore's Reserve in the South Downs, the reserve closest to London and the south coast towns ({{dsp_uk.16.mag|f2}}). The points are the centres of large areas, so they are a rough guide.</p>
+<div class="figure">
+  <div class="fig-h">The UK's Dark Sky Places in the model</div>
+  <div class="fig-sub">Modelled total sky at the place's Wikipedia coordinates. Click a row to see it on the map.</div>
+  <div class="tablewrap"><table class="t" id="dspTable"></table></div>
+</div>
+
+<h2><span class="n">06 · Change</span>Is the UK getting darker?</h2>
+<p>From space, yes. The total light VIIRS recorded from Great Britain fell by {{change.gbr_pct|abs1}}% between 2015 and 2023, while Ireland's rose by {{change.irl_pct|f1}}%. Run with 2015 lights, the model puts {{change.pop_mw_2015|pct}} of UK residents under a Milky Way hiding sky, against {{change.pop_mw_2023|pct}} with 2023 lights, and {{change.land_dimmer|pct}} of UK land has a sky at least 5% dimmer, against {{change.land_brighter|pct}} brighter. The biggest falls were in Tyne and Wear ({{uk_light_fall.0.pct|abs1}}%), Inverclyde and Northumberland. Lights rose in only {{uk_areas_light_up|int}} of the {{uk_areas_n|int}} areas, most of all in the Western Isles (+{{uk_light_rise.0.pct|f1}}%) and Cornwall (+{{uk_light_rise.1.pct|f1}}%).</p>
+<div class="figure">
+  <div class="fig-h">Lights seen from space, 2015 = 100</div>
+  <div class="fig-sub">Sum of annual VIIRS radiance (EOG VNL, via WorldPop) over Great Britain and over Ireland.</div>
+  <div class="chart" id="chgChart"></div>
+</div>
+<p>But I would not trust that from the ground. Over these years councils replaced orange sodium street lamps with white LEDs. LEDs are often dimmer and better aimed, which helps. But they give out much of their light at blue wavelengths, which the VIIRS sensor barely sees and which scatters more in the air. A street can look darker from space and brighter to the eye. Volunteers counting stars for Globe at Night found the opposite of the satellite: across the world, the stars they could see faded fast between 2011 and 2022, equivalent to the sky brightening by about 10% a year (Kyba and colleagues, 2023). The fall in the UK's lights from space is real, but it is probably not a fall of the same size in sky glow.</p>
+
+<div class="note" id="method">
+  <h3>How I did this</h3>
+  <p><b>Lights.</b> The Earth Observation Group at the Colorado School of Mines makes yearly cloud-free averages of what the VIIRS Day/Night Band sees at about 1:30 am (VNL version 2), with gas flares and volcanoes removed. WorldPop republishes them per country at 3 arc seconds (about 90 m) under an open licence. I read all {{meta.world_files|int}} country files for 2023 in a web browser and averaged them to a world grid of 2.5 arc minutes (about 4.6 km), and the UK, Ireland and Isle of Man files for every year from 2015 to 2023 to a 30 arc second grid (about 0.9 km by 0.5 km).</p>
+  <p><b>Glow.</b> Each cell's light (radiance times lit area) is spread to every place within {{model.r_max|int}} km with weight (d² + 1)<sup>−α/2</sup>, d in km, and the sky at a place is k times the total. Lights outside the UK reach the UK grid from the world grid. This is the old rule of thumb that sky glow falls off with a power of distance (Walker's law has 2.5), not a full radiative transfer model: it ignores hills, haze, height and the colour and angle of lamps.</p>
+  <p><b>Tuning and checking.</b> I took Globe at Night Sky Quality Meter readings from 2019 to 2025, made under a clear sky after 8 pm, and chose α and k to match the {{model.n18|int}} readings darker than {{model.fit_min|f1}} magnitudes (the 4.6 km grid cannot resolve bright city-centre streets) with least absolute error. α = {{model.alpha|f1}} worked best. Tested on regions left out of the fit (five folds of 10° blocks), the model misses a typical reading by {{model.cv18_mae|f2}} magnitudes, with correlation {{model.cv18_r|f2}}. On the {{model.uk_fine.n|int}} readings inside the UK the 1 km model misses by {{model.uk_fine.mae|f2}}. It underestimates the brightest city centres badly, which is why city figures here are shown as "never truly dark" rather than with precise values.</p>
+  <div class="figure">
+    <div class="fig-h">Model against measurement</div>
+    <div class="fig-sub">A random 1,500 of the {{model.n_fit|int}} Globe at Night readings, 2019 to 2025, against the model at the same place. Dashed line: perfect agreement.</div>
+    <div class="chart" id="fitChart"></div>
+  </div>
+  <p><b>People.</b> WorldPop's 2023 population grid (R2025A, constrained to built-up areas, 30 arc seconds), summed to each model grid. On the coarse world grid people share their cell's average sky, while in reality they cluster under the brightest part of it, so world figures for people may be too low; on the same UK population the coarse grid gives {{uk.coarse_pop_mw|pct}} under a Milky Way hiding sky, the 1 km grid {{uk.pop_mw|pct}}.</p>
+  <p><b>Limits.</b> This is a model. It is tuned to readings taken mostly in North America and Europe, by volunteers, in the evening; it says nothing about clouds, the Moon or the season. The finest distinctions near natural darkness (the 1% and 8% lines) are within the noise of the sky meters, so I lean on the Milky Way line. Kosovo has no light file of its own in the WorldPop set and is left out of country figures. I did not use the Falchi atlas grid itself: it is published under a non-commercial licence, with a note in the download that forbids further distribution, so I quote only the figures printed in their paper. I could not find an open licence for CPRE's Night Blight maps of England, so they are not used either.</p>
+</div>
+<!--@end-->

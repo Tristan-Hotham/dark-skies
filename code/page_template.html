@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Darkest Skies</title>
+<meta name="description" content="Where can you still see the Milky Way? A sky glow map of the world and a 1 km map of the UK, built from VIIRS satellite lights and checked against thousands of sky meter readings.">
+<meta property="og:title" content="Darkest skies: where you can still see the Milky Way">
+<meta property="og:description" content="By my model, {{world.pop_mw|pct}} of the world's people live under skies too bright to see the Milky Way, and {{uk.pop_mw|pct}} of the UK's. Find your own sky.">
+<meta property="og:image" content="https://maps.tristanhotham.com/dark-skies/header.png">
+<meta property="og:url" content="https://maps.tristanhotham.com/dark-skies/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Pale dusk paper, ink and a night palette: navy, violet, rose, amber, starlight. */
+:root{
+  --bg:#F5F3EE; --panel:#ECE8E0; --fg:#191A2B; --muted:#5F6072; --rule:#DBD6CC; --card:#FBFAF6; --border:#CCC6BA;
+  --night:#1B2147; --violet:#5B3F8C; --rose:#C8466F; --amber:#D9861C; --star:#F3D27A; --sea:#DCE0E6;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12131D; --panel:#1C1E2B; --fg:#ECEBF2; --muted:#A3A3B5; --rule:#2F3142; --card:#1A1C28; --border:#40435A;
+  --night:#9FB0FF; --violet:#B79BE6; --rose:#F07C9F; --amber:#F2A64A; --star:#F3D27A; --sea:#191B26; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12131D; --panel:#1C1E2B; --fg:#ECEBF2; --muted:#A3A3B5; --rule:#2F3142; --card:#1A1C28; --border:#40435A;
+  --night:#9FB0FF; --violet:#B79BE6; --rose:#F07C9F; --amber:#F2A64A; --star:#F3D27A; --sea:#191B26; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:680px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1120px,calc(100vw - 32px));margin-left:calc((100% - min(1120px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--rose);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--night);color:#fff;padding:5px 8px;font-weight:500}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .kicker b{color:#12131D}}
+:root[data-theme="dark"] .kicker b{color:#12131D}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:end;border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+h1{font:900 clamp(46px,11.5vw,98px)/.9 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1 .d{color:var(--night)} h1 .s{color:var(--amber)}
+.mark{width:clamp(78px,17vw,132px);height:auto;display:block}
+.dek{grid-column:1/-1;font-size:21px;line-height:1.42;margin:8px 0 0;max-width:48ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:52px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--rose);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--night)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(26px,5.6vw,38px)/1 var(--display);color:var(--fg)}
+.stats b.r{color:var(--rose)} .stats b.n{color:var(--night)} .stats b.a{color:var(--amber)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.lab{font-size:12px}.lab.m{fill:var(--muted)}.lab.b{font-weight:500}.lab.s{font-size:11px}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font:400 12px/1.45 var(--mono);padding:8px 10px;border-radius:3px;max-width:280px;z-index:1000;transform:translate(-50%,calc(-100% - 12px));display:none}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.controls label.l{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+@media (max-width:600px){.controls.scroll{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;scrollbar-width:thin}.controls.scroll>*{flex:0 0 auto}}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px;white-space:nowrap}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:disabled{opacity:.4;cursor:default}
+.btn:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;max-width:100%}
+.seg .btn{border:0;border-radius:0;border-right:1px solid var(--border)}
+.seg .btn:last-child{border-right:0}
+.searchbox{position:relative;flex:1 1 240px;min-width:0}
+input[type=search]{font:400 15px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:10px 11px;min-height:40px;width:100%}
+.suggest{position:absolute;left:0;right:0;top:100%;margin:2px 0 0;padding:0;list-style:none;background:var(--card);border:1px solid var(--border);z-index:1001;font:400 13px/1.3 var(--mono);display:none;max-height:300px;overflow:auto}
+.suggest li{padding:8px 10px;cursor:pointer;border-bottom:1px solid var(--rule)}
+.suggest li span{color:var(--muted)}
+.suggest li[aria-selected="true"],.suggest li:hover{background:var(--panel)}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:18px;align-items:start}
+@media (max-width:900px){.mapgrid{grid-template-columns:1fr}}
+#lmap{height:720px;border:1px solid var(--border);background:#0E1020;border-radius:2px}
+@media (max-width:900px){#lmap{height:560px}}
+@media (max-width:600px){#lmap{height:430px}}
+.leaflet-container{font:400 12px/1.4 var(--mono)}
+.leaflet-image-layer.px{image-rendering:pixelated;image-rendering:crisp-edges}
+.leaflet-bar a,.leaflet-bar a:hover{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+@media (max-width:600px){.leaflet-control-attribution{font-size:10px;line-height:1.25}}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)}
+.leaflet-control-attribution a{color:var(--fg)}
+.city{font:500 11px/1 var(--mono);color:#F4F2EA;white-space:nowrap;text-shadow:0 0 3px #000,0 0 3px #000,0 0 2px #000;pointer-events:none}
+.city.lt{color:#191A2B;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 2px #fff}
+.city.s{font-size:10px;font-weight:400}
+.city i{display:inline-block;width:5px;height:5px;border-radius:50%;background:currentColor;margin-right:4px;vertical-align:1px}
+.lyrBtn{background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;font:600 12px/1 var(--mono);padding:8px 10px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+.lyrBtn[aria-expanded="true"]{background:var(--fg);color:var(--bg)}
+.lyrPanel{background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:10px 12px 8px;margin-top:6px;width:236px;box-shadow:0 2px 10px rgba(0,0,0,.2);font:400 12px/1.3 var(--mono)}
+.lyrPanel[hidden]{display:none}
+.lyrPanel .row{display:grid;grid-template-columns:auto 1fr;gap:4px 8px;align-items:center;margin:0 0 9px}
+.lyrPanel label{display:flex;gap:6px;align-items:center;cursor:pointer;font-weight:600}
+.lyrPanel input[type=range]{width:100%;accent-color:var(--fg)}
+.lyrPanel select{font:400 12px var(--mono);background:var(--bg);color:var(--fg);border:1px solid var(--border);border-radius:2px;padding:2px 4px;width:100%}
+.lyrPanel .sub{grid-column:1/-1;display:flex;gap:6px;align-items:center;color:var(--muted);font-size:11px}
+.lyrPanel .sub span{flex:0 0 52px}
+.lyrPanel .reset{font:400 11px var(--mono);color:var(--muted);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+@media (max-width:600px){.lyrPanel{width:210px}}
+.pin{width:18px;height:18px;border:3px solid #fff;border-radius:50%;background:transparent;box-shadow:0 0 0 2px #191A2B}
+.pin.d{border:0;box-shadow:none;width:16px;height:16px}
+.pin.d i{display:block;width:13px;height:13px;margin:1.5px;border:3px solid var(--star);box-shadow:0 0 0 2px #191A2B;transform:rotate(45deg);border-radius:2px}
+.side{background:var(--card);border:1px solid var(--border);padding:14px 14px 10px}
+.side h4{font:500 11px/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+#legend svg{width:100%;height:auto;display:block}
+#readout{font:400 12.5px/1.5 var(--mono);border-top:1px solid var(--rule);padding-top:10px;margin-top:10px;min-height:120px}
+#readout b{font-weight:500}
+#readout .big{font:800 22px/1.15 var(--display);margin:2px 0 6px;display:block}
+.sw{display:inline-block;width:12px;height:12px;vertical-align:-1px;margin-right:6px;border:1px solid var(--border)}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--rose);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.35 var(--mono)}
+table.t th{text-align:left;font-weight:500;color:var(--muted);border-bottom:2px solid var(--fg);padding:6px 8px 6px 0;cursor:pointer;white-space:nowrap}
+table.t td{border-bottom:1px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+table.t td.num,table.t th.num{text-align:right;white-space:nowrap}
+table.t td small{color:var(--muted);display:block}
+table.t tr.go{cursor:pointer}
+table.t tr.go:hover td{background:var(--panel)}
+.tablewrap{overflow-x:auto;max-height:520px;overflow-y:auto;border-bottom:1px solid var(--rule)}
+@media (max-width:600px){table.t .wide{display:none}}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-left:10px solid var(--night);padding:12px 14px;font:400 13px/1.5 var(--mono);cursor:pointer}
+.card b{font:600 19px/1.2 var(--display);display:block;margin-bottom:2px}
+.card .big{font:900 30px/1.05 var(--display);margin:6px 0 2px}
+.card .big span{color:var(--muted);font:400 13px/1 var(--mono)}
+details{margin:14px 0}
+summary{font:500 13px/1.4 var(--mono);cursor:pointer;color:var(--fg);padding:8px 0}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--night);border-color:var(--night);color:#fff}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1002}
+.loading{font:400 12px/1.4 var(--mono);color:var(--muted)}
+@media print{.theme,.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>Night sky</span><span>World and UK, 2023</span></div>
+<header class="hero">
+  <h1><span class="d">Darkest</span> <span class="s">skies</span></h1>
+  <svg class="mark" viewBox="0 0 120 120" aria-hidden="true"><g id="heroMark"></g></svg>
+  <p class="dek">Where can you still see the Milky Way? A map of the glow our lights throw into the night sky, for the whole world and for every square kilometre of the UK, built from satellite images of the Earth at night and checked against {{model.n_fit|int}} readings from hand-held sky meters.</p>
+</header>
+<div class="byline">Dr Tristan Hotham, Independent researcher · 2026 · Data: VIIRS night lights via WorldPop (CC BY 4.0); Globe at Night (CC BY 4.0); WorldPop population (CC BY 4.0)</div>
+
+<div class="stats">
+  <div><b class="r">{{world.pop_mw|pct}}</b><span>of the world's people live where my model says light hides the Milky Way</span></div>
+  <div><b class="r">{{uk.pop_mw|pct}}</b><span>of people in the UK, and {{uk.land_mw|pct}} of its land</span></div>
+  <div><b class="n">{{uk.land_mw_visible|pct}}</b><span>of UK land still has a sky where the Milky Way shows</span></div>
+  <div><b class="a">{{uk_cities.London.mw_km|int}} km</b><span>from central London to the nearest sky where the Milky Way shows</span></div>
+</div>
+
+/*INTRO*/
+
+<h2><span class="n">01 · The map</span>Find your sky</h2>
+<div class="figure bleed">
+  <div class="controls scroll">
+    <div class="seg" role="group" aria-label="Map layer" id="modeBtns"><button class="btn" data-m="sky" aria-pressed="true">Sky glow</button><button class="btn" data-m="lit" aria-pressed="false">Lights from space</button><button class="btn" data-m="chg" aria-pressed="false">UK change 2015 to 2023</button></div>
+    <div class="seg" role="group" aria-label="View" id="viewBtns"><button class="btn" data-v="world">World</button><button class="btn" data-v="uk">UK and Ireland</button></div>
+  </div>
+  <div class="controls">
+    <div class="searchbox">
+      <input type="search" id="q" placeholder="Search a town, city or village" aria-label="Find a place" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="sug">
+      <ul class="suggest" id="sug" role="listbox"></ul>
+    </div>
+    <button class="btn" id="geo">Use my location</button>
+    <span class="loading" id="loadMsg"></span>
+  </div>
+  <div class="mapgrid">
+    <div id="lmap" role="region" aria-label="Map of modelled artificial sky brightness"></div>
+    <div class="side">
+      <h4 id="legTitle">Artificial glow, times the natural night sky</h4>
+      <div id="legend"></div>
+      <div id="readout">Click the map or search a place to read its sky.</div>
+    </div>
+  </div>
+  <div class="src">Sky glow is modelled from VIIRS annual night lights for 2023 (world at 2.5 arc minutes, about 4.6 km; UK and Ireland at 30 arc seconds, about 1 km), as described below. It is artificial light only, at the zenith, on a clear moonless night. The UK change layer compares the model run with 2015 and 2023 lights. Base map tiles © Esri.</div>
+</div>
+
+/*BODY*/
+
+<div class="cta">
+  <a class="p" href="https://github.com/Tristan-Hotham/dark-skies">Data and code</a>
+  <a href="https://doi.org/10.5281/zenodo.23757708">Paper (Zenodo)</a>
+  <a href="https://blog.tristanhotham.com/2026/10/29/dark-skies/">Blog post</a>
+  <a href="https://blog.tristanhotham.com/">All posts</a>
+</div>
+<footer>
+  <p>Dr Tristan Hotham, Independent researcher. ORCID 0000-0003-4931-9349. Cite as: Hotham, T. (2026) Darkest skies: where you can still see the Milky Way. A sky glow model of the world and the UK from VIIRS night lights. https://doi.org/10.5281/zenodo.23757708</p>
+  <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+  <p>Night lights: Earth Observation Group, Payne Institute for Public Policy, Colorado School of Mines, annual VIIRS night-time lights VNL v2.1/2.2 (Elvidge et al. 2021), as resampled by WorldPop: Woods, D. et al. (2024) WorldPop high resolution, harmonised annual global geospatial covariates, doi:10.5258/SOTON/WP00772 (CC BY 4.0). Population: Bondarenko, M. et al. (2025) The spatial distribution of population in 2015 to 2030 at 30 arc seconds, R2025A, doi:10.5258/SOTON/WP00845 (CC BY 4.0). Sky meter readings: Globe at Night, NOIRLab (CC BY 4.0). Comparison figures: Falchi, F. et al. (2016) The new world atlas of artificial night sky brightness, Science Advances 2: e1600377. Star visibility trend: Kyba, C.C.M., Altıntaş, Y.Ö., Walker, C.E. and Newhouse, M. (2023) Citizen scientists report global rapid reductions in the visibility of stars from 2011 to 2022, Science 379: 265 to 268. Dark Sky Places: English Wikipedia, "Dark-sky preserve" (CC BY-SA 4.0), and Wikidata (CC0). Places: OS Open Names (contains OS data © Crown copyright and database right 2026, Open Government Licence v3.0); GeoNames (CC BY 4.0). Boundaries: Natural Earth (public domain); Office for National Statistics via onsvisual/uk-topojson (Open Government Licence v3). Base map and hill shading tiles © Esri. Map library: Leaflet.</p>
+  <p>Data files and text: CC BY 4.0, except the Dark Sky Places table (CC BY-SA 4.0). Code: MIT. Other studies: <a href="https://maps.tristanhotham.com/sun-and-rain/">Sun and rain</a>, <a href="https://maps.tristanhotham.com/eclipse-towns/">Eclipse towns</a>, <a href="https://maps.tristanhotham.com/did-lighthouses-work/">Did lighthouses work?</a>, <a href="https://blog.tristanhotham.com/">all posts</a>.</p>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<button class="btn theme" id="theme" aria-label="Toggle dark mode">◐</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+const R = /*RESULTS*/;
+const PD = /*PD*/;
+const NS = "http://www.w3.org/2000/svg";
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const el = (t, a = {}, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const fmt = n => n == null || isNaN(n) ? "n/a" : Math.round(n).toLocaleString("en-GB");
+const pc = (x, d = 0) => x == null ? "n/a" : (x * 100).toFixed(d) + "%";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const tip = document.getElementById("tip");
+function showTip(h, x, y) { tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth; x = Math.max(w / 2 + 8, Math.min(innerWidth - w / 2 - 8, x)); tip.style.left = x + scrollX + "px"; tip.style.top = y + scrollY + "px"; }
+function hideTip() { tip.style.display = "none"; }
+function hover(node, h) { node.style.cursor = "pointer"; node.setAttribute("tabindex", "0"); const s = () => { const r = node.getBoundingClientRect(); showTip(h, r.left + r.width / 2, r.top); }; node.addEventListener("pointerenter", s); node.addEventListener("pointerleave", hideTip); node.addEventListener("focus", s); node.addEventListener("blur", hideTip); }
+const redraws = [];
+function resp(box, render) { let last = 0; const go = (force) => { const w = Math.max(280, Math.round(box.clientWidth)); if (!force && Math.abs(w - last) < 4) return; last = w; box.innerHTML = ""; render(w, w < 560); }; new ResizeObserver(() => go()).observe(box); go(); redraws.push(() => go(true)); }
+const lbl = (svg, x, y, s, cls = "lab", anchor = "start") => { const t = el("text", { x, y, class: cls, "text-anchor": anchor }, svg); t.textContent = s; return t; };
+const isDark = () => { const r = document.documentElement; return r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+
+/* ===== brightness scale: codes, colours, words ===== */
+const NAT = 174, LO = 0.5, HI = 20000, LLO = Math.log10(LO), LHI = Math.log10(HI);
+const TH = [1.74, 13.9, 87, 688, 3000];
+const skyOf = v => v ? Math.pow(10, LLO + (v - 1) / 254 * (LHI - LLO)) : 0.3;
+const litOf = v => v ? Math.pow(10, (v - 1) / 254 * Math.log10(401)) - 1 : 0;
+const magOf = b => 22 - 2.5 * Math.log10((b + NAT) / NAT);
+const STOPS = [[0.5, [14, 18, 48, 0]], [1.74, [20, 27, 74, 150]], [13.9, [42, 58, 140, 215]], [87, [98, 70, 168, 235]], [300, [176, 72, 150, 245]], [688, [222, 86, 112, 250]],
+  [3000, [242, 156, 72, 255]], [8000, [250, 214, 120, 255]], [20000, [255, 249, 226, 255]]];
+function skyRGBA(b) {
+  if (b < STOPS[0][0]) return [0, 0, 0, 0];
+  const lb = Math.log10(b);
+  for (let i = 1; i < STOPS.length; i++) if (b <= STOPS[i][0]) {
+    const a = Math.log10(STOPS[i - 1][0]), c = Math.log10(STOPS[i][0]), t = (lb - a) / (c - a);
+    return STOPS[i - 1][1].map((x, k) => Math.round(x + (STOPS[i][1][k] - x) * t));
+  }
+  return STOPS[STOPS.length - 1][1];
+}
+const LUT_SKY = Array.from({ length: 256 }, (_, v) => v ? skyRGBA(skyOf(v)) : [0, 0, 0, 0]);
+const LUT_LIT = Array.from({ length: 256 }, (_, v) => { if (!v) return [0, 0, 0, 0]; const t = (v - 1) / 254; const c = t < .5 ? [40 + 400 * t, 30 + 300 * t, 60 - 40 * t] : [240, 180 + 140 * (t - .5), 40 + 420 * (t - .5)]; return [Math.min(255, c[0]), Math.min(255, c[1]), Math.min(255, c[2]), Math.round(90 + 165 * Math.min(1, t * 2.2))]; });
+function chgRGBA(r) {   // ratio 2023 / 2015 of sky glow
+  if (!isFinite(r)) return [0, 0, 0, 0];
+  const l = Math.max(-1, Math.min(1, Math.log2(r) / 0.6));
+  if (Math.abs(l) < 0.06) return [200, 200, 205, 70];
+  return l > 0 ? [Math.round(240 - 20 * l), Math.round(200 - 120 * l), Math.round(150 - 120 * l), Math.round(110 + 140 * l)] : [Math.round(150 + 80 * l), Math.round(190 + 40 * l), 245, Math.round(110 - 140 * l)];
+}
+function classOf(b) {
+  if (b < TH[0]) return ["Pristine", "artificial light adds under 1% to the natural night sky"];
+  if (b < TH[1]) return ["Near natural", "less than 8% above the natural sky, so not light polluted by Falchi's definition"];
+  if (b < TH[2]) return ["Light polluted", "glow is noticeable, but the natural sky still dominates"];
+  if (b < TH[3]) return ["Natural sky lost", "the glow is at least half the natural sky, but the Milky Way should still show on a good night"];
+  if (b < TH[4]) return ["Milky Way hidden", "the glow is about four times the natural sky or more"];
+  return ["Never truly dark", "too bright for eyes to fully adapt to the dark"];
+}
+const sw = b => { const c = skyRGBA(Math.max(b, .6)); return `rgb(${c[0]},${c[1]},${c[2]})`; };
+
+/* hero mark: a field of stars that fades from a dark edge into city glow */
+(() => { const g = document.getElementById("heroMark"); el("rect", { x: 0, y: 0, width: 120, height: 120, rx: 6, fill: "#14183A" }, g);
+  const grd = el("radialGradient", { id: "hg", cx: "100%", cy: "100%", r: "95%" }, g);
+  el("stop", { offset: "0", "stop-color": "#F7C66B", "stop-opacity": "0.95" }, grd); el("stop", { offset: ".45", "stop-color": "#C8466F", "stop-opacity": "0.55" }, grd); el("stop", { offset: "1", "stop-color": "#14183A", "stop-opacity": "0" }, grd);
+  el("rect", { x: 0, y: 0, width: 120, height: 120, rx: 6, fill: "url(#hg)" }, g);
+  let s = 7; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647; const stars = [];
+  for (let i = 0; i < 70; i++) { const x = rnd() * 116 + 2, y = rnd() * 116 + 2, d = Math.hypot(120 - x, 120 - y) / 170; stars.push(el("circle", { cx: x, cy: y, r: (.5 + rnd() * 1.1).toFixed(2), fill: "#fff", opacity: Math.max(0, Math.min(1, d * 1.6 - .35)).toFixed(2) }, g)); }
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  let t = 0; setInterval(() => { t++; stars.forEach((c, k) => { if ((k + t) % 9 === 0) c.setAttribute("r", (+c.getAttribute("r") * (t % 2 ? 1.25 : .8)).toFixed(2)); }); }, 700);
+})();
+
+/* ===== grids ===== */
+const WG = { w: 4320, h: 1620, top: 75, bot: -60, left: -180, cell: 1 / 12 };
+const UG = { w: 1560, h: 1344, top: 61, bot: 49.8, left: -11, right: 2, cell: 1 / 120 };
+const D = { wsky: null, wlit: null, usky: null, uold: null, uarea: null, ulit: null };
+const msg = document.getElementById("loadMsg");
+async function pixels(url, w, h) {
+  const blob = await (await fetch(url)).blob();
+  let src; try { src = await createImageBitmap(blob, { colorSpaceConversion: "none", premultiplyAlpha: "none" }); }
+  catch (e) { src = await new Promise((ok, no) => { const im = new Image(); im.onload = () => ok(im); im.onerror = no; im.src = URL.createObjectURL(blob); }); }
+  const c = document.createElement("canvas"); c.width = w; c.height = h; const x = c.getContext("2d", { willReadFrequently: true });
+  x.drawImage(src, 0, 0); return x.getImageData(0, 0, w, h).data;
+}
+const chan = (px, ch, n) => { const o = new Uint8Array(n); for (let i = 0; i < n; i++) o[i] = px[i * 4 + ch]; return o; };
+async function loadBase() {
+  msg.textContent = "Loading the sky grids...";
+  const [a, b] = await Promise.all([pixels("data/page/world_sky.png", WG.w, WG.h), pixels("data/page/uk_sky.png", UG.w, UG.h)]);
+  D.wsky = chan(a, 0, WG.w * WG.h); WLAND = chan(a, 1, WG.w * WG.h); D.usky = chan(b, 0, UG.w * UG.h); D.uold = chan(b, 1, UG.w * UG.h); D.uarea = chan(b, 2, UG.w * UG.h);
+  msg.textContent = "";
+}
+let litP = null;
+function loadLit() {
+  if (litP) return litP; msg.textContent = "Loading the lights...";
+  litP = Promise.all([pixels("data/page/world_lit.png", WG.w, WG.h), pixels("data/page/uk_lit.png", UG.w, UG.h)]).then(([a, b]) => { D.wlit = chan(a, 0, WG.w * WG.h); D.ulit = chan(b, 0, UG.w * UG.h); msg.textContent = ""; });
+  return litP;
+}
+const wIdx = (lat, lon) => { const r = Math.floor((WG.top - lat) / WG.cell), c = Math.floor((lon - WG.left) / WG.cell); return r < 0 || c < 0 || r >= WG.h || c >= WG.w ? -1 : r * WG.w + c; };
+const uIdx = (lat, lon) => { const r = Math.floor((UG.top - lat) / UG.cell), c = Math.floor((lon - UG.left) / UG.cell); return r < 0 || c < 0 || r >= UG.h || c >= UG.w ? -1 : r * UG.w + c; };
+function skyAt(lat, lon) {
+  const u = uIdx(lat, lon);
+  if (u >= 0 && D.usky) return { b: skyOf(D.usky[u]), b15: skyOf(D.uold[u]), area: D.uarea[u], fine: true, lit: D.ulit ? litOf(D.ulit[u]) : null };
+  const w = wIdx(lat, lon); if (w < 0 || !D.wsky) return null;
+  return { b: skyOf(D.wsky[w]), fine: false, lit: D.wlit ? litOf(D.wlit[w]) : null };
+}
+const hav = (a, b, c, d) => { const p = Math.PI / 180, x = Math.sin((c - a) * p / 2) ** 2 + Math.cos(a * p) * Math.cos(c * p) * Math.sin((d - b) * p / 2) ** 2; return 2 * 6371 * Math.asin(Math.sqrt(x)); };
+const BEAR = ["north", "north-east", "east", "south-east", "south", "south-west", "west", "north-west"];
+const bearing = (a, b, c, d) => { const p = Math.PI / 180, y = Math.sin((d - b) * p) * Math.cos(c * p), x = Math.cos(a * p) * Math.sin(c * p) - Math.sin(a * p) * Math.cos(c * p) * Math.cos((d - b) * p); return BEAR[Math.round(((Math.atan2(y, x) / p + 360) % 360) / 45) % 8]; };
+const vOf = b => 1 + Math.round(254 * (Math.log10(b) - LLO) / (LHI - LLO));
+function nearestDark(lat, lon, thr, maxKm) {
+  const v = vOf(thr), useUK = uIdx(lat, lon) >= 0 && D.uarea[uIdx(lat, lon)] > 0;
+  const G = useUK ? UG : WG, A = useUK ? D.usky : D.wsky, land = useUK ? D.uarea : null;
+  const r0 = Math.floor((G.top - lat) / G.cell), c0 = Math.floor((lon - G.left) / G.cell);
+  const dr = Math.ceil(maxKm / 111.2 / G.cell), dc = Math.ceil(maxKm / (111.2 * Math.max(.2, Math.cos(lat * Math.PI / 180))) / G.cell);
+  let best = null, bd = 1e9;
+  for (let r = Math.max(0, r0 - dr); r < Math.min(G.h, r0 + dr + 1); r++) for (let c = Math.max(0, c0 - dc); c < Math.min(G.w, c0 + dc + 1); c++) {
+    const i = r * G.w + c; if (A[i] >= v) continue; if (land ? !land[i] : !landW(i)) continue;
+    const la = G.top - (r + .5) * G.cell, lo = G.left + (c + .5) * G.cell; const d = hav(lat, lon, la, lo); if (d < bd) { bd = d; best = [la, lo]; }
+  }
+  return best ? { km: bd, lat: best[0], lon: best[1], dir: bearing(lat, lon, best[0], best[1]) } : null;
+}
+let WLAND = null; const landW = i => WLAND ? WLAND[i] > 0 : true;
+
+/* ===== map ===== */
+const S = { mode: "sky", view: "world", sel: null };
+const map = L.map("lmap", { minZoom: 1, maxZoom: 12, zoomSnap: .5, worldCopyJump: false, maxBounds: [[-75, -200], [85, 200]], scrollWheelZoom: false }).setView([30, 10], 2);
+map.on("click", () => map.scrollWheelZoom.enable());
+const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/";
+const LY = { base: "dark", hills: false, hillK: 45, names: true, nameLvl: 1, lines: true, lineK: 45, colour: 90 };
+const LYDEF = { ...LY };
+try { Object.assign(LY, JSON.parse(localStorage.getItem("ds_layers") || "{}")); } catch (e) {}
+const saveLY = () => { try { localStorage.setItem("ds_layers", JSON.stringify(LY)); } catch (e) {} };
+map.createPane("glow"); map.getPane("glow").style.zIndex = 400; map.getPane("glow").style.pointerEvents = "none";
+map.createPane("hills"); map.getPane("hills").style.zIndex = 420; map.getPane("hills").style.pointerEvents = "none";
+map.createPane("lines"); map.getPane("lines").style.zIndex = 430; map.getPane("lines").style.pointerEvents = "none";
+let base = null, hills = null, linesL = L.layerGroup(), nameL = L.layerGroup(), BORD = null;
+function setTiles() {
+  if (base) map.removeLayer(base); if (hills) map.removeLayer(hills);
+  base = LY.base === "none" ? null : L.tileLayer(LY.base === "sat" ? ESRI + "World_Imagery/MapServer/tile/{z}/{y}/{x}" : `${ESRI}Canvas/World_${LY.base === "light" ? "Light" : "Dark"}_Gray_Base/MapServer/tile/{z}/{y}/{x}`, { maxZoom: 16, attribution: "Tiles © Esri" });
+  if (base) base.addTo(map);
+  document.getElementById("lmap").style.background = LY.base === "light" ? "#E8E6E1" : "#0E1020";
+  hills = L.tileLayer(ESRI + "Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}", { maxZoom: 16, pane: "hills", attribution: "Hill shading © Esri" });
+  applyLayers();
+}
+function applyLayers() {
+  if (glow) glow.setOpacity(LY.colour / 100);
+  if (LY.hills) { hills.addTo(map); hills.setOpacity(.15 + LY.hillK / 100 * .7); } else map.removeLayer(hills);
+  drawLines(); placeNames();
+}
+function drawLines() {
+  linesL.clearLayers(); if (!LY.lines || !BORD) { map.removeLayer(linesL); return; }
+  const light = LY.base === "light", col = light ? "#2A2B3A" : "#E9E6F2", op = .2 + LY.lineK / 100 * .75;
+  L.geoJSON({ type: "FeatureCollection", features: BORD.countries }, { pane: "lines", interactive: false, style: { color: col, weight: 1, opacity: op, fill: false } }).addTo(linesL);
+  if (map.getZoom() >= 5) L.geoJSON({ type: "FeatureCollection", features: BORD.uk }, { pane: "lines", interactive: false, style: { color: col, weight: .8, opacity: op * .8, dashArray: "3 3", fill: false } }).addTo(linesL);
+  linesL.addTo(map);
+}
+let CITIES = null, UKP = null;
+function placeNames() {
+  nameL.clearLayers(); if (!LY.names || !CITIES) { map.removeLayer(nameL); return; }
+  const z = map.getZoom(), bb = map.getBounds().pad(.05), lvl = LY.nameLvl, light = LY.base === "light";
+  const minPop = [[2, 1e7], [3, 4e6], [4, 1.5e6], [5, 6e5], [6, 2.5e5], [7, 9e4], [8, 4e4], [99, 15000]].find(([zz]) => z < zz + (lvl === 2 ? 1 : lvl === 0 ? -1 : 0))[1] * (lvl === 0 ? 2 : 1);
+  const cand = CITIES.filter(c => c[3] >= minPop && bb.contains([c[1], c[2]])).map(c => ({ n: c[0], lat: c[1], lon: c[2], big: c[3] >= 1e6 }));
+  if (UKP && z >= 8) { const minK = z >= 10 + (lvl === 0 ? 1 : 0) - (lvl === 2 ? 1 : 0) ? 1 : 2; for (const p of UKP) if (p[3] >= minK && bb.contains([p[1], p[2]])) cand.push({ n: p[0], lat: p[1], lon: p[2], big: p[3] >= 3 }); }
+  const boxes = []; let n = 0;
+  for (const c of cand) {
+    const pt = map.latLngToContainerPoint([c.lat, c.lon]); const bx = [pt.x - 4, pt.y - 8, pt.x + 10 + c.n.length * (c.big ? 6.9 : 6.3), pt.y + 7];
+    if (boxes.some(o => bx[0] < o[2] && bx[2] > o[0] && bx[1] < o[3] && bx[3] > o[1])) continue;
+    boxes.push(bx); L.marker([c.lat, c.lon], { interactive: false, keyboard: false, icon: L.divIcon({ className: "city" + (c.big ? "" : " s") + (light ? " lt" : ""), html: `<i></i>${esc(c.n)}`, iconSize: null, iconAnchor: [3, 6] }) }).addTo(nameL);
+    if (++n >= 220) break;
+  }
+  nameL.addTo(map);
+}
+map.on("zoomend moveend", () => { placeNames(); });
+map.on("zoomend", drawLines);
+(function layerControl() {
+  const Ctl = L.Control.extend({ options: { position: "topright" }, onAdd() {
+    const d = L.DomUtil.create("div"); L.DomEvent.disableClickPropagation(d); L.DomEvent.disableScrollPropagation(d);
+    d.innerHTML = `<button class="lyrBtn" aria-expanded="false" aria-controls="lyrPanel">Map layers</button>
+<div class="lyrPanel" id="lyrPanel" hidden>
+ <div class="row"><label for="lyBase" style="font-weight:600">Base map</label><div class="sub"><select id="lyBase" aria-label="Base map"><option value="dark">Night grey</option><option value="light">Day grey</option><option value="sat">Satellite</option><option value="none">None</option></select></div></div>
+ <div class="row"><label><input type="checkbox" id="lyHills"> Hills</label><div class="sub"><span>strength</span><input type="range" id="lyHillK" min="10" max="100" step="5" aria-label="Hill shading strength"></div></div>
+ <div class="row"><label><input type="checkbox" id="lyNames"> Place names</label><div class="sub"><span>how many</span><select id="lyNameLvl" aria-label="How many place names"><option value="0">Fewer</option><option value="1">Some</option><option value="2">Lots</option></select></div></div>
+ <div class="row"><label><input type="checkbox" id="lyLines"> Borders and counties</label><div class="sub"><span>strength</span><input type="range" id="lyLineK" min="10" max="100" step="5" aria-label="Border line strength"></div></div>
+ <div class="row"><label style="font-weight:600">Colour</label><div class="sub"><span>strength</span><input type="range" id="lyColour" min="25" max="100" step="5" aria-label="Colour strength"></div></div>
+ <button class="reset" id="lyReset">Reset layers</button>
+</div>`;
+    return d; } });
+  map.addControl(new Ctl());
+  const q = id => document.getElementById(id), btn = map.getContainer().querySelector(".lyrBtn"), pan = q("lyrPanel");
+  btn.onclick = () => { const o = pan.hidden; pan.hidden = !o; btn.setAttribute("aria-expanded", o); };
+  const sync = () => { q("lyBase").value = LY.base; q("lyHills").checked = LY.hills; q("lyHillK").value = LY.hillK; q("lyNames").checked = LY.names; q("lyNameLvl").value = LY.nameLvl; q("lyLines").checked = LY.lines; q("lyLineK").value = LY.lineK; q("lyColour").value = LY.colour; };
+  const on = (id, ev, f, retile) => q(id).addEventListener(ev, e => { f(e.target); saveLY(); retile ? setTiles() : applyLayers(); });
+  on("lyBase", "change", t => LY.base = t.value, true);
+  on("lyHills", "change", t => LY.hills = t.checked); on("lyHillK", "input", t => { LY.hillK = +t.value; LY.hills = q("lyHills").checked = true; });
+  on("lyNames", "change", t => LY.names = t.checked); on("lyNameLvl", "change", t => { LY.nameLvl = +t.value; LY.names = q("lyNames").checked = true; });
+  on("lyLines", "change", t => LY.lines = t.checked); on("lyLineK", "input", t => { LY.lineK = +t.value; LY.lines = q("lyLines").checked = true; });
+  on("lyColour", "input", t => LY.colour = +t.value);
+  q("lyReset").onclick = () => { Object.assign(LY, LYDEF); saveLY(); sync(); setTiles(); };
+  sync();
+})();
+/* the glow layer: tiles drawn in the browser from the grids, UK grid at 1 km where it exists */
+const RAD = 180 / Math.PI;
+let glow = null, chgCache = new Map();
+function colourAt(lat, lon, z) {
+  const m = S.mode;
+  if (z >= 4 && lat < UG.top && lat >= UG.bot && lon >= UG.left && lon < UG.right) {
+    const u = Math.floor((UG.top - lat) / UG.cell) * UG.w + Math.floor((lon - UG.left) / UG.cell);
+    if (m === "sky") return LUT_SKY[D.usky[u]];
+    if (m === "chg") { if (!D.uarea[u] || D.uarea[u] >= 200) return null; const k = D.usky[u] * 256 + D.uold[u]; let c = chgCache.get(k); if (!c) { c = chgRGBA(skyOf(D.usky[u]) / skyOf(D.uold[u])); chgCache.set(k, c); } return c; }
+    if (D.uarea[u] || D.ulit[u]) return LUT_LIT[D.ulit[u]];
+  }
+  if (m === "chg") return null;
+  if (lat >= WG.top || lat < WG.bot) return null;
+  const w = Math.floor((WG.top - lat) / WG.cell) * WG.w + Math.floor((((lon + 180) % 360 + 360) % 360) / WG.cell);
+  return m === "sky" ? LUT_SKY[D.wsky[w]] : LUT_LIT[D.wlit[w]];
+}
+const GlowLayer = L.GridLayer.extend({
+  createTile(c) {
+    const t = document.createElement("canvas"); t.width = t.height = 256;
+    if (!D.wsky || (S.mode === "lit" && !D.wlit)) return t;
+    const ctx = t.getContext("2d"), img = ctx.createImageData(256, 256), d = img.data, n = 256 * Math.pow(2, c.z);
+    const lons = new Float64Array(256); for (let i = 0; i < 256; i++) lons[i] = (c.x * 256 + i + .5) / n * 360 - 180;
+    for (let j = 0; j < 256; j++) { const y = Math.PI * (1 - 2 * (c.y * 256 + j + .5) / n), lat = Math.atan(Math.sinh(y)) * RAD;
+      for (let i = 0; i < 256; i++) { const col = colourAt(lat, lons[i], c.z); if (!col || !col[3]) continue; const q = (j * 256 + i) * 4; d[q] = col[0]; d[q + 1] = col[1]; d[q + 2] = col[2]; d[q + 3] = col[3]; } }
+    ctx.putImageData(img, 0, 0); return t;
+  }
+});
+function render() {
+  if (!D.wsky) return;
+  if (!glow) glow = new GlowLayer({ pane: "glow", opacity: LY.colour / 100, maxNativeZoom: 12, attribution: "Sky glow: own model from VIIRS lights (EOG via WorldPop)" }).addTo(map);
+  else glow.redraw();
+  legend();
+}
+/* legend */
+function legend() {
+  const box = document.getElementById("legend"); box.innerHTML = ""; const t = document.getElementById("legTitle");
+  const W0 = 300, s = el("svg", { viewBox: `0 0 ${W0} 92` }, box);
+  if (S.mode === "chg") {
+    t.textContent = "Change in UK sky glow, 2015 to 2023";
+    const g = el("linearGradient", { id: "lgc" }, s); for (let k = 0; k <= 10; k++) { const r = Math.pow(2, (k - 5) / 5 * .6), c = chgRGBA(r); el("stop", { offset: k / 10, "stop-color": `rgb(${c[0]},${c[1]},${c[2]})`, "stop-opacity": Math.max(.35, c[3] / 255) }, g); }
+    el("rect", { x: 8, y: 14, width: W0 - 16, height: 18, fill: "url(#lgc)", stroke: css("--border") }, s);
+    lbl(s, 8, 50, "−33% dimmer", "lab s m"); lbl(s, W0 / 2, 50, "no change", "lab s m", "middle"); lbl(s, W0 - 8, 50, "+50% brighter", "lab s m", "end");
+    lbl(s, 8, 74, "VIIRS cannot see much blue LED light, so", "lab s m"); lbl(s, 8, 88, "real brightening is understated.", "lab s m"); return;
+  }
+  if (S.mode === "lit") {
+    t.textContent = "Lights seen from space, 2023";
+    const g = el("linearGradient", { id: "lgl" }, s); for (let k = 0; k <= 10; k++) { const c = LUT_LIT[1 + Math.round(k / 10 * 254)]; el("stop", { offset: k / 10, "stop-color": `rgb(${c[0]},${c[1]},${c[2]})` }, g); }
+    el("rect", { x: 22, y: 14, width: W0 - 44, height: 18, fill: "url(#lgl)", stroke: css("--border") }, s);
+    [[1, "1"], [10, "10"], [100, "100"], [400, "400"]].forEach(([v, l]) => { const x = 22 + (W0 - 44) * Math.log10(1 + v) / Math.log10(401); el("line", { x1: x, x2: x, y1: 32, y2: 38, stroke: css("--fg") }, s); lbl(s, x, 52, l, "lab s", "middle"); });
+    lbl(s, 22, 74, "Annual average radiance, nW/cm²/sr (VIIRS)", "lab s m"); return;
+  }
+  t.textContent = "Artificial glow, times the natural night sky";
+  const g = el("linearGradient", { id: "lgs" }, s), x0 = 22, x = b => x0 + (W0 - 2 * x0) * (Math.log10(b) - LLO) / (LHI - LLO);
+  for (let k = 0; k <= 20; k++) { const b = Math.pow(10, LLO + k / 20 * (LHI - LLO)), c = skyRGBA(b); el("stop", { offset: k / 20, "stop-color": `rgb(${c[0]},${c[1]},${c[2]})` }, g); }
+  el("rect", { x: x0, y: 14, width: W0 - 2 * x0, height: 18, fill: "url(#lgs)", stroke: css("--border") }, s);
+  [[1.74, "1%"], [13.9, "8%"], [87, "½"], [688, "4×"], [3000, "17×"]].forEach(([b, l]) => { el("line", { x1: x(b), x2: x(b), y1: 10, y2: 38, stroke: css("--fg"), "stroke-width": 1 }, s); lbl(s, x(b), 52, l, "lab s", "middle"); });
+  lbl(s, x0, 70, "darker", "lab s m");
+  lbl(s, x(688), 70, "Milky Way", "lab s b", "middle"); lbl(s, x(688), 84, "hidden beyond", "lab s m", "middle");
+}
+function setMode(m) {
+  S.mode = m; document.querySelectorAll("#modeBtns .btn").forEach(b => b.setAttribute("aria-pressed", b.dataset.m === m));
+  if (m === "lit") loadLit().then(render); else render();
+  if (m === "chg") goView("uk");
+  if (S.sel) readout(S.sel);
+}
+document.querySelectorAll("#modeBtns .btn").forEach(b => b.onclick = () => setMode(b.dataset.m));
+function goView(v) { S.view = v; if (v === "uk") map.fitBounds([[49.9, -10.5], [60.9, 1.9]]); else map.setView([30, 10], 2); }
+document.querySelectorAll("#viewBtns .btn").forEach(b => b.onclick = () => { goView(b.dataset.v); document.getElementById("lmap").scrollIntoView({ block: "nearest", behavior: "smooth" }); });
+
+/* readout */
+let pin = null, dpin = null;
+function readout(p) {
+  S.sel = p; const box = document.getElementById("readout"), k = skyAt(p.lat, p.lon);
+  if (!k) { box.innerHTML = `<b>${esc(p.name || "Here")}</b><br>Outside the mapped area (75° N to 60° S).`; return; }
+  const [cl, words] = classOf(k.b), mag = magOf(k.b), x = k.b / NAT;
+  const area = k.area && k.area < 200 ? PD.ukAreaNames[k.area - 1] : "";
+  let h = `<b>${esc(p.name || "This spot")}</b>${area ? " · " + esc(area) : ""}<span class="big"><span class="sw" style="background:${sw(k.b)}"></span>${cl}</span>`;
+  h += `Artificial glow ${k.b < 1 ? "under 1" : fmt(k.b)} µcd/m², ${x < .01 ? "under 1%" : x < 1 ? pc(x) : x.toFixed(x < 10 ? 1 : 0) + "×"} of the natural sky: ${words}. Total sky about ${mag.toFixed(2)} mag/arcsec².`;
+  if (k.fine && k.area && k.area < 200) { const r = k.b / k.b15; h += `<br>Since 2015: ${Math.abs(r - 1) < .03 ? "about the same" : (r > 1 ? "brighter by " : "dimmer by ") + pc(Math.abs(r - 1))} in the model (2023 lights against 2015).`; }
+  if (k.lit != null) h += `<br>Lights seen from space here: ${k.lit < .05 ? "none detected" : k.lit.toFixed(k.lit < 10 ? 1 : 0) + " nW/cm²/sr"}.`;
+  if (k.b >= TH[3]) { const n = nearestDark(p.lat, p.lon, TH[3], k.fine ? 300 : 700); if (n) { h += `<br><b>Nearest Milky Way sky:</b> ${fmt(n.km)} km to the ${n.dir}.`; if (dpin) map.removeLayer(dpin); dpin = L.marker([n.lat, n.lon], { icon: L.divIcon({ className: "pin d", html: "<i></i>", iconSize: [16, 16] }), title: "Nearest Milky Way sky" }).addTo(map); } }
+  else if (dpin) { map.removeLayer(dpin); dpin = null; }
+  h += `<br><span style="color:var(--muted)">${k.fine ? "UK and Ireland model, 1 km." : "World model, 4.6 km cells; town centres are brighter than the cell average."}</span>`;
+  box.innerHTML = h;
+}
+function choose(p, fly = true) {
+  if (pin) map.removeLayer(pin); pin = L.marker([p.lat, p.lon], { icon: L.divIcon({ className: "pin", iconSize: [18, 18] }), title: p.name }).addTo(map);
+  if (fly) map.setView([p.lat, p.lon], Math.max(map.getZoom(), uIdx(p.lat, p.lon) >= 0 ? 8 : 6));
+  readout(p);
+  if (innerWidth < 900) document.getElementById("lmap").scrollIntoView({ block: "start", behavior: "smooth" });
+}
+map.on("click", e => choose({ lat: e.latlng.lat, lon: ((e.latlng.lng + 540) % 360) - 180, name: "" }, false));
+
+/* search */
+let SEARCH = null;
+async function loadSearch() { if (SEARCH) return SEARCH; const [u, w] = await Promise.all([fetch("data/page/search_uk.json").then(r => r.json()), CITIES ? Promise.resolve(CITIES) : fetch("data/page/search_world.json").then(r => r.json())]); UKP = u; CITIES = w; SEARCH = { u, w }; placeNames(); return SEARCH; }
+const qi = document.getElementById("q"), sug = document.getElementById("sug");
+const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+let hits = [], hsel = -1;
+qi.addEventListener("focus", loadSearch);
+qi.addEventListener("input", async () => {
+  const s = norm(qi.value.trim()); if (s.length < 2) { sug.style.display = "none"; qi.setAttribute("aria-expanded", "false"); return; }
+  const { u, w } = await loadSearch(); const out = [];
+  for (const p of w) { if (norm(p[0]).startsWith(s)) out.push({ name: p[0], lat: p[1], lon: p[2], sub: p[4] + (p[3] ? " · " + fmt(p[3]) + " people" : ""), r: 2e9 - p[3] }); if (out.length > 40) break; }
+  for (const p of u) { if (norm(p[0]).startsWith(s)) out.push({ name: p[0], lat: p[1], lon: p[2], sub: p[4] + " · " + ["suburb", "village", "town", "city"][p[3]], r: 3e9 - p[3] * 1e8 }); if (out.length > 120) break; }
+  const seen = new Set(); hits = out.sort((a, b) => (norm(a.name) === s ? 0 : 1) - (norm(b.name) === s ? 0 : 1) || a.r - b.r).filter(h => { const k = h.name + Math.round(h.lat * 10) + Math.round(h.lon * 10); if (seen.has(k)) return false; seen.add(k); return true; }).slice(0, 12);
+  sug.innerHTML = hits.map((h, i) => `<li role="option" data-i="${i}">${esc(h.name)} <span>${esc(h.sub)}</span></li>`).join(""); hsel = -1;
+  sug.style.display = hits.length ? "block" : "none"; qi.setAttribute("aria-expanded", hits.length ? "true" : "false");
+});
+sug.addEventListener("click", e => { const li = e.target.closest("li"); if (li) pick(+li.dataset.i); });
+qi.addEventListener("keydown", e => { if (!hits.length) return; if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); hsel = (hsel + (e.key === "ArrowDown" ? 1 : -1) + hits.length) % hits.length; [...sug.children].forEach((li, i) => li.setAttribute("aria-selected", i === hsel)); } else if (e.key === "Enter") { e.preventDefault(); pick(Math.max(0, hsel)); } });
+function pick(i) { const h = hits[i]; if (!h) return; qi.value = h.name; sug.style.display = "none"; qi.setAttribute("aria-expanded", "false"); choose(h); }
+document.getElementById("geo").onclick = () => navigator.geolocation && navigator.geolocation.getCurrentPosition(p => choose({ lat: p.coords.latitude, lon: p.coords.longitude, name: "Your location" }), () => { msg.textContent = "Location not available."; });
+document.addEventListener("click", e => { if (!e.target.closest(".searchbox")) sug.style.display = "none"; });
+
+setTiles();
+fetch("data/page/borders.json").then(r => r.json()).then(b => { BORD = b; drawLines(); });
+fetch("data/page/search_world.json").then(r => r.json()).then(w => { CITIES = w; placeNames(); });
+loadBase().then(render);
+document.getElementById("theme").onclick = () => { const r = document.documentElement; r.dataset.theme = isDark() ? "light" : "dark"; redraws.forEach(f => f()); legend(); };
+window.goPlace = (lat, lon, name) => { choose({ lat, lon, name }); };
+
+/*CHARTS*/
+</script>
+</body>
+</html>

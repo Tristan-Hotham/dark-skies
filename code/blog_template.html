@@ -1,0 +1,159 @@
+<!-- wp:paragraph -->
+<p><em>When did you last see the Milky Way? I mapped the glow that our lights throw into the night sky, for the whole world and for every square kilometre of the UK, and checked the map against {{model.n_fit|int}} readings from volunteers' sky meters. About half the world, and {{uk.pop_mw|pct}} of people in the UK, cannot see it from home.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/dark-skies/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.23757708">Read the paper</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p>On a clear night with no Moon, far from any town, the Milky Way crosses the sky as a pale, lumpy river of light. It is the disc of our own galaxy seen from inside. It is also faint, and easily drowned. Light that leaves streets, car parks and buildings and heads upwards does not all escape to space: some of it is scattered back down by air and dust, and the whole sky glows. A little glow and the faint stars go. A bit more and the Milky Way goes too.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Satellites photograph the Earth at night every night. I took the yearly average of what the VIIRS instrument sees, for every country in 2023, spread each patch of light across the sky around it with a simple rule for how glow fades with distance, and tuned that rule against sky meter readings made by Globe at Night volunteers. Then I laid the result over a map of where people live.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_world_map.png|World map on a dark ground showing modelled artificial sky glow in 2023. The eastern United States, Europe, the Nile valley, the Gulf, India, eastern China, Japan and Java glow rose and amber; most of Africa, Siberia, Amazonia, Canada and Australia stay dark navy.|Modelled artificial sky glow, 2023. Navy: close to natural darkness. Rose and amber: the Milky Way is hidden.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Half the world under a hidden galaxy</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I used the thresholds of the best-known study, the World Atlas of Artificial Night Sky Brightness (Falchi and colleagues, 2016). They count the Milky Way as hidden once artificial glow is about four times the natural brightness of the night sky. By my model {{world.pop_mw|pct}} of the world's people, about {{world.people_mw_bn|f1}} billion, live under such a sky. The atlas, using lights from 2014, said {{falchi.pop_mw|pct}}.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The gap is not a contradiction. My lights are nine years newer, my population map puts people only where there are buildings, and the sky meter readings I tuned against are mostly taken in the evening, when more lamps are lit than at the satellite's 1:30 am pass. The atlas uses a far more detailed model of how light scatters, which mine does not. What matters is that the two agree closely on which countries are bright and which dark: the rank correlation across {{falchi.compare.n|int}} countries is {{falchi.compare.spearman|f2}}. I would put the truth somewhere between a third and a half of humanity.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_countries.png|Horizontal bar chart of countries with 30 million people or more, ranked by the share of people under skies that hide the Milky Way, from Egypt, South Korea and Iraq near 100% down to Madagascar and Ethiopia near zero, with black ticks showing the 2016 atlas figures, mostly a little lower.|Share of people under skies that hide the Milky Way, countries of 30 million or more. Bars: my model, 2023. Ticks: Falchi et al. (2016).}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>The brightest places are crowded and rich: Hong Kong, Singapore, the Gulf states, Israel, and Egypt, whose people pack into the lit ribbon of the Nile. {{country.CHN.pop_mw|pct}} of people in China cannot see the Milky Way from home, {{country.IND.pop_mw|pct}} in India and {{country.USA.pop_mw|pct}} in the United States. In Ethiopia, Sierra Leone and South Sudan almost everyone can, mainly because there is so little electric light at all. A dark sky is not always a sign of good fortune. One country stands out for the opposite reason: in Ukraine my 2023 figure is {{country.UKR.pop_mw|pct}}, against {{country.UKR.falchi_pop_mw|pct}} in the atlas, as you would expect after the wartime blackouts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Britain at one kilometre</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>For the UK I ran the model on a grid of about one kilometre. {{uk.pop_mw|pct}} of people, about {{uk.people_mw_m|f1}} million, live where the glow hides the Milky Way. But Britain's people are packed together, and the Milky Way still shows over {{uk.land_mw_visible|pct}} of the land.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_uk_map.png|Map of Great Britain and Ireland at 1 km on a dark ground. London, the Midlands, Manchester and Liverpool, West Yorkshire, Tyneside, the Central Belt, south Wales and Belfast glow amber and white with rose halos; the Highlands, the Western Isles, mid Wales, Northumberland and Dartmoor stay navy and violet.|Modelled artificial sky glow over Britain and Ireland, 2023, at about 1 km.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>England is the brightest nation: {{uk.nations.England.pop_mw|pct}} of its people and {{uk.nations.England.land_mw|pct}} of its land sit under a Milky Way hiding sky. The darkest places in the UK are all Scottish: the Western Isles, Highland, Orkney, Shetland, and Argyll and Bute. England's darkest counties are Northumberland, Devon, Cumbria, Cornwall and Dorset. The town with the darkest sky is Hugh Town on St Mary's in the Isles of Scilly, followed by New Galloway, Tobermory on Mull, Chagford on Dartmoor and Whithorn.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_counties.png|Bar chart of the ten darkest and ten brightest UK counties and council areas by median sky brightness. The darkest, led by Na h-Eileanan Siar and Highland near 22 magnitudes, are all Scottish except Dyfed; the brightest, ending with Glasgow City and Greater London near 18, are the big city regions.|The ten darkest and ten brightest areas, by median sky over their land (higher is darker).}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>The size of the place you live matters more than where it is. The Milky Way should be visible from the centre of {{uk_kind_mw_visible.City|pct}} of the UK's cities, {{uk_kind_mw_visible.Town|pct}} of its towns, {{uk_kind_mw_visible.Village|pct}} of its villages and {{uk_kind_mw_visible.Hamlet|pct}} of its hamlets. In {{uk_councils_all_hidden|int}} of {{uk_councils_n|int}} council areas, practically nobody can see it from home.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pullquote -->
+<figure class="wp-block-pullquote"><blockquote><p>From central London, the nearest sky where the Milky Way shows is {{uk_cities.London.mw_km|int}} km away, near Toys Hill in Kent.</p></blockquote></figure>
+<!-- /wp:pullquote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How far to the dark?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The good news is that the worst glow is concentrated. For the median city of a million people or more, a Milky Way sky is only {{cities_1m_median_mw_km|int}} km away. For Birmingham it is {{uk_cities.Birmingham.mw_km|int}} km, for Manchester {{uk_cities.Manchester.mw_km|int}} km (up on the moors above Glossop) and for Glasgow {{uk_cities.Glasgow.mw_km|int}} km. The great sprawls are harder: {{city.New York City.mw_km|int}} km from New York, {{city.Moscow.mw_km|int}} km from Moscow.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_cities.png|Two bar charts of distance to the nearest Milky Way sky. Left, the world's biggest cities: Moscow 80 km, Guangzhou 63, Delhi 58, Mexico City 55, Shanghai 54, Tokyo 50, Kinshasa 11. Right, UK cities: London 35 km, Birmingham 25, Manchester 22, Leeds and Liverpool 16, Glasgow 15, Edinburgh and Bristol 9.|Distance from the city centre to the nearest land where the model says the Milky Way should show.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Darker from space, brighter on the ground?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>One result surprised me. The light that VIIRS records from Great Britain fell by {{change.gbr_pct|abs1}}% between 2015 and 2023, and fell in all but {{uk_areas_light_up|int}} of the UK's {{uk_areas_n|int}} counties and council areas, most of all in Tyne and Wear. Ireland's rose by {{change.irl_pct|f1}}%.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_change.png|Left, a line chart of total VIIRS radiance indexed to 2015: Great Britain falls to about 86 by 2023 while Ireland rises to about 110. Right, a map of the UK in which most areas are blue, meaning dimmer modelled sky glow, with red patches in Cornwall, the Western Isles and parts of the east.|Lights seen from space, 2015 = 100 (left), and the modelled change in UK sky glow, 2023 lights against 2015 (right).}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>I would not take that at face value. Over these years councils swapped orange sodium street lamps for white LEDs. LEDs are often dimmer and better aimed, which helps. But they put much of their light into blue wavelengths that the satellite barely sees, and blue light scatters more in the air. Volunteers counting stars tell a different story: across the world, the stars people could see faded quickly between 2011 and 2022, equivalent to the sky brightening by about 10% a year (Kyba and colleagues, 2023). From space, Britain looks darker. From the back garden, probably not.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How I did this</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The lights are the Earth Observation Group's yearly VIIRS composites, as republished per country by WorldPop. I read all {{meta.world_files|int}} country files for 2023 in my browser and averaged them to a world grid of about 4.6 km, and the UK and Ireland files for 2015 to 2023 to about 1 km. Each patch's light spreads to every place within {{model.r_max|int}} km with a weight that falls with distance to the power {{model.alpha|f1}}. I fitted that power and the overall scale to {{model.n18|int}} Globe at Night sky meter readings from 2019 to 2025, leaving out the brightest city-centre readings that a 4.6 km grid cannot resolve. Tested on regions it had not seen, the model misses a typical reading by {{model.cv18_mae|f2}} magnitudes. People are from WorldPop's 2023 population grid.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>It is a model, not a measurement. It ignores hills, haze and the colour and angle of lamps, it is tuned on readings mostly from North America and Europe, and it underestimates the brightest city centres. I did not use the atlas grid itself: it is published under a non-commercial licence with a note forbidding redistribution, so I quote only the figures printed in the paper.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_fit.png|Left, a density plot of modelled against measured sky brightness for 6,653 Globe at Night readings, clustered along the diagonal. Right, median model error by measured brightness: large positive errors for the brightest readings below 18 magnitudes, close to zero from 18.5 to 21.5.|How the model compares with volunteers' sky meter readings. It is close outside city centres and too dark for the brightest streets.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/dark-skies/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.23757708">Read the paper</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/Tristan-Hotham/dark-skies">Data and code</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Notes and sources</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Night lights: Earth Observation Group, Colorado School of Mines, <a href="https://doi.org/10.3390/rs13050922">VIIRS annual night lights</a> (Elvidge et al. 2021), as resampled per country by <a href="https://doi.org/10.5258/SOTON/WP00772">WorldPop</a> (CC BY 4.0).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Population: <a href="https://doi.org/10.5258/SOTON/WP00845">WorldPop 2023 population, R2025A</a> (CC BY 4.0).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Sky meter readings: <a href="https://globeatnight.org/maps-data/">Globe at Night</a>, NOIRLab (CC BY 4.0).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Thresholds and comparison: Falchi, F. et al. (2016) <a href="https://doi.org/10.1126/sciadv.1600377">The new world atlas of artificial night sky brightness</a>, Science Advances.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Star visibility: Kyba, C.C.M. et al. (2023) Citizen scientists report global rapid reductions in the visibility of stars from 2011 to 2022, Science 379: 265 to 268.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Dark Sky Places: English Wikipedia, <a href="https://en.wikipedia.org/wiki/Dark-sky_preserve">Dark-sky preserve</a> (CC BY-SA 4.0). Places: OS Open Names (Open Government Licence) and GeoNames.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Paper, data and code: <a href="https://doi.org/10.5281/zenodo.23757708">Zenodo</a> and <a href="https://github.com/Tristan-Hotham/dark-skies">GitHub</a>.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite it as below."
+title: "Darkest Skies: Where You Can Still See the Milky Way. A Sky Glow Model of the World and the United Kingdom from VIIRS Night Lights, Checked Against Citizen Sky Meter Readings"
+type: dataset
+authors:
+  - family-names: Hotham
+    given-names: Tristan
+    orcid: "https://orcid.org/0000-0003-4931-9349"
+    affiliation: "Independent researcher"
+doi: "10.5281/zenodo.23757708"
+url: "https://maps.tristanhotham.com/dark-skies/"
+repository-code: "https://github.com/Tristan-Hotham/dark-skies"
+license: CC-BY-4.0
+keywords:
+  - "light pollution"
+  - "night sky brightness"
+  - "skyglow"
+  - "Milky Way"
+  - "VIIRS"
+  - "night lights"
+  - "Globe at Night"
+  - "Sky Quality Meter"
+  - "United Kingdom"
+  - "data visualisation"
